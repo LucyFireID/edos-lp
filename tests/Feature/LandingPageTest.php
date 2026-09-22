@@ -11,7 +11,8 @@ class LandingPageTest extends TestCase
     {
         $this->get('/')
             ->assertOk()
-            ->assertSee('EduSmart')
+            ->assertSee('Qosim Al Hadi')
+            ->assertSee('Bhakti Kepada Negeri')
             ->assertSee('Daftar Sekarang');
     }
 

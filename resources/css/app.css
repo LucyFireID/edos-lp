@@ -5,6 +5,21 @@
 @source '../../resources/views/**/*.blade.php';
 
 @theme {
-    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Plus Jakarta Sans';
+    --font-serif: 'Plus Jakarta Sans';
+    --font-mono: 'Plus Jakarta Sans';
+}
+
+@layer base {
+    html,
+    :host,
+    body {
+        font-family: 'Plus Jakarta Sans';
+        font-synthesis-weight: none;
+        text-rendering: optimizeLegibility;
+    }
+}
+
+[x-cloak] {
+    display: none !important;
 }

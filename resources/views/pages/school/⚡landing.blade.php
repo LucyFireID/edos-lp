@@ -102,35 +102,35 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
         :class="scrolled ? 'bg-white/90 shadow-lg backdrop-blur-md' : 'bg-transparent'"
     >
-        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-            <a href="#home" class="flex items-center gap-3">
-                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-700 text-lg font-bold text-white shadow-lg">
-                    ES
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+            <a href="#home" class="flex items-center gap-4">
+                <span class="flex h-14 w-14 shrink-0 items-center justify-center">
+                    <img src="{{ asset('images/logo-qosimalhadi-128.png') }}" alt="Logo Qosim Al Hadi" class="h-full w-full object-contain drop-shadow-lg">
                 </span>
                 <span class="flex flex-col leading-tight">
-                    <span class="text-base font-bold" :class="scrolled ? 'text-slate-900' : 'text-white'">EduSmart</span>
-                    <span class="text-xs" :class="scrolled ? 'text-slate-500' : 'text-sky-100'">Sekolah Unggulan</span>
+                    <span class="text-xl font-bold tracking-tight sm:text-2xl" :class="scrolled ? 'text-slate-900' : 'text-white'">Qosim Al Hadi</span>
+                    <span class="text-sm tracking-wide" :class="scrolled ? 'text-slate-500' : 'text-sky-100'">Bhakti Kepada Negeri</span>
                 </span>
             </a>
 
-            <ul class="hidden items-center gap-8 lg:flex">
+            <ul class="hidden items-center gap-9 lg:flex">
                 @foreach (['home' => 'Beranda', 'about' => 'Tentang', 'programs' => 'Program', 'facilities' => 'Fasilitas', 'news' => 'Berita', 'contact' => 'Kontak'] as $id => $label)
                     <li>
-                        <a href="#{{ $id }}" class="text-sm font-medium transition hover:text-sky-500" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
+                        <a href="#{{ $id }}" class="text-base font-medium transition hover:text-sky-500" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
                             {{ $label }}
                         </a>
                     </li>
                 @endforeach
                 <li>
-                    <a href="#contact" class="rounded-full bg-gradient-to-r from-sky-500 to-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:scale-105">
+                    <a href="#contact" class="rounded-full bg-gradient-to-r from-sky-500 to-blue-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:scale-105">
                         Daftar Sekarang
                     </a>
                 </li>
             </ul>
 
             <button @click="open = !open" class="lg:hidden" :class="scrolled ? 'text-slate-900' : 'text-white'" aria-label="Menu">
-                <svg x-show="!open" class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                <svg x-show="open" x-cloak class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                <svg x-show="!open" class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg x-show="open" x-cloak class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
         </nav>
 
@@ -138,7 +138,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             <ul class="mx-4 mb-4 space-y-1 rounded-2xl bg-white p-4 shadow-2xl">
                 @foreach (['home' => 'Beranda', 'about' => 'Tentang', 'programs' => 'Program', 'facilities' => 'Fasilitas', 'news' => 'Berita', 'contact' => 'Kontak'] as $id => $label)
                     <li>
-                        <a href="#{{ $id }}" @click="open = false" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-600">
+                        <a href="#{{ $id }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-600">
                             {{ $label }}
                         </a>
                     </li>
@@ -148,23 +148,34 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     </header>
 
     {{-- Hero --}}
-    <section id="home" class="relative flex min-h-screen items-center overflow-hidden bg-slate-900">
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900"></div>
-        <div class="absolute -left-32 top-10 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl"></div>
-        <div class="absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl"></div>
+    <section id="home" class="relative flex min-h-svh items-center overflow-hidden bg-slate-900">
+        <video
+            class="absolute inset-0 h-full w-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-hidden="true"
+        >
+            <source src="{{ asset('videos/hero-video.mp4') }}" type="video/mp4">
+        </video>
 
-        <div class="relative mx-auto grid max-w-7xl gap-12 px-6 pt-32 pb-20 lg:grid-cols-2 lg:items-center">
-            <div>
+        <div class="absolute inset-0 bg-slate-950/70 lg:hidden"></div>
+        <div class="absolute inset-0 hidden bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-slate-950/10 lg:block"></div>
+
+        <div class="relative mx-auto w-full max-w-7xl px-6 pt-36 pb-28">
+            <div class="max-w-3xl">
                 <span class="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-sky-300">
                     <span class="h-2 w-2 animate-pulse rounded-full bg-sky-400"></span>
                     Penerimaan Siswa Baru 2027/2028
                 </span>
-                <h1 class="mt-6 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+                <h1 class="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                     Membentuk Generasi
                     <span class="bg-gradient-to-r from-sky-400 to-blue-300 bg-clip-text text-transparent">Cerdas &amp; Berkarakter</span>
                 </h1>
-                <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
-                    EduSmart School menghadirkan pendidikan berkualitas dengan kurikulum modern, tenaga pengajar berpengalaman, dan lingkungan belajar yang inspiratif.
+                <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-200">
+                    Sekolah Qosim Al Hadi menghadirkan pendidikan berkualitas dengan kurikulum modern, tenaga pengajar berpengalaman, dan lingkungan belajar yang inspiratif.
                 </p>
                 <div class="mt-10 flex flex-wrap gap-4">
                     <a href="#contact" class="rounded-full bg-gradient-to-r from-sky-500 to-blue-600 px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-sky-500/30 transition hover:scale-105">
@@ -178,29 +189,10 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 <div class="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-4">
                     @foreach ($stats as $stat)
                         <div>
-                            <p class="text-2xl font-bold text-white sm:text-3xl">{{ $stat['value'] }}{{ $stat['suffix'] }}</p>
+                            <p class="text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ $stat['value'] }}{{ $stat['suffix'] }}</p>
                             <p class="mt-1 text-xs font-medium uppercase tracking-wider text-slate-400">{{ $stat['label'] }}</p>
                         </div>
                     @endforeach
-                </div>
-            </div>
-
-            <div class="relative hidden lg:block">
-                <div class="relative rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-                    <div class="grid grid-cols-2 gap-4">
-                        @foreach (array_slice($facilities, 0, 4) as $facility)
-                            <div class="rounded-2xl bg-gradient-to-br from-white/10 to-white/5 p-6 text-center transition hover:from-sky-500/20">
-                                <svg class="mx-auto h-8 w-8 text-sky-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="{{ $facility['icon'] }}"/>
-                                </svg>
-                                <p class="mt-3 text-sm font-medium text-white">{{ $facility['name'] }}</p>
-                            </div>
-                        @endforeach
-                    </div>
-                    <div class="mt-6 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 p-6">
-                        <p class="text-3xl font-bold text-white">98%</p>
-                        <p class="text-sm text-sky-100">Lulusan melanjutkan ke perguruan tinggi favorit</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -213,7 +205,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 <div class="aspect-4/3 overflow-hidden rounded-3xl bg-gradient-to-br from-sky-500 to-blue-700 p-1">
                     <div class="flex h-full w-full items-center justify-center rounded-[1.35rem] bg-slate-900">
                         <div class="text-center">
-                            <p class="text-6xl font-extrabold text-white">46</p>
+                            <p class="text-6xl font-extrabold tracking-tighter text-white">46</p>
                             <p class="mt-2 text-sm uppercase tracking-widest text-sky-300">Tahun Pengabdian</p>
                         </div>
                     </div>
@@ -226,11 +218,11 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
             <div>
                 <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Tentang Kami</span>
-                <h2 class="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">
+                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">
                     Sekolah yang Menumbuhkan Potensi Setiap Anak
                 </h2>
                 <p class="mt-6 leading-relaxed text-slate-600">
-                    Berdiri sejak 1978, EduSmart School berkomitmen menyelenggarakan pendidikan holistik yang menyeimbangkan kecerdasan intelektual, emosional, dan spiritual. Kami percaya setiap siswa memiliki keunikan yang layak dikembangkan.
+                    Berdiri sejak 1978, Sekolah Qosim Al Hadi berkomitmen menyelenggarakan pendidikan holistik yang menyeimbangkan kecerdasan intelektual, emosional, dan spiritual. Kami percaya setiap siswa memiliki keunikan yang layak dikembangkan.
                 </p>
                 <div class="mt-8 space-y-4">
                     @foreach ([
@@ -256,7 +248,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         <div class="mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-2xl text-center">
                 <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Program Studi</span>
-                <h2 class="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">Pilihan Program Unggulan</h2>
+                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Pilihan Program Unggulan</h2>
                 <p class="mt-4 text-slate-600">Dirancang untuk membekali siswa dengan kompetensi abad ke-21 dan kesiapan menghadapi dunia global.</p>
             </div>
 
@@ -268,7 +260,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                                 <path stroke-linecap="round" stroke-linejoin="round" d="{{ $program['icon'] }}"/>
                             </svg>
                         </span>
-                        <h3 class="mt-6 text-lg font-bold text-slate-900">{{ $program['title'] }}</h3>
+                            <h3 class="mt-6 text-lg font-semibold text-slate-900">{{ $program['title'] }}</h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600">{{ $program['desc'] }}</p>
                         <a href="#contact" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-sky-600 transition group-hover:gap-3">
                             Selengkapnya
@@ -285,7 +277,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         <div class="mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-2xl text-center">
                 <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Sarana &amp; Prasarana</span>
-                <h2 class="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">Fasilitas Penunjang Belajar</h2>
+                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Fasilitas Penunjang Belajar</h2>
             </div>
 
             <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -309,7 +301,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         <div class="relative mx-auto max-w-4xl px-6" x-data="{ active: 0, total: {{ count($testimonials) }} }">
             <div class="text-center">
                 <span class="text-sm font-semibold uppercase tracking-widest text-sky-400">Testimoni</span>
-                <h2 class="mt-4 text-3xl font-bold text-white sm:text-4xl">Apa Kata Mereka</h2>
+                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">Apa Kata Mereka</h2>
             </div>
 
             <div class="mt-14">
@@ -343,7 +335,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             <div class="flex flex-wrap items-end justify-between gap-6">
                 <div>
                     <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Berita Terbaru</span>
-                    <h2 class="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">Kabar dari Sekolah</h2>
+                    <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Kabar dari Sekolah</h2>
                 </div>
                 <a href="#" class="text-sm font-semibold text-sky-600 hover:text-sky-700">Lihat semua berita &rarr;</a>
             </div>
@@ -357,7 +349,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                                 <span class="rounded-full bg-sky-100 px-3 py-1 font-semibold text-sky-700">{{ $item['category'] }}</span>
                                 <span class="text-slate-500">{{ $item['date'] }}</span>
                             </div>
-                            <h3 class="mt-4 text-lg font-bold text-slate-900 transition group-hover:text-sky-600">{{ $item['title'] }}</h3>
+                                <h3 class="mt-4 text-lg font-semibold text-slate-900 transition group-hover:text-sky-600">{{ $item['title'] }}</h3>
                             <p class="mt-3 text-sm leading-relaxed text-slate-600">{{ $item['excerpt'] }}</p>
                             <a href="#" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sky-600">
                                 Baca selengkapnya
@@ -375,7 +367,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         <div class="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
             <div>
                 <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Hubungi Kami</span>
-                <h2 class="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">Siap Bergabung Bersama Kami?</h2>
+                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Siap Bergabung Bersama Kami?</h2>
                 <p class="mt-6 leading-relaxed text-slate-600">
                     Kirimkan pertanyaan Anda mengenai penerimaan siswa baru, program, maupun kunjungan sekolah. Tim kami akan merespons dalam 1x24 jam.
                 </p>
@@ -384,7 +376,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     @foreach ([
                         ['title' => 'Alamat', 'value' => 'Jl. Pendidikan No. 123, Jakarta Selatan 12190', 'icon' => 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z'],
                         ['title' => 'Telepon', 'value' => '(021) 555-0123', 'icon' => 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z'],
-                        ['title' => 'Email', 'value' => 'info@edusmart.sch.id', 'icon' => 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'],
+                        ['title' => 'Email', 'value' => 'info@qosimalhadi.sch.id', 'icon' => 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'],
                         ['title' => 'Jam Operasional', 'value' => 'Senin - Jumat, 07.00 - 16.00 WIB', 'icon' => 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'],
                     ] as $contact)
                         <div class="flex items-start gap-4">
@@ -486,8 +478,10 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             <div class="grid gap-12 lg:grid-cols-4">
                 <div class="lg:col-span-2">
                     <div class="flex items-center gap-3">
-                        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-700 text-lg font-bold text-white">ES</span>
-                        <span class="text-lg font-bold text-white">EduSmart School</span>
+                        <span class="flex h-14 w-14 shrink-0 items-center justify-center">
+                            <img src="{{ asset('images/logo-qosimalhadi-128.png') }}" alt="Logo Qosim Al Hadi" class="h-full w-full object-contain">
+                        </span>
+                        <span class="text-xl font-bold tracking-tight text-white">Qosim Al Hadi</span>
                     </div>
                     <p class="mt-5 max-w-md leading-relaxed">
                         Menyelenggarakan pendidikan berkualitas untuk membentuk generasi cerdas, berkarakter, dan siap menghadapi tantangan global.
@@ -508,7 +502,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <ul class="mt-5 space-y-3 text-sm">
                         <li>Jl. Pendidikan No. 123, Jakarta</li>
                         <li>(021) 555-0123</li>
-                        <li>info@edusmart.sch.id</li>
+                        <li>info@qosimalhadi.sch.id</li>
                     </ul>
                     <div class="mt-6 flex gap-3">
                         @foreach (['M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z', 'M23 12a11 11 0 11-13-10.9v7.5h-2.2V12h2.2V9.6c0-2.2 1.3-3.4 3.3-3.4.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 3.3h-2V23A11 11 0 0023 12z', 'M12 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 4.3 2.8 8 6.7 9.3.5.1.7-.2.7-.5v-1.7c-2.7.6-3.3-1.3-3.3-1.3-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.3-1.1.6-1.4-2.2-.2-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.7-4.5 4.9.3.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5 3.9-1.3 6.7-5 6.7-9.3 0-5.4-4.4-9.8-9.8-9.8z'] as $icon)
@@ -521,7 +515,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </div>
 
             <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm sm:flex-row">
-                <p>&copy; {{ date('Y') }} EduSmart School. Seluruh hak cipta dilindungi.</p>
+                <p>&copy; {{ date('Y') }} Qosim Al Hadi. Seluruh hak cipta dilindungi.</p>
                 <div class="flex gap-6">
                     <a href="#" class="transition hover:text-sky-400">Kebijakan Privasi</a>
                     <a href="#" class="transition hover:text-sky-400">Syarat &amp; Ketentuan</a>
