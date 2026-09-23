@@ -202,12 +202,11 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     <section id="nurture" class="bg-white py-24">
         <div class="mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-3xl text-center">
-                <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Our Vision</span>
-                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                    Built to Nurture Tomorrow's Global Citizens
+                <h2 class="text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                    Membentuk Generasi Unggul untuk Masa Depan
                 </h2>
                 <p class="mt-5 text-lg leading-relaxed text-slate-600">
-                    Menyiapkan generasi muda yang memiliki daya juang tinggi, empati, dan wawasan global dalam setiap bidang yang mereka tekuni.
+                    Menyiapkan generasi yang berilmu, berakhlak, berdaya juang tinggi, dan memiliki wawasan luas untuk menghadapi masa depan dengan penuh keyakinan.
                 </p>
             </div>
 
