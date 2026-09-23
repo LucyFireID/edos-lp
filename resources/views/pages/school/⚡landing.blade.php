@@ -232,13 +232,13 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     </div>
                 </div>
                 <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-8">
-                    <img src="{{ asset('images/ma.png') }}" alt="Global" class="absolute inset-0 h-full w-full object-cover">
+                    <img src="{{ asset('images/ma.png') }}" alt="Madrasah Aliyah" class="absolute inset-0 h-full w-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     <div class="absolute top-1/2 bottom-0 left-0 z-0 w-full -translate-x-full bg-primary-500/95 transition-transform duration-500 ease-out group-hover:translate-x-0"></div>
                     <div class="relative z-10 flex h-full flex-col items-start justify-end p-6">
-                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur transition-colors duration-500 group-hover:bg-primary-100 group-hover:text-primary-700">Global</span>
-                        <h3 class="mt-3 text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Wawasan Internasional</h3>
-                        <p class="mt-2 max-w-md text-sm leading-relaxed text-slate-200 transition-colors duration-500 group-hover:text-slate-100">Program bilingual dan pertukaran pelajar yang memperluas cakrawala dunia.</p>
+                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur transition-colors duration-500 group-hover:bg-primary-100 group-hover:text-primary-700">Madrasah Aliyah (MA)</span>
+                        <h3 class="mt-3 text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Mempersiapkan Generasi untuk Masa Depan</h3>
+                        <p class="mt-2 max-w-md text-sm leading-relaxed text-slate-200 transition-colors duration-500 group-hover:text-slate-100">Membekali peserta didik dengan ilmu pengetahuan, keterampilan, dan karakter untuk melanjutkan pendidikan tinggi, berkarier, serta berkontribusi di tengah masyarakat.</p>
                     </div>
                 </div>
                 <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-4">
