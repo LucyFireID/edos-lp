@@ -8,6 +8,18 @@
     --font-sans: 'Plus Jakarta Sans';
     --font-serif: 'Plus Jakarta Sans';
     --font-mono: 'Plus Jakarta Sans';
+
+    --color-primary-50: #e9f5e8;
+    --color-primary-100: #d3ecd0;
+    --color-primary-200: #a5df9d;
+    --color-primary-300: #73d664;
+    --color-primary-400: #3fcf2a;
+    --color-primary-500: #2aa118;
+    --color-primary-600: #268619;
+    --color-primary-700: #226e17;
+    --color-primary-800: #1d5615;
+    --color-primary-900: #173f12;
+    --color-primary-950: #143410;
 }
 
 @layer base {

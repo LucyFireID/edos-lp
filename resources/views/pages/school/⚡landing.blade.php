@@ -50,7 +50,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     'icon' => 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
                     'title' => 'Ilmu Pengetahuan Alam',
                     'desc' => 'Pembelajaran berbasis eksperimen dengan laboratorium modern untuk Fisika, Kimia, dan Biologi.',
-                    'color' => 'from-sky-500 to-blue-600',
+                    'color' => 'from-primary-500 to-primary-600',
                 ],
                 [
                     'icon' => 'M9 7h6m-6 4h6m-6 4h3M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z',
@@ -109,20 +109,20 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 </span>
                 <span class="flex flex-col leading-tight">
                     <span class="text-xl font-bold tracking-tight sm:text-2xl" :class="scrolled ? 'text-slate-900' : 'text-white'">Qosim Al Hadi</span>
-                    <span class="text-sm tracking-wide" :class="scrolled ? 'text-slate-500' : 'text-sky-100'">Bhakti Kepada Negeri</span>
+                    <span class="text-sm tracking-wide" :class="scrolled ? 'text-slate-500' : 'text-primary-100'">Bhakti Kepada Negeri</span>
                 </span>
             </a>
 
             <ul class="hidden items-center gap-9 lg:flex">
                 @foreach (['home' => 'Beranda', 'about' => 'Tentang', 'programs' => 'Program', 'facilities' => 'Fasilitas', 'news' => 'Berita', 'contact' => 'Kontak'] as $id => $label)
                     <li>
-                        <a href="#{{ $id }}" class="text-base font-medium transition hover:text-sky-500" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
+                        <a href="#{{ $id }}" class="text-base font-medium transition hover:text-primary-500" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
                             {{ $label }}
                         </a>
                     </li>
                 @endforeach
                 <li>
-                    <a href="#contact" class="rounded-full bg-gradient-to-r from-sky-500 to-blue-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:scale-105">
+                    <a href="#contact" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:scale-105">
                         Daftar Sekarang
                     </a>
                 </li>
@@ -138,7 +138,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             <ul class="mx-4 mb-4 space-y-1 rounded-2xl bg-white p-4 shadow-2xl">
                 @foreach (['home' => 'Beranda', 'about' => 'Tentang', 'programs' => 'Program', 'facilities' => 'Fasilitas', 'news' => 'Berita', 'contact' => 'Kontak'] as $id => $label)
                     <li>
-                        <a href="#{{ $id }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-600">
+                        <a href="#{{ $id }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
                             {{ $label }}
                         </a>
                     </li>
@@ -166,19 +166,19 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
         <div class="relative mx-auto w-full max-w-7xl px-6 pt-36 pb-28">
             <div class="max-w-3xl">
-                <span class="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-sky-300">
-                    <span class="h-2 w-2 animate-pulse rounded-full bg-sky-400"></span>
+                <span class="inline-flex items-center gap-2 rounded-full border border-primary-400/30 bg-primary-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-300">
+                    <span class="h-2 w-2 animate-pulse rounded-full bg-primary-400"></span>
                     Penerimaan Siswa Baru 2027/2028
                 </span>
                 <h1 class="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                     Membentuk Generasi
-                    <span class="bg-gradient-to-r from-sky-400 to-blue-300 bg-clip-text text-transparent">Cerdas &amp; Berkarakter</span>
+                    <span class="bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-transparent">Cerdas &amp; Berkarakter</span>
                 </h1>
                 <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-200">
                     Sekolah Qosim Al Hadi menghadirkan pendidikan berkualitas dengan kurikulum modern, tenaga pengajar berpengalaman, dan lingkungan belajar yang inspiratif.
                 </p>
                 <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="#contact" class="rounded-full bg-gradient-to-r from-sky-500 to-blue-600 px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-sky-500/30 transition hover:scale-105">
+                    <a href="#contact" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-primary-500/30 transition hover:scale-105">
                         Daftar Sekarang
                     </a>
                     <a href="#programs" class="rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">
@@ -214,9 +214,9 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-6">
                     <img src="{{ asset('images/mi.png') }}" alt="Akademik" class="absolute inset-0 h-full w-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                    <div class="absolute top-1/2 bottom-0 left-0 z-0 w-full -translate-x-full bg-sky-500/95 transition-transform duration-500 ease-out group-hover:translate-x-0"></div>
+                    <div class="absolute top-1/2 bottom-0 left-0 z-0 w-full -translate-x-full bg-primary-500/95 transition-transform duration-500 ease-out group-hover:translate-x-0"></div>
                     <div class="relative z-10 flex h-full flex-col items-start justify-end p-6">
-                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur transition-colors duration-500 group-hover:bg-sky-100 group-hover:text-sky-700">Akademik</span>
+                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur transition-colors duration-500 group-hover:bg-primary-100 group-hover:text-primary-700">Akademik</span>
                         <h3 class="mt-3 text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Kurikulum Berkualitas</h3>
                         <p class="mt-2 max-w-md text-sm leading-relaxed text-slate-200 transition-colors duration-500 group-hover:text-slate-100">Pembelajaran berbasis riset dan proyek nyata untuk mengasah kemampuan berpikir kritis.</p>
                     </div>
@@ -259,11 +259,11 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     <section id="about" class="bg-white py-24">
         <div class="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
             <div class="relative">
-                <div class="aspect-4/3 overflow-hidden rounded-3xl bg-gradient-to-br from-sky-500 to-blue-700 p-1">
+                <div class="aspect-4/3 overflow-hidden rounded-3xl bg-gradient-to-br from-primary-500 to-primary-700 p-1">
                     <div class="flex h-full w-full items-center justify-center rounded-[1.35rem] bg-slate-900">
                         <div class="text-center">
                             <p class="text-6xl font-extrabold tracking-tighter text-white">46</p>
-                            <p class="mt-2 text-sm uppercase tracking-widest text-sky-300">Tahun Pengabdian</p>
+                            <p class="mt-2 text-sm uppercase tracking-widest text-primary-300">Tahun Pengabdian</p>
                         </div>
                     </div>
                 </div>
@@ -274,7 +274,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </div>
 
             <div>
-                <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Tentang Kami</span>
+                <span class="text-sm font-semibold uppercase tracking-widest text-primary-600">Tentang Kami</span>
                 <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">
                     Sekolah yang Menumbuhkan Potensi Setiap Anak
                 </h2>
@@ -289,7 +289,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         'Kemitraan dengan universitas dan industri terkemuka',
                     ] as $point)
                         <div class="flex items-start gap-3">
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600">
+                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600">
                                 <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             </span>
                             <p class="text-slate-700">{{ $point }}</p>
@@ -304,7 +304,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     <section id="programs" class="bg-slate-50 py-24">
         <div class="mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-2xl text-center">
-                <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Program Studi</span>
+                <span class="text-sm font-semibold uppercase tracking-widest text-primary-600">Program Studi</span>
                 <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Pilihan Program Unggulan</h2>
                 <p class="mt-4 text-slate-600">Dirancang untuk membekali siswa dengan kompetensi abad ke-21 dan kesiapan menghadapi dunia global.</p>
             </div>
@@ -319,7 +319,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         </span>
                             <h3 class="mt-6 text-lg font-semibold text-slate-900">{{ $program['title'] }}</h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600">{{ $program['desc'] }}</p>
-                        <a href="#contact" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-sky-600 transition group-hover:gap-3">
+                        <a href="#contact" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary-600 transition group-hover:gap-3">
                             Selengkapnya
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
@@ -333,14 +333,14 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     <section id="facilities" class="bg-white py-24">
         <div class="mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-2xl text-center">
-                <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Sarana &amp; Prasarana</span>
+                <span class="text-sm font-semibold uppercase tracking-widest text-primary-600">Sarana &amp; Prasarana</span>
                 <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Fasilitas Penunjang Belajar</h2>
             </div>
 
             <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ($facilities as $facility)
-                    <div class="flex items-center gap-5 rounded-2xl border border-slate-100 bg-slate-50 p-6 transition hover:border-sky-200 hover:bg-sky-50">
-                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-sky-600 shadow-sm">
+                    <div class="flex items-center gap-5 rounded-2xl border border-slate-100 bg-slate-50 p-6 transition hover:border-primary-200 hover:bg-primary-50">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-primary-600 shadow-sm">
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="{{ $facility['icon'] }}"/>
                             </svg>
@@ -353,11 +353,11 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     </section>
 
     {{-- Testimonials --}}
-    <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-24">
-        <div class="absolute -right-24 top-0 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl"></div>
+    <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-primary-950 to-slate-900 py-24">
+        <div class="absolute -right-24 top-0 h-80 w-80 rounded-full bg-primary-500/10 blur-3xl"></div>
         <div class="relative mx-auto max-w-4xl px-6" x-data="{ active: 0, total: {{ count($testimonials) }} }">
             <div class="text-center">
-                <span class="text-sm font-semibold uppercase tracking-widest text-sky-400">Testimoni</span>
+                <span class="text-sm font-semibold uppercase tracking-widest text-primary-400">Testimoni</span>
                 <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">Apa Kata Mereka</h2>
             </div>
 
@@ -367,7 +367,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         <p class="text-xl leading-relaxed text-slate-200 sm:text-2xl">&ldquo;{{ $testimonial['quote'] }}&rdquo;</p>
                         <footer class="mt-8">
                             <p class="font-semibold text-white">{{ $testimonial['name'] }}</p>
-                            <p class="text-sm text-sky-300">{{ $testimonial['role'] }}</p>
+                            <p class="text-sm text-primary-300">{{ $testimonial['role'] }}</p>
                         </footer>
                     </blockquote>
                 @endforeach
@@ -378,7 +378,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <button
                         @click="active = {{ $index }}"
                         class="h-2.5 rounded-full transition-all"
-                        :class="active === {{ $index }} ? 'w-8 bg-sky-400' : 'w-2.5 bg-white/30 hover:bg-white/50'"
+                        :class="active === {{ $index }} ? 'w-8 bg-primary-400' : 'w-2.5 bg-white/30 hover:bg-white/50'"
                         aria-label="Testimoni {{ $index + 1 }}"
                     ></button>
                 @endforeach
@@ -391,24 +391,24 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         <div class="mx-auto max-w-7xl px-6">
             <div class="flex flex-wrap items-end justify-between gap-6">
                 <div>
-                    <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Berita Terbaru</span>
+                    <span class="text-sm font-semibold uppercase tracking-widest text-primary-600">Berita Terbaru</span>
                     <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Kabar dari Sekolah</h2>
                 </div>
-                <a href="#" class="text-sm font-semibold text-sky-600 hover:text-sky-700">Lihat semua berita &rarr;</a>
+                <a href="#" class="text-sm font-semibold text-primary-600 hover:text-primary-700">Lihat semua berita &rarr;</a>
             </div>
 
             <div class="mt-14 grid gap-8 lg:grid-cols-3">
                 @foreach ($news as $item)
                     <article class="group overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-2 hover:shadow-2xl">
-                        <div class="h-48 bg-gradient-to-br from-sky-500 to-blue-700"></div>
+                        <div class="h-48 bg-gradient-to-br from-primary-500 to-primary-700"></div>
                         <div class="p-7">
                             <div class="flex items-center gap-3 text-xs">
-                                <span class="rounded-full bg-sky-100 px-3 py-1 font-semibold text-sky-700">{{ $item['category'] }}</span>
+                                <span class="rounded-full bg-primary-100 px-3 py-1 font-semibold text-primary-700">{{ $item['category'] }}</span>
                                 <span class="text-slate-500">{{ $item['date'] }}</span>
                             </div>
-                                <h3 class="mt-4 text-lg font-semibold text-slate-900 transition group-hover:text-sky-600">{{ $item['title'] }}</h3>
+                                <h3 class="mt-4 text-lg font-semibold text-slate-900 transition group-hover:text-primary-600">{{ $item['title'] }}</h3>
                             <p class="mt-3 text-sm leading-relaxed text-slate-600">{{ $item['excerpt'] }}</p>
-                            <a href="#" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sky-600">
+                            <a href="#" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary-600">
                                 Baca selengkapnya
                                 <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                             </a>
@@ -423,7 +423,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     <section id="contact" class="bg-white py-24">
         <div class="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
             <div>
-                <span class="text-sm font-semibold uppercase tracking-widest text-sky-600">Hubungi Kami</span>
+                <span class="text-sm font-semibold uppercase tracking-widest text-primary-600">Hubungi Kami</span>
                 <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Siap Bergabung Bersama Kami?</h2>
                 <p class="mt-6 leading-relaxed text-slate-600">
                     Kirimkan pertanyaan Anda mengenai penerimaan siswa baru, program, maupun kunjungan sekolah. Tim kami akan merespons dalam 1x24 jam.
@@ -437,7 +437,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         ['title' => 'Jam Operasional', 'value' => 'Senin - Jumat, 07.00 - 16.00 WIB', 'icon' => 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'],
                     ] as $contact)
                         <div class="flex items-start gap-4">
-                            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky-100 text-sky-600">
+                            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-600">
                                 <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="{{ $contact['icon'] }}"/>
                                 </svg>
@@ -472,7 +472,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                                 type="text"
                                 wire:model="name"
                                 placeholder="Masukkan nama lengkap"
-                                class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
+                                class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                             >
                             @error('name') <p class="mt-1.5 text-sm text-red-600">{{ $message }}</p> @enderror
                         </div>
@@ -485,7 +485,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                                     type="email"
                                     wire:model="email"
                                     placeholder="nama@email.com"
-                                    class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
+                                    class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                                 >
                                 @error('email') <p class="mt-1.5 text-sm text-red-600">{{ $message }}</p> @enderror
                             </div>
@@ -496,7 +496,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                                     type="text"
                                     wire:model="phone"
                                     placeholder="0812xxxxxxx"
-                                    class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
+                                    class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                                 >
                                 @error('phone') <p class="mt-1.5 text-sm text-red-600">{{ $message }}</p> @enderror
                             </div>
@@ -509,14 +509,14 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                                 rows="5"
                                 wire:model="message"
                                 placeholder="Tuliskan pertanyaan atau pesan Anda..."
-                                class="w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
+                                class="w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                             ></textarea>
                             @error('message') <p class="mt-1.5 text-sm text-red-600">{{ $message }}</p> @enderror
                         </div>
 
                         <button
                             type="submit"
-                            class="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:scale-[1.02] disabled:opacity-60"
+                            class="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:scale-[1.02] disabled:opacity-60"
                             wire:loading.attr="disabled"
                         >
                             <svg wire:loading wire:target="submit" class="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
@@ -549,7 +549,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Tautan Cepat</h3>
                     <ul class="mt-5 space-y-3 text-sm">
                         @foreach (['about' => 'Tentang Kami', 'programs' => 'Program', 'facilities' => 'Fasilitas', 'news' => 'Berita'] as $id => $label)
-                            <li><a href="#{{ $id }}" class="transition hover:text-sky-400">{{ $label }}</a></li>
+                            <li><a href="#{{ $id }}" class="transition hover:text-primary-400">{{ $label }}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -563,7 +563,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     </ul>
                     <div class="mt-6 flex gap-3">
                         @foreach (['M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z', 'M23 12a11 11 0 11-13-10.9v7.5h-2.2V12h2.2V9.6c0-2.2 1.3-3.4 3.3-3.4.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 3.3h-2V23A11 11 0 0023 12z', 'M12 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 4.3 2.8 8 6.7 9.3.5.1.7-.2.7-.5v-1.7c-2.7.6-3.3-1.3-3.3-1.3-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.3-1.1.6-1.4-2.2-.2-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.7-4.5 4.9.3.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5 3.9-1.3 6.7-5 6.7-9.3 0-5.4-4.4-9.8-9.8-9.8z'] as $icon)
-                            <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-slate-300 transition hover:bg-sky-500 hover:text-white">
+                            <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-slate-300 transition hover:bg-primary-500 hover:text-white">
                                 <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="{{ $icon }}"/></svg>
                             </a>
                         @endforeach
@@ -574,8 +574,8 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm sm:flex-row">
                 <p>&copy; {{ date('Y') }} Qosim Al Hadi. Seluruh hak cipta dilindungi.</p>
                 <div class="flex gap-6">
-                    <a href="#" class="transition hover:text-sky-400">Kebijakan Privasi</a>
-                    <a href="#" class="transition hover:text-sky-400">Syarat &amp; Ketentuan</a>
+                    <a href="#" class="transition hover:text-primary-400">Kebijakan Privasi</a>
+                    <a href="#" class="transition hover:text-primary-400">Syarat &amp; Ketentuan</a>
                 </div>
             </div>
         </div>
