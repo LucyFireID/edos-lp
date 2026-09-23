@@ -210,8 +210,8 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 </p>
             </div>
 
-            <div class="mt-16 grid gap-6 md:grid-cols-2">
-                <div class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl">
+            <div class="mt-16 grid grid-cols-1 gap-6 md:grid-cols-12">
+                <div class="group relative col-span-1 aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl md:col-span-6">
                     <div class="absolute inset-0 bg-gradient-to-br from-sky-500 to-blue-700 transition duration-500 group-hover:scale-105"></div>
                     <div class="relative flex h-full flex-col items-start justify-end p-8">
                         <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">Akademik</span>
@@ -219,7 +219,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         <p class="mt-2 max-w-md text-sm leading-relaxed text-sky-100">Pembelajaran berbasis riset dan proyek nyata untuk mengasah kemampuan berpikir kritis.</p>
                     </div>
                 </div>
-                <div class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl">
+                <div class="group relative col-span-1 aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl md:col-span-6">
                     <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-teal-700 transition duration-500 group-hover:scale-105"></div>
                     <div class="relative flex h-full flex-col items-start justify-end p-8">
                         <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">Karater</span>
@@ -227,7 +227,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         <p class="mt-2 max-w-md text-sm leading-relaxed text-emerald-100">Menanamkan nilai-nilai integritas, tanggung jawab, dan kepedulian sosial.</p>
                     </div>
                 </div>
-                <div class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl">
+                <div class="group relative col-span-1 aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl md:col-span-6">
                     <div class="absolute inset-0 bg-gradient-to-br from-violet-500 to-purple-700 transition duration-500 group-hover:scale-105"></div>
                     <div class="relative flex h-full flex-col items-start justify-end p-8">
                         <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">Global</span>
@@ -235,7 +235,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         <p class="mt-2 max-w-md text-sm leading-relaxed text-violet-100">Program bilingual dan pertukaran pelajar yang memperluas cakrawala dunia.</p>
                     </div>
                 </div>
-                <div class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl">
+                <div class="group relative col-span-1 aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl md:col-span-6">
                     <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-700 transition duration-500 group-hover:scale-105"></div>
                     <div class="relative flex h-full flex-col items-start justify-end p-8">
                         <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">Kreativitas</span>
