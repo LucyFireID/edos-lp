@@ -211,36 +211,36 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </div>
 
             <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-12">
-                <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl md:col-span-6">
-                    <div class="absolute inset-0 bg-gradient-to-br from-sky-500 to-blue-700 transition duration-500 group-hover:scale-105"></div>
-                    <div class="relative flex h-full flex-col items-start justify-end p-5">
-                        <span class="rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">Akademik</span>
-                        <h3 class="mt-2 text-lg font-bold text-white">Kurikulum Berkualitas</h3>
-                        <p class="mt-1 max-w-[16rem] text-xs leading-relaxed text-sky-100">Pembelajaran berbasis riset dan proyek nyata untuk mengasah kemampuan berpikir kritis.</p>
+                <div class="relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-6">
+                    <div class="absolute inset-0 bg-gradient-to-br from-sky-500 to-blue-700"></div>
+                    <div class="relative flex h-full flex-col items-start justify-end p-6">
+                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">Akademik</span>
+                        <h3 class="mt-3 text-2xl font-bold text-white">Kurikulum Berkualitas</h3>
+                        <p class="mt-2 max-w-md text-sm leading-relaxed text-sky-100">Pembelajaran berbasis riset dan proyek nyata untuk mengasah kemampuan berpikir kritis.</p>
                     </div>
                 </div>
-                <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl md:col-span-6">
-                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-teal-700 transition duration-500 group-hover:scale-105"></div>
-                    <div class="relative flex h-full flex-col items-start justify-end p-5">
-                        <span class="rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">Karater</span>
-                        <h3 class="mt-2 text-lg font-bold text-white">Pembentukan Karakter</h3>
-                        <p class="mt-1 max-w-[16rem] text-xs leading-relaxed text-emerald-100">Menanamkan nilai-nilai integritas, tanggung jawab, dan kepedulian sosial.</p>
+                <div class="relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-6">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-teal-700"></div>
+                    <div class="relative flex h-full flex-col items-start justify-end p-6">
+                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">Karater</span>
+                        <h3 class="mt-3 text-2xl font-bold text-white">Pembentukan Karakter</h3>
+                        <p class="mt-2 max-w-md text-sm leading-relaxed text-emerald-100">Menanamkan nilai-nilai integritas, tanggung jawab, dan kepedulian sosial.</p>
                     </div>
                 </div>
-                <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl md:col-span-8">
-                    <div class="absolute inset-0 bg-gradient-to-br from-violet-500 to-purple-700 transition duration-500 group-hover:scale-105"></div>
-                    <div class="relative flex h-full flex-col items-start justify-end p-5">
-                        <span class="rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">Global</span>
-                        <h3 class="mt-2 text-lg font-bold text-white">Wawasan Internasional</h3>
-                        <p class="mt-1 max-w-[16rem] text-xs leading-relaxed text-violet-100">Program bilingual dan pertukaran pelajar yang memperluas cakrawala dunia.</p>
+                <div class="relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-8">
+                    <div class="absolute inset-0 bg-gradient-to-br from-violet-500 to-purple-700"></div>
+                    <div class="relative flex h-full flex-col items-start justify-end p-6">
+                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">Global</span>
+                        <h3 class="mt-3 text-2xl font-bold text-white">Wawasan Internasional</h3>
+                        <p class="mt-2 max-w-md text-sm leading-relaxed text-violet-100">Program bilingual dan pertukaran pelajar yang memperluas cakrawala dunia.</p>
                     </div>
                 </div>
-                <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl md:col-span-4">
-                    <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-700 transition duration-500 group-hover:scale-105"></div>
-                    <div class="relative flex h-full flex-col items-start justify-end p-5">
-                        <span class="rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">Kreativitas</span>
-                        <h3 class="mt-2 text-lg font-bold text-white">Inovasi &amp; Kreativitas</h3>
-                        <p class="mt-1 max-w-[16rem] text-xs leading-relaxed text-amber-100">Ruang eksplorasi seni, teknologi, dan entrepreneurship sejak usia dini.</p>
+                <div class="relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-4">
+                    <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-700"></div>
+                    <div class="relative flex h-full flex-col items-start justify-end p-6">
+                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">Kreativitas</span>
+                        <h3 class="mt-3 text-2xl font-bold text-white">Inovasi &amp; Kreativitas</h3>
+                        <p class="mt-2 max-w-md text-sm leading-relaxed text-amber-100">Ruang eksplorasi seni, teknologi, dan entrepreneurship sejak usia dini.</p>
                     </div>
                 </div>
             </div>
