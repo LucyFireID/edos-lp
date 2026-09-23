@@ -211,7 +211,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </div>
 
             <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-12">
-                <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-6">
+                <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-5">
                     <img src="{{ asset('images/mi.png') }}" alt="Madrasah Ibtidaiyah" class="absolute inset-0 h-full w-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     <div class="absolute top-1/2 bottom-0 left-0 z-0 w-full -translate-x-full bg-primary-500/95 transition-transform duration-500 ease-out group-hover:translate-x-0"></div>
@@ -221,7 +221,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         <p class="mt-2 max-w-md text-sm leading-relaxed text-slate-200 transition-colors duration-500 group-hover:text-slate-100">Menanamkan dasar ilmu pengetahuan, nilai keislaman, dan karakter positif melalui pembelajaran yang menyenangkan dan sesuai dengan perkembangan anak.</p>
                     </div>
                 </div>
-                <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-6">
+                <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-7">
                     <img src="{{ asset('images/mts.png') }}" alt="Madrasah Tsanawiyah" class="absolute inset-0 h-full w-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     <div class="absolute top-1/2 bottom-0 left-0 z-0 w-full -translate-x-full bg-primary-500/95 transition-transform duration-500 ease-out group-hover:translate-x-0"></div>
