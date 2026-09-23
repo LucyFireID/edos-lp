@@ -114,7 +114,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </a>
 
             <ul class="hidden items-center gap-9 lg:flex">
-                @foreach (['home' => 'Beranda', 'about' => 'Tentang', 'programs' => 'Program', 'facilities' => 'Fasilitas', 'news' => 'Berita', 'contact' => 'Kontak'] as $id => $label)
+                @foreach (['home' => 'Beranda', 'news' => 'Berita', 'contact' => 'Kontak'] as $id => $label)
                     <li>
                         <a href="#{{ $id }}" class="text-base font-medium transition hover:text-primary-500" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
                             {{ $label }}
@@ -136,7 +136,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
         <div x-show="open" x-cloak x-transition.opacity class="lg:hidden">
             <ul class="mx-4 mb-4 space-y-1 rounded-2xl bg-white p-4 shadow-2xl">
-                @foreach (['home' => 'Beranda', 'about' => 'Tentang', 'programs' => 'Program', 'facilities' => 'Fasilitas', 'news' => 'Berita', 'contact' => 'Kontak'] as $id => $label)
+                @foreach (['home' => 'Beranda', 'news' => 'Berita', 'contact' => 'Kontak'] as $id => $label)
                     <li>
                         <a href="#{{ $id }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
                             {{ $label }}
@@ -251,137 +251,6 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         <p class="mt-2 max-w-md text-sm leading-relaxed text-slate-200 transition-colors duration-500 group-hover:text-slate-100">Membangun pribadi yang berpegang teguh pada nilai-nilai keislaman, berakhlak mulia, mandiri, disiplin, dan siap menghadapi tantangan kehidupan.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- About --}}
-    <section id="about" class="bg-white py-24">
-        <div class="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
-            <div class="relative">
-                <div class="aspect-4/3 overflow-hidden rounded-3xl bg-gradient-to-br from-primary-500 to-primary-700 p-1">
-                    <div class="flex h-full w-full items-center justify-center rounded-[1.35rem] bg-slate-900">
-                        <div class="text-center">
-                            <p class="text-6xl font-extrabold tracking-tighter text-white">46</p>
-                            <p class="mt-2 text-sm uppercase tracking-widest text-primary-300">Tahun Pengabdian</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute -bottom-8 -right-8 hidden rounded-2xl bg-white p-6 shadow-2xl sm:block">
-                    <p class="text-3xl font-bold text-slate-900">A</p>
-                    <p class="text-xs font-medium uppercase tracking-wider text-slate-500">Akreditasi Unggul</p>
-                </div>
-            </div>
-
-            <div>
-                <span class="text-sm font-semibold uppercase tracking-widest text-primary-600">Tentang Kami</span>
-                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">
-                    Sekolah yang Menumbuhkan Potensi Setiap Anak
-                </h2>
-                <p class="mt-6 leading-relaxed text-slate-600">
-                    Berdiri sejak 1978, Sekolah Qosim Al Hadi berkomitmen menyelenggarakan pendidikan holistik yang menyeimbangkan kecerdasan intelektual, emosional, dan spiritual. Kami percaya setiap siswa memiliki keunikan yang layak dikembangkan.
-                </p>
-                <div class="mt-8 space-y-4">
-                    @foreach ([
-                        'Kurikulum Merdeka yang adaptif dan berbasis proyek',
-                        'Rasio guru dan siswa ideal 1:15 untuk pendampingan optimal',
-                        'Program pembinaan karakter dan kepemimpinan siswa',
-                        'Kemitraan dengan universitas dan industri terkemuka',
-                    ] as $point)
-                        <div class="flex items-start gap-3">
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            </span>
-                            <p class="text-slate-700">{{ $point }}</p>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- Programs --}}
-    <section id="programs" class="bg-slate-50 py-24">
-        <div class="mx-auto max-w-7xl px-6">
-            <div class="mx-auto max-w-2xl text-center">
-                <span class="text-sm font-semibold uppercase tracking-widest text-primary-600">Program Studi</span>
-                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Pilihan Program Unggulan</h2>
-                <p class="mt-4 text-slate-600">Dirancang untuk membekali siswa dengan kompetensi abad ke-21 dan kesiapan menghadapi dunia global.</p>
-            </div>
-
-            <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                @foreach ($programs as $program)
-                    <div class="group rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-2 hover:shadow-2xl">
-                        <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br {{ $program['color'] }} text-white shadow-lg">
-                            <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="{{ $program['icon'] }}"/>
-                            </svg>
-                        </span>
-                            <h3 class="mt-6 text-lg font-semibold text-slate-900">{{ $program['title'] }}</h3>
-                        <p class="mt-3 text-sm leading-relaxed text-slate-600">{{ $program['desc'] }}</p>
-                        <a href="#contact" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary-600 transition group-hover:gap-3">
-                            Selengkapnya
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    {{-- Facilities --}}
-    <section id="facilities" class="bg-white py-24">
-        <div class="mx-auto max-w-7xl px-6">
-            <div class="mx-auto max-w-2xl text-center">
-                <span class="text-sm font-semibold uppercase tracking-widest text-primary-600">Sarana &amp; Prasarana</span>
-                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Fasilitas Penunjang Belajar</h2>
-            </div>
-
-            <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                @foreach ($facilities as $facility)
-                    <div class="flex items-center gap-5 rounded-2xl border border-slate-100 bg-slate-50 p-6 transition hover:border-primary-200 hover:bg-primary-50">
-                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-primary-600 shadow-sm">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="{{ $facility['icon'] }}"/>
-                            </svg>
-                        </span>
-                        <p class="font-semibold text-slate-800">{{ $facility['name'] }}</p>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    {{-- Testimonials --}}
-    <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-primary-950 to-slate-900 py-24">
-        <div class="absolute -right-24 top-0 h-80 w-80 rounded-full bg-primary-500/10 blur-3xl"></div>
-        <div class="relative mx-auto max-w-4xl px-6" x-data="{ active: 0, total: {{ count($testimonials) }} }">
-            <div class="text-center">
-                <span class="text-sm font-semibold uppercase tracking-widest text-primary-400">Testimoni</span>
-                <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">Apa Kata Mereka</h2>
-            </div>
-
-            <div class="mt-14">
-                @foreach ($testimonials as $index => $testimonial)
-                    <blockquote x-show="active === {{ $index }}" x-transition.opacity.duration.500ms class="text-center">
-                        <p class="text-xl leading-relaxed text-slate-200 sm:text-2xl">&ldquo;{{ $testimonial['quote'] }}&rdquo;</p>
-                        <footer class="mt-8">
-                            <p class="font-semibold text-white">{{ $testimonial['name'] }}</p>
-                            <p class="text-sm text-primary-300">{{ $testimonial['role'] }}</p>
-                        </footer>
-                    </blockquote>
-                @endforeach
-            </div>
-
-            <div class="mt-12 flex items-center justify-center gap-3">
-                @foreach ($testimonials as $index => $testimonial)
-                    <button
-                        @click="active = {{ $index }}"
-                        class="h-2.5 rounded-full transition-all"
-                        :class="active === {{ $index }} ? 'w-8 bg-primary-400' : 'w-2.5 bg-white/30 hover:bg-white/50'"
-                        aria-label="Testimoni {{ $index + 1 }}"
-                    ></button>
-                @endforeach
             </div>
         </div>
     </section>
@@ -548,7 +417,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 <div>
                     <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Tautan Cepat</h3>
                     <ul class="mt-5 space-y-3 text-sm">
-                        @foreach (['about' => 'Tentang Kami', 'programs' => 'Program', 'facilities' => 'Fasilitas', 'news' => 'Berita'] as $id => $label)
+                        @foreach (['news' => 'Berita'] as $id => $label)
                             <li><a href="#{{ $id }}" class="transition hover:text-primary-400">{{ $label }}</a></li>
                         @endforeach
                     </ul>
