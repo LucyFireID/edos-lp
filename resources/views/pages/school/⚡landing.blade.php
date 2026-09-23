@@ -268,8 +268,9 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             ['title' => 'Pengabdian Masyarakat', 'desc' => 'Melatih empati dan kontribusi nyata untuk lingkungan.'],
         ];
     @endphp
-    <section id="qurani" class="bg-slate-50 py-24">
-        <div class="mx-auto max-w-7xl px-6">
+    <section id="qurani" class="relative bg-slate-50 py-24">
+        <div class="pointer-events-none absolute inset-0 bg-[url('/images/batik-pattern.svg')] bg-[length:150px] opacity-[0.08]"></div>
+        <div class="relative mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
                     Menumbuhkan Generasi Qur'ani yang Unggul
