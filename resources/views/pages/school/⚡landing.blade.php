@@ -255,6 +255,46 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         </div>
     </section>
 
+    {{-- Quranic Generation --}}
+    @php
+        $features = [
+            ['title' => 'Tahfidz Qur\'an', 'desc' => 'Menghafal Al-Qur\'an dengan metode yang menyenangkan dan terstruktur.'],
+            ['title' => 'Bahasa Arab', 'desc' => 'Membekali kemampuan berbahasa Arab untuk memahami ajaran Islam.'],
+            ['title' => 'Pendidikan Karakter', 'desc' => 'Menanamkan akhlak mulia, integritas, dan kepribadian positif.'],
+            ['title' => 'STEM & Inovasi', 'desc' => 'Mengembangkan kemampuan sains, teknologi, dan pemecahan masalah.'],
+            ['title' => 'Kepemimpinan', 'desc' => 'Membangun jiwa kepemimpinan, tanggung jawab, dan kerja sama.'],
+            ['title' => 'Seni & Kreativitas', 'desc' => 'Menyalurkan bakat melalui seni, musik, dan kreativitas.'],
+            ['title' => 'Olahraga & Kesehatan', 'desc' => 'Membiasakan gaya hidup sehat, aktif, dan sportif.'],
+            ['title' => 'Pengabdian Masyarakat', 'desc' => 'Melatih empati dan kontribusi nyata untuk lingkungan.'],
+        ];
+    @endphp
+    <section id="qurani" class="bg-slate-50 py-24">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="mx-auto max-w-3xl text-center">
+                <h2 class="text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                    Menumbuhkan Generasi Qur'ani yang Unggul
+                </h2>
+                <p class="mt-4 text-base leading-relaxed text-slate-600 lg:text-lg">
+                    Mengintegrasikan pendidikan umum dan keislaman untuk membentuk generasi yang berilmu, berakhlak mulia, mandiri, dan siap memberikan manfaat bagi masyarakat.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                @foreach ($features as $feature)
+                    <div class="group aspect-square rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-2 hover:shadow-xl">
+                        <div class="flex h-full flex-col items-center justify-center text-center">
+                            <span class="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-lg transition group-hover:scale-110">
+                                <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </span>
+                            <h3 class="text-lg font-semibold text-slate-900">{{ $feature['title'] }}</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-slate-600">{{ $feature['desc'] }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
     {{-- News --}}
     <section id="news" class="bg-slate-50 py-24">
         <div class="mx-auto max-w-7xl px-6">
