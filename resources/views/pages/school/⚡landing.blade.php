@@ -315,8 +315,8 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     $logos = array_merge($logos, $logos, $logos, $logos);
                 @endphp
                 @foreach ($logos as $logo)
-                    <div class="flex w-64 flex-shrink-0 items-center justify-center px-8">
-                        <img src="{{ asset('images/' . $logo) }}" alt="Logo" class="h-24 w-auto object-contain">
+                    <div class="flex w-80 flex-shrink-0 items-center justify-center px-8">
+                        <img src="{{ asset('images/' . $logo) }}" alt="Logo" class="h-32 w-auto object-contain">
                     </div>
                 @endforeach
             </div>
