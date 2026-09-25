@@ -218,7 +218,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <div class="relative z-10 flex h-full flex-col items-start justify-end p-6">
                         <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur transition-colors duration-500 group-hover:bg-primary-100 group-hover:text-primary-700">Madrasah Ibtidaiyah (MI)</span>
                         <h3 class="mt-3 text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Membangun Fondasi Ilmu dan Karakter</h3>
-                        <p class="mt-2 max-w-md text-sm leading-relaxed text-slate-200 transition-colors duration-500 group-hover:text-slate-100">Menanamkan dasar ilmu pengetahuan, nilai keislaman, dan karakter positif melalui pembelajaran yang menyenangkan dan sesuai dengan perkembangan anak.</p>
+                        <p class="mt-0 max-w-md overflow-hidden text-sm leading-relaxed text-slate-100 transition-all duration-500 ease-out [max-height:0] opacity-0 group-hover:mt-2 group-hover:[max-height:10rem] group-hover:opacity-100">Menanamkan dasar ilmu pengetahuan, nilai keislaman, dan karakter positif melalui pembelajaran yang menyenangkan dan sesuai dengan perkembangan anak.</p>
                     </div>
                 </div>
                 <div class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100 md:col-span-6">
