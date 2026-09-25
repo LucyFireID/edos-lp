@@ -312,10 +312,11 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             <div class="animate-marquee flex w-max">
                 @php
                     $logos = ['logo-ui.png', 'logo-ugm.png', 'logo-itb.png', 'logo-unair.png', 'logo-ipb.png'];
+                    $logos = array_merge($logos, $logos, $logos, $logos);
                 @endphp
-                @foreach (array_merge($logos, $logos) as $logo)
-                    <div class="flex w-40 flex-shrink-0 items-center justify-center px-8">
-                        <img src="{{ asset('images/' . $logo) }}" alt="Logo" class="h-12 w-auto object-contain">
+                @foreach ($logos as $logo)
+                    <div class="flex w-64 flex-shrink-0 items-center justify-center px-8">
+                        <img src="{{ asset('images/' . $logo) }}" alt="Logo" class="h-24 w-auto object-contain">
                     </div>
                 @endforeach
             </div>
