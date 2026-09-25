@@ -290,6 +290,24 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         </div>
     </section>
 
+    {{-- University Spread --}}
+    <section id="universities" class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="grid items-start gap-12 lg:grid-cols-2">
+                <div>
+                    <h2 class="text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                        Sebaran Universitas
+                    </h2>
+                </div>
+                <div>
+                    <p class="text-base leading-relaxed text-slate-600 lg:text-lg">
+                        Mempersiapkan lulusan untuk melanjutkan pendidikan ke perguruan tinggi pilihan mereka. Temukan bagaimana kami membantu setiap siswa meraih potensi dan cita-citanya.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- News --}}
     <section id="news" class="bg-slate-50 py-24">
         <div class="mx-auto max-w-7xl px-6">
