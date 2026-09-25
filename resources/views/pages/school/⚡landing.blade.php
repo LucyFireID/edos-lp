@@ -291,8 +291,9 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     </section>
 
     {{-- University Spread --}}
-    <section id="universities" class="bg-white py-24">
-        <div class="mx-auto max-w-7xl px-6">
+    <section id="universities" class="relative bg-white py-24">
+        <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('{{ asset('images/batik2.png') }}')"></div>
+        <div class="relative z-10 mx-auto max-w-7xl px-6">
             <div class="grid items-start gap-12 lg:grid-cols-2">
                 <div>
                     <h2 class="text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
