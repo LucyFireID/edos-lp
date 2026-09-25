@@ -282,7 +282,9 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
             <div class="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 @foreach ($features as $feature)
-                    <div class="aspect-[10/11] rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 {{ $loop->iteration % 2 === 0 ? 'md:translate-y-[30%]' : '' }}"></div>
+                    <div class="aspect-[10/11] rounded-2xl {{ $loop->iteration === 1 ? 'bg-cover bg-center' : 'bg-white' }} shadow-sm ring-1 ring-slate-100 {{ $loop->iteration % 2 === 0 ? 'md:translate-y-[30%]' : '' }}"
+                        @if ($loop->iteration === 1) style="background-image: url('{{ asset('images/card1.png') }}')" @endif
+                    ></div>
                 @endforeach
             </div>
         </div>
