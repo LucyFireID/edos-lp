@@ -307,6 +307,19 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 </div>
             </div>
         </div>
+
+        <div class="relative z-10 mt-16 w-full overflow-hidden">
+            <div class="animate-marquee flex w-max">
+                @php
+                    $logos = ['logo-ui.png', 'logo-ugm.png', 'logo-itb.png', 'logo-unair.png', 'logo-ipb.png'];
+                @endphp
+                @foreach (array_merge($logos, $logos) as $logo)
+                    <div class="flex w-40 flex-shrink-0 items-center justify-center px-8">
+                        <img src="{{ asset('images/' . $logo) }}" alt="Logo" class="h-12 w-auto object-contain">
+                    </div>
+                @endforeach
+            </div>
+        </div>
     </section>
 
     {{-- News --}}
