@@ -199,7 +199,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     </section>
 
     {{-- Built to Nurture --}}
-    <section id="nurture" class="relative bg-white py-16 lg:py-20">
+    <section id="nurture" class="relative bg-white py-24">
         <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('{{ asset('images/batik.png') }}')"></div>
         <div class="relative z-10 mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-3xl text-center">
@@ -269,7 +269,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             ['title' => 'Pengabdian Masyarakat', 'desc' => 'Melatih empati dan kontribusi nyata untuk lingkungan.'],
         ];
     @endphp
-    <section id="qurani" class="bg-slate-50 py-24 md:pb-40">
+    <section id="qurani" class="bg-slate-50 py-24">
         <div class="mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
