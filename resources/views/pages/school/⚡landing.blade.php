@@ -282,18 +282,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
             <div class="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 @foreach ($features as $feature)
-                    <div class="relative aspect-[10/11] rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 {{ $loop->iteration % 2 === 0 ? 'md:translate-y-[30%]' : '' }}">
-                        @if ($loop->iteration <= 3)
-                            <div class="absolute inset-0 flex items-end justify-start p-6">
-                                <span class="text-2xl font-bold text-slate-900">
-                                    @if ($loop->iteration === 1) 480+ Siswa Aktif
-                                    @elseif ($loop->iteration === 2) 27+ Guru Aktif
-                                    @elseif ($loop->iteration === 3) 1024+ Alumni
-                                    @endif
-                                </span>
-                            </div>
-                        @endif
-                    </div>
+                    <div class="aspect-[10/11] rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 {{ $loop->iteration % 2 === 0 ? 'md:translate-y-[30%]' : '' }}"></div>
                 @endforeach
             </div>
         </div>
