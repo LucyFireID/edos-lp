@@ -329,9 +329,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     <div class="absolute top-[30%] bottom-0 left-0 z-0 w-full bg-primary-500/95 transition-transform duration-500 ease-out" :class="open ? 'translate-x-0' : '-translate-x-full'"></div>
                     <div class="relative z-10 flex h-full flex-col items-start justify-end p-6">
-                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur transition-colors duration-500 group-hover:bg-primary-100 group-hover:text-primary-700">Perguruan Tinggi Negeri</span>
-                        <h3 class="mt-3 text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Lolos PTN Favorit</h3>
-                        <p class="max-w-md overflow-hidden text-sm leading-relaxed text-slate-100 transition-all duration-500 ease-out" :class="open ? 'mt-2 max-h-40 opacity-100' : 'mt-0 max-h-0 opacity-0'">Persiapan intensif UTBK dan ujian mandiri agar siswa diterima di universitas negeri pilihan.</p>
+                        <h3 class="text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Lolos PTN Favorit</h3>
                     </div>
                 </div>
                 <div x-data="{ open: false, isTouch: 'ontouchstart' in window }" @mouseenter="if (!isTouch) open = true" @mouseleave="if (!isTouch) open = false" @click="if (isTouch) open = !open" class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100">
@@ -339,9 +337,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     <div class="absolute top-[30%] bottom-0 left-0 z-0 w-full bg-primary-500/95 transition-transform duration-500 ease-out" :class="open ? 'translate-x-0' : '-translate-x-full'"></div>
                     <div class="relative z-10 flex h-full flex-col items-start justify-end p-6">
-                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur transition-colors duration-500 group-hover:bg-primary-100 group-hover:text-primary-700">Perguruan Tinggi Islam</span>
-                        <h3 class="mt-3 text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Jalur PTKIN Unggulan</h3>
-                        <p class="max-w-md overflow-hidden text-sm leading-relaxed text-slate-100 transition-all duration-500 ease-out" :class="open ? 'mt-2 max-h-40 opacity-100' : 'mt-0 max-h-0 opacity-0'">Bimbingan khusus menuju UIN, IAIN, dan STAIN dengan bekal ilmu keislaman yang kuat.</p>
+                        <h3 class="text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Jalur PTKIN Unggulan</h3>
                     </div>
                 </div>
                 <div x-data="{ open: false, isTouch: 'ontouchstart' in window }" @mouseenter="if (!isTouch) open = true" @mouseleave="if (!isTouch) open = false" @click="if (isTouch) open = !open" class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100">
@@ -349,9 +345,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     <div class="absolute top-[30%] bottom-0 left-0 z-0 w-full bg-primary-500/95 transition-transform duration-500 ease-out" :class="open ? 'translate-x-0' : '-translate-x-full'"></div>
                     <div class="relative z-10 flex h-full flex-col items-start justify-end p-6">
-                        <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur transition-colors duration-500 group-hover:bg-primary-100 group-hover:text-primary-700">Kedinasan & Swasta</span>
-                        <h3 class="mt-3 text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Peluang Beragam</h3>
-                        <p class="max-w-md overflow-hidden text-sm leading-relaxed text-slate-100 transition-all duration-500 ease-out" :class="open ? 'mt-2 max-h-40 opacity-100' : 'mt-0 max-h-0 opacity-0'">Dukungan karier ke akademi kedinasan, sekolah tinggi terbuka, hingga kampus swasta terbaik.</p>
+                        <h3 class="text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Peluang Beragam</h3>
                     </div>
                 </div>
             </div>
