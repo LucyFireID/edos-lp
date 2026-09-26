@@ -365,14 +365,14 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
             <div class="mt-14 grid gap-8 lg:grid-cols-3">
                 @foreach ($news as $item)
-                    <article class="group overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-2 hover:shadow-2xl">
+                    <article class="group overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-100 transition">
                         <div class="h-48 bg-gradient-to-br from-primary-500 to-primary-700"></div>
                         <div class="p-7">
                             <div class="flex items-center gap-3 text-xs">
                                 <span class="rounded-full bg-primary-100 px-3 py-1 font-semibold text-primary-700">{{ $item['category'] }}</span>
                                 <span class="text-slate-500">{{ $item['date'] }}</span>
                             </div>
-                                <h3 class="mt-4 text-lg font-semibold text-slate-900 transition group-hover:text-primary-600">{{ $item['title'] }}</h3>
+                                <h3 class="mt-4 text-lg font-semibold text-slate-900 transition">{{ $item['title'] }}</h3>
                             <p class="mt-3 text-sm leading-relaxed text-slate-600">{{ $item['excerpt'] }}</p>
                             <a href="#" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary-600">
                                 Baca selengkapnya
