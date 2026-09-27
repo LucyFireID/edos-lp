@@ -5,14 +5,7 @@ use Livewire\Component;
 
 new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Component
 {
-    public ?string $section = null;
-
     public string $name = '';
-
-    public function mount(?string $section = null): void
-    {
-        $this->section = $section;
-    }
 
     public string $email = '';
 
@@ -101,17 +94,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 };
 ?>
 
-<div
-    class="scroll-smooth"
-    x-init="
-        @if ($section)
-            const el = document.getElementById(@js($section));
-            if (el) {
-                setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
-            }
-        @endif
-    "
->
+<div class="scroll-smooth">
     {{-- Navigation --}}
     <header
         x-data="{ open: false, scrolled: false }"
@@ -120,7 +103,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         :class="scrolled ? 'bg-white/90 shadow-lg backdrop-blur-md' : 'bg-transparent'"
     >
         <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-            <a href="{{ route('home') }}" class="flex items-center gap-4">
+            <a href="#home" @click.prevent="scrollToSection('home')" class="flex items-center gap-4">
                 <span class="flex h-14 w-14 shrink-0 items-center justify-center">
                     <img src="{{ asset('images/logo-qosimalhadi-128.png') }}" alt="Logo Qosim Al Hadi" class="h-full w-full object-contain drop-shadow-lg">
                 </span>
@@ -131,15 +114,15 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </a>
 
             <ul class="hidden items-center gap-9 lg:flex">
-                @foreach (['home' => 'Beranda', 'program' => 'Program', 'facilities' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $routeName => $label)
+                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
                     <li>
-                        <a href="{{ route($routeName) }}" class="text-base font-medium transition hover:text-primary-500" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
+                        <a href="#{{ $id }}" @click.prevent="scrollToSection('{{ $id }}')" class="text-base font-medium transition hover:text-primary-500" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
                             {{ $label }}
                         </a>
                     </li>
                 @endforeach
                 <li>
-                    <a href="{{ route('home') }}" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:scale-105">
+                    <a href="#home" @click.prevent="scrollToSection('home')" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:scale-105">
                         SPMB 2027
                     </a>
                 </li>
@@ -153,9 +136,9 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
         <div x-show="open" x-cloak x-transition.opacity class="lg:hidden">
             <ul class="mx-4 mb-4 space-y-1 rounded-2xl bg-white p-4 shadow-2xl">
-                @foreach (['home' => 'Beranda', 'program' => 'Program', 'facilities' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $routeName => $label)
+                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
                     <li>
-                        <a href="{{ route($routeName) }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
+                        <a href="#{{ $id }}" @click.prevent="scrollToSection('{{ $id }}'); open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
                             {{ $label }}
                         </a>
                     </li>
@@ -163,6 +146,15 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </ul>
         </div>
     </header>
+
+    <script>
+        window.scrollToSection = function (id) {
+            const el = document.getElementById(id);
+            if (! el) return;
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, '', window.location.pathname);
+        };
+    </script>
 
     {{-- Hero --}}
     <section id="home" class="relative flex min-h-svh items-center overflow-hidden bg-slate-900">
@@ -195,10 +187,10 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     Sekolah Qosim Al Hadi menghadirkan pendidikan berkualitas dengan kurikulum modern, tenaga pengajar berpengalaman, dan lingkungan belajar yang inspiratif.
                 </p>
                 <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="{{ route('home') }}" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-primary-500/30 transition hover:scale-105">
+                    <a href="#home" @click.prevent="scrollToSection('home')" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-primary-500/30 transition hover:scale-105">
                         SPMB 2027
                     </a>
-                    <a href="{{ route('program') }}" class="rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">
+                    <a href="#nurture" @click.prevent="scrollToSection('nurture')" class="rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">
                         Lihat Program
                     </a>
                 </div>
@@ -423,8 +415,8 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 <div>
                     <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Tautan Cepat</h3>
                     <ul class="mt-5 space-y-3 text-sm">
-                        @foreach (['news' => 'Berita'] as $routeName => $label)
-                            <li><a href="{{ route($routeName) }}" class="transition hover:text-primary-400">{{ $label }}</a></li>
+                        @foreach (['news' => 'Berita'] as $id => $label)
+                            <li><a href="#{{ $id }}" @click.prevent="scrollToSection('{{ $id }}')" class="transition hover:text-primary-400">{{ $label }}</a></li>
                         @endforeach
                     </ul>
                 </div>
