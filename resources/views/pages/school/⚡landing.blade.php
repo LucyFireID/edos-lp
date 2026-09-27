@@ -439,7 +439,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 <div>
                     <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Tautan Cepat</h3>
                     <ul class="mt-5 space-y-3 text-sm">
-                        @foreach (['news' => 'Berita'] as $id => $label)
+                        @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
                             <li><a href="#{{ $id }}" @click.prevent="scrollToSection('{{ $id }}')" class="transition hover:text-primary-400">{{ $label }}</a></li>
                         @endforeach
                     </ul>
