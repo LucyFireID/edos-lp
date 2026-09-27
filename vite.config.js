@@ -11,6 +11,8 @@ export default defineConfig({
             fonts: [
                 bunny('Plus Jakarta Sans', {
                     weights: [400, 500, 600, 700, 800],
+                    preload: false,
+                    optimizedFallbacks: false,
                 }),
             ],
         }),
