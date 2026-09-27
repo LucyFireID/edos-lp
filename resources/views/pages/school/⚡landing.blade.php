@@ -151,7 +151,9 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         window.scrollToSection = function (id) {
             const el = document.getElementById(id);
             if (! el) return;
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const offset = 96;
+            const top = el.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
             history.replaceState(null, '', window.location.pathname);
         };
     </script>
