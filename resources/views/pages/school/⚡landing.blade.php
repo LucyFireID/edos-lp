@@ -114,7 +114,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </a>
 
             <ul class="hidden items-center gap-9 lg:flex">
-                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => "Qur'ani", 'universities' => 'Alumni', 'news' => 'Berita'] as $id => $label)
+                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
                     <li>
                         <a href="#{{ $id }}" class="text-base font-medium transition hover:text-primary-500" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
                             {{ $label }}
@@ -123,7 +123,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 @endforeach
                 <li>
                     <a href="#home" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:scale-105">
-                        Daftar Sekarang
+                        SPMB 2027
                     </a>
                 </li>
             </ul>
@@ -136,7 +136,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
         <div x-show="open" x-cloak x-transition.opacity class="lg:hidden">
             <ul class="mx-4 mb-4 space-y-1 rounded-2xl bg-white p-4 shadow-2xl">
-                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => "Qur'ani", 'universities' => 'Alumni', 'news' => 'Berita'] as $id => $label)
+                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
                     <li>
                         <a href="#{{ $id }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
                             {{ $label }}
