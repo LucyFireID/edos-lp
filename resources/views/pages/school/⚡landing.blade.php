@@ -448,7 +448,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 <div>
                     <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Kontak</h3>
                     <ul class="mt-5 space-y-3 text-sm">
-                        <li>Jl. Pendidikan No. 123, Jakarta</li>
+                        <li>Jl. Raya Kuripan, RT.2/RW.1, Kelurahan Wonolopo, Kecamatan Mijen, Kota Semarang, Jawa Tengah 50215</li>
                         <li>(021) 555-0123</li>
                         <li>info@qosimalhadi.sch.id</li>
                     </ul>
