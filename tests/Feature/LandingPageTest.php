@@ -13,7 +13,7 @@ class LandingPageTest extends TestCase
             ->assertOk()
             ->assertSee('Qosim Al Hadi')
             ->assertSee('Bhakti Kepada Negeri')
-            ->assertSee('Daftar Sekarang');
+            ->assertSee('SPMB 2027');
     }
 
     public function test_contact_form_validates_input(): void
