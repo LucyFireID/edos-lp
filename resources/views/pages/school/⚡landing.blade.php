@@ -151,9 +151,31 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
         window.scrollToSection = function (id) {
             const el = document.getElementById(id);
             if (! el) return;
+
             const offset = 96;
-            const top = el.getBoundingClientRect().top + window.scrollY - offset;
-            window.scrollTo({ top, behavior: 'smooth' });
+            const targetY = el.getBoundingClientRect().top + window.scrollY - offset;
+            const startY = window.scrollY;
+            const distance = targetY - startY;
+            const duration = 700;
+            let startTime = null;
+
+            function easeOutCubic(t) {
+                return 1 - Math.pow(1 - t, 3);
+            }
+
+            function step(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                window.scrollTo(0, startY + distance * easeOutCubic(progress));
+
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            }
+
+            requestAnimationFrame(step);
             history.replaceState(null, '', window.location.pathname);
         };
     </script>
