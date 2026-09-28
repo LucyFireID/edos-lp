@@ -40,10 +40,10 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     {
         return [
             'stats' => [
-                ['label' => 'Siswa Aktif', 'value' => '1.240', 'suffix' => '+'],
-                ['label' => 'Guru & Staf', 'value' => '86', 'suffix' => ''],
-                ['label' => 'Tahun Berdiri', 'value' => '1978', 'suffix' => ''],
-                ['label' => 'Alumni', 'value' => '12.500', 'suffix' => '+'],
+                ['label' => 'Siswa Aktif', 'value' => '480', 'suffix' => '+'],
+                ['label' => 'Guru & Staf', 'value' => '30', 'suffix' => '+'],
+                ['label' => 'Tahun Berdiri', 'value' => '2003', 'suffix' => ''],
+                ['label' => 'Alumni', 'value' => '1.664', 'suffix' => '+'],
             ],
             'programs' => [
                 [
