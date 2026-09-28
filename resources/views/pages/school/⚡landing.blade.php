@@ -211,7 +211,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         SPMB 2027
                     </a>
                     <a href="#nurture" @click.prevent="scrollToSection('nurture')" class="rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">
-                        Lihat Program
+                        Jelajahi Program
                     </a>
                 </div>
 
