@@ -433,11 +433,11 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
                     <div class="mt-10">
                         <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Instansi Kerja Sama</h3>
-                        <ul class="mt-5 space-y-3 text-sm">
-                            @foreach (['Kemendikbudristek', 'Dinas Pendidikan Kota Semarang', 'Universitas Indonesia', 'UIN Walisongo'] as $partner)
-                                <li><a href="#" class="transition hover:text-primary-400">{{ $partner }}</a></li>
-                            @endforeach
-                        </ul>
+                        <div class="mt-5 flex flex-wrap items-center gap-4">
+                            <img src="{{ asset('images/kemenag.png') }}" alt="Kemenag" class="h-12 w-auto rounded bg-white/5 object-contain p-2">
+                            <img src="{{ asset('images/dinas-kota-semarang.png') }}" alt="Dinas Kota Semarang" class="h-12 w-auto rounded bg-white/5 object-contain p-2">
+                            <img src="{{ asset('images/ban-pdm.png') }}" alt="BAN PDM" class="h-12 w-auto rounded bg-white/5 object-contain p-2">
+                        </div>
                     </div>
                 </div>
 
