@@ -477,7 +477,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </div>
 
             <p class="mt-6 text-center text-xs text-slate-500">
-                Dibuat oleh <a href="#" class="transition hover:text-primary-400">EduSatuOS by TexusCode</a>
+                <a href="#" class="transition hover:text-primary-400">EduSatuOS by TexusCode</a>
             </p>
         </div>
     </footer>
