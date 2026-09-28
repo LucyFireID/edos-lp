@@ -199,10 +199,6 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
         <div class="relative mx-auto w-full max-w-7xl px-6 pt-36 pb-28">
             <div class="max-w-3xl">
-                <span class="inline-flex items-center gap-2 rounded-full border border-primary-400/30 bg-primary-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-300">
-                    <span class="h-2 w-2 animate-pulse rounded-full bg-primary-400"></span>
-                    Penerimaan Siswa Baru 2027/2028
-                </span>
                 <h1 class="mt-6 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                     Membentuk Generasi
                     <span class="bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-transparent">Cerdas &amp; Berkarakter</span>
