@@ -430,6 +430,15 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <p class="mt-5 max-w-md leading-relaxed">
                         Menyelenggarakan pendidikan berkualitas untuk membentuk generasi cerdas, berkarakter, dan siap menghadapi tantangan global.
                     </p>
+
+                    <div class="mt-10">
+                        <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Instansi Kerja Sama</h3>
+                        <ul class="mt-5 space-y-3 text-sm">
+                            @foreach (['Kemendikbudristek', 'Dinas Pendidikan Kota Semarang', 'Universitas Indonesia', 'UIN Walisongo'] as $partner)
+                                <li><a href="#" class="transition hover:text-primary-400">{{ $partner }}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
 
                 <div>
