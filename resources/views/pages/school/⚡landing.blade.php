@@ -204,7 +204,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <span class="bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-transparent">Cerdas &amp; Berkarakter</span>
                 </h1>
                 <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-200">
-                    Sekolah Qosim Al Hadi menghadirkan pendidikan berkualitas dengan kurikulum modern, tenaga pengajar berpengalaman, dan lingkungan belajar yang inspiratif.
+                    Yayasan Qosim Al Hadi menghadirkan pendidikan berkualitas dengan kurikulum modern, tenaga pengajar berpengalaman, dan lingkungan belajar yang inspiratif.
                 </p>
                 <div class="mt-10 flex flex-wrap gap-4">
                     <a href="#home" @click.prevent="scrollToSection('home')" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-primary-500/30 transition hover:scale-105">
