@@ -1,57 +1,94 @@
 <?php
 
 use Livewire\Attributes\Title;
+use Livewire\Attributes\Url;
 use Livewire\Component;
 
 new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Component
 {
+    #[Url]
+    public int $page = 1;
+
     public function with(): array
     {
-        return [
-            'posts' => [
-                [
-                    'category' => 'Pengumuman',
-                    'date' => '28 Agu 2026',
-                    'title' => 'Pendaftaran Penerimaan Siswa Baru Dibuka',
-                    'excerpt' => 'Gelombang pertama pendaftaran tahun ajaran 2027/2028 resmi dibuka secara daring. Segera daftarkan putra-putri Anda.',
-                    'color' => 'bg-blue-100 text-blue-700',
-                ],
-                [
-                    'category' => 'Prestasi',
-                    'date' => '12 Sep 2026',
-                    'title' => 'Tim Olimpiade Sains Raih Medali Emas Nasional',
-                    'excerpt' => 'Tiga siswa berhasil membawa pulang medali emas pada ajang OSN tingkat nasional tahun ini.',
-                    'color' => 'bg-amber-100 text-amber-700',
-                ],
-                [
-                    'category' => 'Kegiatan',
-                    'date' => '05 Sep 2026',
-                    'title' => 'Festival Seni Budaya Nusantara 2026',
-                    'excerpt' => 'Ribuan penonton hadir memeriahkan panggung seni tahunan yang menampilkan pertunjukan budaya.',
-                    'color' => 'bg-rose-100 text-rose-700',
-                ],
-                [
-                    'category' => 'Informasi',
-                    'date' => '20 Jul 2026',
-                    'title' => 'Jadwal Ujian Semester Genap Tahun Ajaran 2025/2026',
-                    'excerpt' => 'Informasi lengkap mengenai jadwal ujian semester genap dapat diunduh melalui portal siswa.',
-                    'color' => 'bg-emerald-100 text-emerald-700',
-                ],
-                [
-                    'category' => 'Prestasi',
-                    'date' => '15 Jun 2026',
-                    'title' => 'Juara Umum Olimpiade Matematika Tingkat Kota',
-                    'excerpt' => 'Siswa-siswi Qosim Al Hadi kembali menorehkan prestasi gemilang di bidang matematika.',
-                    'color' => 'bg-amber-100 text-amber-700',
-                ],
-                [
-                    'category' => 'Kegiatan',
-                    'date' => '10 Mei 2026',
-                    'title' => 'Study Tour ke Kawasan Industri dan Perguruan Tinggi',
-                    'excerpt' => 'Kegiatan study tour memberikan pengalaman belajar langsung di dunia industri dan kampus.',
-                    'color' => 'bg-rose-100 text-rose-700',
-                ],
+        $posts = collect([
+            [
+                'category' => 'Pengumuman',
+                'date' => '28 Agu 2026',
+                'timestamp' => '2026-08-28',
+                'title' => 'Pendaftaran Penerimaan Siswa Baru Dibuka',
+                'excerpt' => 'Gelombang pertama pendaftaran tahun ajaran 2027/2028 resmi dibuka secara daring. Segera daftarkan putra-putri Anda.',
+                'color' => 'bg-blue-100 text-blue-700',
             ],
+            [
+                'category' => 'Prestasi',
+                'date' => '12 Sep 2026',
+                'timestamp' => '2026-09-12',
+                'title' => 'Tim Olimpiade Sains Raih Medali Emas Nasional',
+                'excerpt' => 'Tiga siswa berhasil membawa pulang medali emas pada ajang OSN tingkat nasional tahun ini.',
+                'color' => 'bg-amber-100 text-amber-700',
+            ],
+            [
+                'category' => 'Kegiatan',
+                'date' => '05 Sep 2026',
+                'timestamp' => '2026-09-05',
+                'title' => 'Festival Seni Budaya Nusantara 2026',
+                'excerpt' => 'Ribuan penonton hadir memeriahkan panggung seni tahunan yang menampilkan pertunjukan budaya.',
+                'color' => 'bg-rose-100 text-rose-700',
+            ],
+            [
+                'category' => 'Informasi',
+                'date' => '20 Jul 2026',
+                'timestamp' => '2026-07-20',
+                'title' => 'Jadwal Ujian Semester Genap Tahun Ajaran 2025/2026',
+                'excerpt' => 'Informasi lengkap mengenai jadwal ujian semester genap dapat diunduh melalui portal siswa.',
+                'color' => 'bg-emerald-100 text-emerald-700',
+            ],
+            [
+                'category' => 'Prestasi',
+                'date' => '15 Jun 2026',
+                'timestamp' => '2026-06-15',
+                'title' => 'Juara Umum Olimpiade Matematika Tingkat Kota',
+                'excerpt' => 'Siswa-siswi Qosim Al Hadi kembali menorehkan prestasi gemilang di bidang matematika.',
+                'color' => 'bg-amber-100 text-amber-700',
+            ],
+            [
+                'category' => 'Kegiatan',
+                'date' => '10 Mei 2026',
+                'timestamp' => '2026-05-10',
+                'title' => 'Study Tour ke Kawasan Industri dan Perguruan Tinggi',
+                'excerpt' => 'Kegiatan study tour memberikan pengalaman belajar langsung di dunia industri dan kampus.',
+                'color' => 'bg-rose-100 text-rose-700',
+            ],
+            [
+                'category' => 'Informasi',
+                'date' => '15 Apr 2026',
+                'timestamp' => '2026-04-15',
+                'title' => 'Jadwal Pembagian Raport Semester Genap',
+                'excerpt' => 'Informasi pembagian raport semester genap tahun ajaran 2025/2026 dapat diakses melalui portal siswa.',
+                'color' => 'bg-emerald-100 text-emerald-700',
+            ],
+            [
+                'category' => 'Kegiatan',
+                'date' => '08 Mar 2026',
+                'timestamp' => '2026-03-08',
+                'title' => 'Workshop Kepramukaian dan Kepemimpinan Siswa',
+                'excerpt' => 'Kegiatan workshop membekali siswa dengan keterampilan kepramukaian dan kepemimpinan.',
+                'color' => 'bg-rose-100 text-rose-700',
+            ],
+        ])->sortByDesc('timestamp')->values();
+
+        $perPage = 6;
+        $total = $posts->count();
+        $lastPage = max(1, (int) ceil($total / $perPage));
+        $current = max(1, min($this->page, $lastPage));
+        $offset = ($current - 1) * $perPage;
+
+        return [
+            'posts' => $posts->slice($offset, $perPage)->all(),
+            'currentPage' => $current,
+            'lastPage' => $lastPage,
+            'total' => $total,
         ];
     }
 };
@@ -164,6 +201,35 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                         </article>
                     @endforeach
                 </div>
+
+                @if ($lastPage > 1)
+                    <div class="mt-12 flex items-center justify-center gap-2">
+                        <button
+                            wire:click="$set('page', {{ $currentPage - 1 }})"
+                            @disabled($currentPage === 1)
+                            class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                            Sebelumnya
+                        </button>
+
+                        @for ($i = 1; $i <= $lastPage; $i++)
+                            <button
+                                wire:click="$set('page', {{ $i }})"
+                                class="h-10 w-10 rounded-lg text-sm font-semibold transition {{ $i === $currentPage ? 'bg-primary-600 text-white' : 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50' }}"
+                            >
+                                {{ $i }}
+                            </button>
+                        @endfor
+
+                        <button
+                            wire:click="$set('page', {{ $currentPage + 1 }})"
+                            @disabled($currentPage === $lastPage)
+                            class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                            Selanjutnya
+                        </button>
+                    </div>
+                @endif
             </div>
         </div>
 
