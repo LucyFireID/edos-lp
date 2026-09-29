@@ -78,16 +78,18 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
                     <p class="mt-3 text-slate-600">Terakhir diperbarui: 29 September 2026</p>
                 </div>
 
-                <div class="grid gap-8 sm:grid-cols-2">
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     @foreach ($teachers as $teacher)
-                        <div class="overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-lg">
-                            <div class="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-slate-100 text-slate-400">
-                                <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                        <div class="text-center">
+                            <div class="mx-auto aspect-[3/4] w-full max-w-[220px] rounded-2xl bg-slate-200">
+                                <div class="flex h-full w-full items-center justify-center text-slate-400">
+                                    <svg class="h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                </div>
                             </div>
-                            <div class="mt-4 text-center">
+                            <div class="mt-4">
                                 <h2 class="text-lg font-bold text-slate-900">{{ $teacher['name'] }}</h2>
-                                <p class="text-sm text-primary-600">{{ $teacher['subject'] }}</p>
-                                <p class="mt-1 text-xs text-slate-500">{{ $teacher['role'] }}</p>
+                                <p class="mt-1 text-sm text-slate-500">{{ $teacher['role'] }}</p>
+                                <p class="mt-0.5 text-sm text-primary-600">{{ $teacher['subject'] }}</p>
                             </div>
                         </div>
                     @endforeach
