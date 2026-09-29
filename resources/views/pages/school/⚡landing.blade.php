@@ -402,6 +402,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <div class="absolute top-[70%] bottom-0 left-0 z-0 w-full bg-primary-500/95 transition-transform duration-500 ease-out" :class="open ? 'translate-x-0' : '-translate-x-full'"></div>
                     <div class="relative z-10 flex h-full flex-col items-start justify-end p-6">
                         <h3 class="text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Perkenalkan Para Tenaga Pendidik Kami</h3>
+                        <span class="mt-0 overflow-hidden text-sm font-semibold text-white transition-all duration-500 ease-out" :class="open ? 'mt-2 max-h-10 opacity-100' : 'mt-0 max-h-0 opacity-0'">Selengkapnya &rarr;</span>
                     </div>
                 </div>
                 <div x-data="{ open: false, isTouch: 'ontouchstart' in window }" @mouseenter="if (!isTouch) open = true" @mouseleave="if (!isTouch) open = false" @click="if (isTouch) open = !open" class="group relative col-span-1 h-100 overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-100">
