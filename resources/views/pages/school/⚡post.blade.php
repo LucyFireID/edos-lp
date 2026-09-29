@@ -224,6 +224,12 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
                                     {!! $post['content'] !!}
                                 </div>
                             </article>
+
+                            <div class="mt-8 flex h-28 w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-white p-4 text-slate-400 shadow-sm">
+                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                <span class="mt-1 text-sm font-medium">Space Iklan</span>
+                                <span class="text-xs">728 x 90</span>
+                            </div>
                         @else
                             <div class="rounded-2xl bg-white p-12 text-center shadow-sm">
                                 <h1 class="text-2xl font-bold text-slate-900">Berita tidak ditemukan</h1>
