@@ -75,8 +75,7 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
 
                 <div class="mb-10 text-center">
                     <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Tenaga Pendidik</h1>
-                    <p class="mt-3 text-slate-600">Perkenalan para guru dan tenaga pendidik Qosim Al Hadi Semarang.</p>
-                    <p class="mt-2 text-sm text-slate-400">Terakhir diperbarui: 29 September 2026</p>
+                    <p class="mt-3 text-slate-600">Terakhir diperbarui: 29 September 2026</p>
                 </div>
 
                 <div class="grid gap-8 sm:grid-cols-2">
