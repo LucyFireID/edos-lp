@@ -159,18 +159,20 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
             <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
                 @if ($post)
                     <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-500">
-                        <ol class="flex items-center gap-2">
+                        <ol class="flex flex-wrap items-center gap-2">
                             <li><a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a></li>
                             <li aria-hidden="true" class="text-slate-300">/</li>
                             <li><a href="{{ route('blog') }}" class="transition hover:text-primary-600">Berita</a></li>
                             <li aria-hidden="true" class="text-slate-300">/</li>
-                            <li class="font-medium text-slate-700" aria-current="page">{{ Str::limit($post['title'], 40) }}</li>
+                            <li class="min-w-0 font-medium text-slate-700" aria-current="page">
+                                <span class="block truncate max-w-[140px] sm:max-w-xs">{{ Str::limit($post['title'], 50) }}</span>
+                            </li>
                         </ol>
                     </nav>
 
                     <div class="mb-8">
                         <span class="rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide {{ $post['color'] }}">{{ $post['category'] }}</span>
-                        <h1 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                        <h1 class="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
                             {{ $post['title'] }}
                         </h1>
                         <p class="mt-3 text-slate-500">{{ $post['date'] }}</p>
@@ -182,8 +184,10 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
                         </div>
                     </div>
 
-                    <article class="prose prose-lg prose-slate max-w-none">
-                        {!! $post['content'] !!}
+                    <article class="rounded-2xl bg-white p-6 sm:p-10 shadow-sm">
+                        <div class="prose prose-lg prose-slate max-w-none prose-p:leading-[1.9] prose-p:text-slate-700 prose-p:mb-6 prose-p:text-justify">
+                            {!! $post['content'] !!}
+                        </div>
                     </article>
                 @else
                     <div class="rounded-2xl bg-white p-12 text-center shadow-sm">

@@ -201,7 +201,9 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                                                     <span class="rounded-full px-2.5 py-1 {{ $heroPost['color'] }}">{{ $heroPost['category'] }}</span>
                                                     <span class="text-slate-400">{{ $heroPost['date'] }}</span>
                                                 </div>
-                                                <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">{{ $heroPost['title'] }}</h2>
+                                                <a href="{{ route('blog.post', $heroPost['slug']) }}" class="block">
+                                                    <h2 class="text-2xl font-bold text-slate-900 transition hover:text-primary-600 sm:text-3xl">{{ $heroPost['title'] }}</h2>
+                                                </a>
                                                 <p class="mt-4 line-clamp-3 text-slate-600">{{ $heroPost['excerpt'] }}</p>
                                                 <a href="{{ route('blog.post', $heroPost['slug']) }}" class="mt-6 inline-flex items-center text-sm font-semibold text-primary-600 transition hover:text-primary-700">
                                                     Baca selengkapnya
@@ -242,9 +244,11 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                                     <span class="rounded-full px-2.5 py-1 {{ $post['color'] }}">{{ $post['category'] }}</span>
                                     <span class="text-slate-400">{{ $post['date'] }}</span>
                                 </div>
-                                <h2 class="text-lg font-bold text-slate-900 transition group-hover:text-primary-600">
-                                    {{ $post['title'] }}
-                                </h2>
+                                <a href="{{ route('blog.post', $post['slug']) }}" class="block">
+                                    <h2 class="text-lg font-bold text-slate-900 transition group-hover:text-primary-600">
+                                        {{ $post['title'] }}
+                                    </h2>
+                                </a>
                                 <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
                                     {{ $post['excerpt'] }}
                                 </p>
