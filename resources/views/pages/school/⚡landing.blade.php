@@ -188,6 +188,13 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             requestAnimationFrame(step);
             history.replaceState(null, '', window.location.pathname);
         };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                setTimeout(() => scrollToSection(hash), 100);
+            }
+        });
     </script>
 
     {{-- Hero --}}
