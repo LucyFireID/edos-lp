@@ -2,19 +2,11 @@
 
 use Illuminate\Support\Str;
 use Livewire\Attributes\Title;
-use Livewire\Attributes\Url;
 use Livewire\Component;
 
-new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Component
+new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
 {
-    #[Url]
-    public int $page = 1;
-
-    public function goToPage(int $page): void
-    {
-        $this->page = $page;
-        $this->dispatch('paginated');
-    }
+    public string $slug = '';
 
     public function with(): array
     {
@@ -26,6 +18,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                 'title' => 'Pendaftaran Penerimaan Siswa Baru Dibuka',
                 'excerpt' => 'Gelombang pertama pendaftaran tahun ajaran 2027/2028 resmi dibuka secara daring. Segera daftarkan putra-putri Anda.',
                 'color' => 'bg-blue-100 text-blue-700',
+                'content' => '<p>Pendaftaran Penerimaan Siswa Baru Qosim Al Hadi Semarang untuk tahun ajaran 2027/2028 telah resmi dibuka. Kami membuka kesempatan bagi para siswa berprestasi untuk bergabung dan menempuh pendidikan berkualitas bersama kami.</p><p>Proses pendaftaran dapat dilakukan secara daring melalui portal resmi sekolah. Orang tua dapat mengisi formulir, mengunggah dokumen yang diperlukan, dan mengikuti jadwal seleksi yang telah ditentukan.</p><p>Jangan lewatkan kesempatan emas ini. Kuota terbatas, segera daftarkan putra-putri Anda dan jadilah bagian dari keluarga besar Qosim Al Hadi Semarang.</p>',
             ],
             [
                 'category' => 'Prestasi',
@@ -34,6 +27,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                 'title' => 'Tim Olimpiade Sains Raih Medali Emas Nasional',
                 'excerpt' => 'Tiga siswa berhasil membawa pulang medali emas pada ajang OSN tingkat nasional tahun ini.',
                 'color' => 'bg-amber-100 text-amber-700',
+                'content' => '<p>Prestasi gemilang kembali diraih oleh siswa-siswi Qosim Al Hadi Semarang dalam ajang Olimpiade Sains Nasional. Tiga siswa berhasil meraih medali emas setelah melewati berbagai tahapan seleksi yang ketat.</p><p>Kemenangan ini menjadi bukti nyata komitmen sekolah dalam mengembangkan potensi akademik siswa. Dengan bimbingan guru dan dukungan orang tua, para siswa mampu bersaing di tingkat nasional.</p><p>Kami mengucapkan selamat kepada para peraih medali dan berharap prestasi ini dapat menginspirasi siswa lain untuk terus berkarya.</p>',
             ],
             [
                 'category' => 'Kegiatan',
@@ -42,6 +36,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                 'title' => 'Festival Seni Budaya Nusantara 2026',
                 'excerpt' => 'Ribuan penonton hadir memeriahkan panggung seni tahunan yang menampilkan pertunjukan budaya.',
                 'color' => 'bg-rose-100 text-rose-700',
+                'content' => '<p>Festival Seni Budaya Nusantara 2026 sukses diselenggarakan dengan meriah. Ribuan penonton hadir menyaksikan berbagai pertunjukan seni dan budaya dari siswa Qosim Al Hadi Semarang.</p><p>Acara ini menampilkan tarian tradisional, musik daerah, teater, dan pameran karya seni rupa. Selain menjadi ajang ekspresi kreativitas, festival juga memperkuat rasa cinta terhadap kekayaan budaya bangsa.</p><p>Terima kasih kepada seluruh pihak yang telah berpartisipasi. Sampai jumpa di festival berikutnya!</p>',
             ],
             [
                 'category' => 'Informasi',
@@ -50,6 +45,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                 'title' => 'Jadwal Ujian Semester Genap Tahun Ajaran 2025/2026',
                 'excerpt' => 'Informasi lengkap mengenai jadwal ujian semester genap dapat diunduh melalui portal siswa.',
                 'color' => 'bg-emerald-100 text-emerald-700',
+                'content' => '<p>Kepala sekolah mengumumkan jadwal ujian semester genap tahun ajaran 2025/2026. Seluruh siswa diharapkan mempersiapkan diri dan mematuhi protokol yang berlaku selama pelaksanaan ujian.</p><p>Jadwal lengkap dapat diunduh melalui portal siswa. Bila terdapat kendala teknis, siswa dapat menghubungi bagian akademik.</p><p>Semoga ujian berjalan lancar dan semua siswa memperoleh hasil terbaik.</p>',
             ],
             [
                 'category' => 'Prestasi',
@@ -58,6 +54,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                 'title' => 'Juara Umum Olimpiade Matematika Tingkat Kota',
                 'excerpt' => 'Siswa-siswi Qosim Al Hadi kembali menorehkan prestasi gemilang di bidang matematika.',
                 'color' => 'bg-amber-100 text-amber-700',
+                'content' => '<p>Qosim Al Hadi Semarang meraih gelar juara umum dalam Olimpiade Matematika Tingkat Kota. Prestasi ini diraih berkat kerja keras siswa dan pendampingan intensif dari tim matematika sekolah.</p><p>Kegiatan ini membuktikan bahwa pendekatan pembelajaran yang sistematis dan menyenangkan mampu menghasilkan prestasi akademik yang luar biasa.</p><p>Selamat kepada seluruh tim dan teruslah berinovasi.</p>',
             ],
             [
                 'category' => 'Kegiatan',
@@ -66,6 +63,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                 'title' => 'Study Tour ke Kawasan Industri dan Perguruan Tinggi',
                 'excerpt' => 'Kegiatan study tour memberikan pengalaman belajar langsung di dunia industri dan kampus.',
                 'color' => 'bg-rose-100 text-rose-700',
+                'content' => '<p>Siswa kelas akhir mengikuti study tour ke berbagai kawasan industri dan perguruan tinggi. Kegiatan ini bertujuan memberikan wawasan mengenai dunia kerja dan pendidikan tinggi.</p><p>Siswa mendapat kesempatan untuk berinteraksi langsung dengan praktisi industri serta menanyakan hal-hal terkait jurusan dan karier masa depan.</p><p>Semoga pengalaman ini dapat menjadi bekal siswa dalam merencanakan masa depan yang gemilang.</p>',
             ],
             [
                 'category' => 'Informasi',
@@ -74,6 +72,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                 'title' => 'Jadwal Pembagian Raport Semester Genap',
                 'excerpt' => 'Informasi pembagian raport semester genap tahun ajaran 2025/2026 dapat diakses melalui portal siswa.',
                 'color' => 'bg-emerald-100 text-emerald-700',
+                'content' => '<p>Pembagian raport semester genap tahun ajaran 2025/2026 akan dilaksanakan sesuai jadwal yang telah ditentukan. Orang tua diharapkan hadir tepat waktu.</p><p>Detail jadwal dapat diakses melalui portal siswa. Bila ada pertanyaan, silakan menghubungi wali kelas masing-masing.</p><p>Terima kasih atas perhatian dan kerja samanya.</p>',
             ],
             [
                 'category' => 'Kegiatan',
@@ -82,30 +81,23 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                 'title' => 'Workshop Kepramukaian dan Kepemimpinan Siswa',
                 'excerpt' => 'Kegiatan workshop membekali siswa dengan keterampilan kepramukaian dan kepemimpinan.',
                 'color' => 'bg-rose-100 text-rose-700',
+                'content' => '<p>Workshop kepramukaian dan kepemimpinan siswa telah sukses dilaksanakan. Kegiatan ini bertujuan membentuk karakter tangguh, mandiri, dan memiliki jiwa kepemimpinan.</p><p>Melalui berbagai simulasi dan permainan edukatif, siswa belajar bekerja sama, memecahkan masalah, dan memimpin tim.</p><p>Terima kasih kepada pembicara dan fasilitator yang telah berbagi ilmu. Semoga manfaatnya terus terasa.</p>',
             ],
         ])->sortByDesc('timestamp')->values();
 
         $posts = $posts->map(fn ($post) => [...$post, 'slug' => Str::slug($post['title'])])->values();
-
-        $perPage = 6;
-        $total = $posts->count();
-        $lastPage = max(1, (int) ceil($total / $perPage));
-        $current = max(1, min($this->page, $lastPage));
-        $offset = ($current - 1) * $perPage;
+        $post = $posts->firstWhere('slug', $this->slug);
 
         return [
-            'posts' => $posts->slice($offset, $perPage)->all(),
-            'heroPosts' => $posts->take(3)->values()->all(),
-            'currentPage' => $current,
-            'lastPage' => $lastPage,
-            'total' => $total,
+            'post' => $post,
+            'latestPosts' => $posts->where('slug', '!=', $this->slug)->take(3)->values()->all(),
         ];
     }
 };
 
 ?>
 
-<div class="scroll-smooth" x-on:paginated.window="window.scrollTo({ top: 0, behavior: 'smooth' })">
+<div class="scroll-smooth">
     {{-- Navigation --}}
     <header
         x-data="{ open: false, scrolled: true }"
@@ -129,7 +121,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('blog') }}" class="text-base font-medium text-primary-600 transition hover:text-primary-500" aria-current="page">
+                    <a href="{{ route('blog') }}" class="text-base font-medium text-slate-700 transition hover:text-primary-500">
                         Berita
                     </a>
                 </li>
@@ -154,7 +146,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('blog') }}" @click="open = false" class="block rounded-lg bg-primary-50 px-4 py-3.5 text-base font-medium text-primary-700 transition hover:bg-primary-100">
+                    <a href="{{ route('blog') }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
                         Berita
                     </a>
                 </li>
@@ -164,125 +156,42 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
 
     <main class="flex min-h-screen flex-col bg-slate-50 pt-28 text-slate-800">
         <div class="flex-1 py-12 sm:py-16 lg:py-20">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <nav aria-label="Breadcrumb" class="mb-6 flex justify-center text-sm text-slate-500">
-                    <ol class="flex items-center gap-2">
-                        <li>
-                            <a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a>
-                        </li>
-                        <li aria-hidden="true" class="text-slate-300">/</li>
-                        <li class="font-medium text-slate-700" aria-current="page">Berita &amp; Informasi</li>
-                    </ol>
-                </nav>
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                @if ($post)
+                    <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-500">
+                        <ol class="flex items-center gap-2">
+                            <li><a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a></li>
+                            <li aria-hidden="true" class="text-slate-300">/</li>
+                            <li><a href="{{ route('blog') }}" class="transition hover:text-primary-600">Berita</a></li>
+                            <li aria-hidden="true" class="text-slate-300">/</li>
+                            <li class="font-medium text-slate-700" aria-current="page">{{ Str::limit($post['title'], 40) }}</li>
+                        </ol>
+                    </nav>
 
-                <div class="mb-12 text-center">
-                    <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                        Berita &amp; Informasi
-                    </h1>
-                    <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-                        Ikuti perkembangan terbaru seputar pengumuman, prestasi, dan kegiatan Qosim Al Hadi Semarang.
-                    </p>
-                </div>
+                    <div class="mb-8">
+                        <span class="rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide {{ $post['color'] }}">{{ $post['category'] }}</span>
+                        <h1 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                            {{ $post['title'] }}
+                        </h1>
+                        <p class="mt-3 text-slate-500">{{ $post['date'] }}</p>
+                    </div>
 
-                @if ($currentPage === 1 && count($heroPosts) > 0)
-                    <div class="mb-12" x-data="{ active: 0, total: {{ count($heroPosts) }} }" x-init="setInterval(() => active = (active + 1) % total, 5000)">
-                        <div class="relative overflow-hidden rounded-3xl bg-white shadow-lg">
-                            <div class="flex transition-transform duration-700 ease-out" :style="`transform: translateX(-${active * 100}%)`">
-                                @foreach ($heroPosts as $heroPost)
-                                    <div class="w-full flex-shrink-0">
-                                        <div class="flex flex-col md:flex-row">
-                                            <div class="relative h-64 bg-slate-200 md:h-auto md:w-1/2 md:min-h-[360px]">
-                                                <div class="flex h-full w-full items-center justify-center text-slate-400">
-                                                    <svg class="h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col justify-center p-8 md:w-1/2 md:p-12">
-                                                <div class="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-wide">
-                                                    <span class="rounded-full px-2.5 py-1 {{ $heroPost['color'] }}">{{ $heroPost['category'] }}</span>
-                                                    <span class="text-slate-400">{{ $heroPost['date'] }}</span>
-                                                </div>
-                                                <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">{{ $heroPost['title'] }}</h2>
-                                                <p class="mt-4 line-clamp-3 text-slate-600">{{ $heroPost['excerpt'] }}</p>
-                                                <a href="{{ route('blog.post', $heroPost['slug']) }}" class="mt-6 inline-flex items-center text-sm font-semibold text-primary-600 transition hover:text-primary-700">
-                                                    Baca selengkapnya
-                                                    <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-
-                            <button @click="active = (active - 1 + total) % total" class="absolute top-1/2 left-4 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow-md transition hover:bg-white" aria-label="Sebelumnya">
-                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                            </button>
-                            <button @click="active = (active + 1) % total" class="absolute top-1/2 right-4 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow-md transition hover:bg-white" aria-label="Selanjutnya">
-                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                            </button>
-
-                            <div class="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
-                                <template x-for="i in total">
-                                    <button @click="active = i - 1" class="h-2.5 w-2.5 rounded-full transition" :class="i - 1 === active ? 'bg-primary-600' : 'bg-slate-300'" aria-label="Pindah slide"></button>
-                                </template>
-                            </div>
+                    <div class="relative mb-10 h-72 w-full overflow-hidden rounded-3xl bg-slate-200 sm:h-96">
+                        <div class="flex h-full w-full items-center justify-center text-slate-400">
+                            <svg class="h-20 w-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                         </div>
                     </div>
-                @endif
 
-                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    @foreach ($posts as $post)
-                        <article class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-lg">
-                            <div class="relative h-48 bg-slate-200">
-                                <div class="flex h-full w-full items-center justify-center text-slate-400">
-                                    <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                </div>
-                            </div>
-                            <div class="flex flex-1 flex-col p-6">
-                                <div class="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-wide">
-                                    <span class="rounded-full px-2.5 py-1 {{ $post['color'] }}">{{ $post['category'] }}</span>
-                                    <span class="text-slate-400">{{ $post['date'] }}</span>
-                                </div>
-                                <h2 class="text-lg font-bold text-slate-900 transition group-hover:text-primary-600">
-                                    {{ $post['title'] }}
-                                </h2>
-                                <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
-                                    {{ $post['excerpt'] }}
-                                </p>
-                                <a href="{{ route('blog.post', $post['slug']) }}" class="mt-5 inline-flex items-center text-sm font-semibold text-primary-600 transition hover:text-primary-700">
-                                    Baca selengkapnya
-                                    <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                                </a>
-                            </div>
-                        </article>
-                    @endforeach
-                </div>
-
-                @if ($lastPage > 1)
-                    <div class="mt-12 flex items-center justify-center gap-2">
-                        <button
-                            wire:click="goToPage({{ $currentPage - 1 }})"
-                            @disabled($currentPage === 1)
-                            class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
-                        >
-                            Sebelumnya
-                        </button>
-
-                        @for ($i = 1; $i <= $lastPage; $i++)
-                            <button
-                                wire:click="goToPage({{ $i }})"
-                                class="h-10 w-10 rounded-lg text-sm font-semibold transition {{ $i === $currentPage ? 'bg-primary-600 text-white' : 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50' }}"
-                            >
-                                {{ $i }}
-                            </button>
-                        @endfor
-
-                        <button
-                            wire:click="goToPage({{ $currentPage + 1 }})"
-                            @disabled($currentPage === $lastPage)
-                            class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
-                        >
-                            Selanjutnya
-                        </button>
+                    <article class="prose prose-lg prose-slate max-w-none">
+                        {!! $post['content'] !!}
+                    </article>
+                @else
+                    <div class="rounded-2xl bg-white p-12 text-center shadow-sm">
+                        <h1 class="text-2xl font-bold text-slate-900">Berita tidak ditemukan</h1>
+                        <p class="mt-3 text-slate-600">Berita yang Anda cari tidak tersedia.</p>
+                        <a href="{{ route('blog') }}" class="mt-6 inline-flex items-center rounded-full bg-primary-600 px-6 py-3 font-semibold text-white transition hover:bg-primary-700">
+                            Kembali ke Berita
+                        </a>
                     </div>
                 @endif
             </div>

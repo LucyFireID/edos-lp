@@ -60,4 +60,11 @@ class LandingPageTest extends TestCase
             ->assertOk()
             ->assertSee('Berita & Informasi');
     }
+
+    public function test_blog_post_page_renders(): void
+    {
+        $this->get('/berita/pendaftaran-penerimaan-siswa-baru-dibuka')
+            ->assertOk()
+            ->assertSee('Pendaftaran Penerimaan Siswa Baru Dibuka');
+    }
 }
