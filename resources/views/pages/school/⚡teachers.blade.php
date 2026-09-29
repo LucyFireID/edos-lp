@@ -43,9 +43,6 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
                     <a href="{{ route('home') }}" class="text-base font-medium text-slate-700 transition hover:text-primary-500">Beranda</a>
                 </li>
                 <li>
-                    <a href="{{ route('blog') }}" class="text-base font-medium text-slate-700 transition hover:text-primary-500">Berita</a>
-                </li>
-                <li>
                     <a href="{{ route('home') }}" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:scale-105">SPMB 2027</a>
                 </li>
             </ul>
@@ -61,16 +58,13 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
                 <li>
                     <a href="{{ route('home') }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">Beranda</a>
                 </li>
-                <li>
-                    <a href="{{ route('blog') }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">Berita</a>
-                </li>
             </ul>
         </div>
     </header>
 
     <main class="flex min-h-screen flex-col bg-slate-50 pt-28 text-slate-800">
         <div class="flex-1 py-12 sm:py-16 lg:py-20">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
                 <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-500">
                     <ol class="flex flex-wrap items-center gap-2">
                         <li><a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a></li>
@@ -84,7 +78,7 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
                     <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600">Perkenalan para guru dan tenaga pendidik Qosim Al Hadi Semarang.</p>
                 </div>
 
-                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="grid gap-8 sm:grid-cols-2">
                     @foreach ($teachers as $teacher)
                         <div class="overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-lg">
                             <div class="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-slate-100 text-slate-400">
