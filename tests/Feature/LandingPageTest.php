@@ -46,4 +46,11 @@ class LandingPageTest extends TestCase
             ->assertOk()
             ->assertSee('Kebijakan Privasi');
     }
+
+    public function test_terms_page_renders(): void
+    {
+        $this->get('/syarat-ketentuan')
+            ->assertOk()
+            ->assertSee('Syarat & Ketentuan');
+    }
 }

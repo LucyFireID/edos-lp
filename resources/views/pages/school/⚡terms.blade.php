@@ -3,7 +3,7 @@
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('Kebijakan Privasi - Qosim Al Hadi Semarang')] class extends Component
+new #[Title('Syarat & Ketentuan - Qosim Al Hadi Semarang')] class extends Component
 {
     //
 };
@@ -70,71 +70,71 @@ new #[Title('Kebijakan Privasi - Qosim Al Hadi Semarang')] class extends Compone
                             <a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a>
                         </li>
                         <li aria-hidden="true" class="text-slate-300">/</li>
-                        <li class="font-medium text-slate-700" aria-current="page">Kebijakan Privasi</li>
+                        <li class="font-medium text-slate-700" aria-current="page">Syarat &amp; Ketentuan</li>
                     </ol>
                 </nav>
 
                 <div class="mb-10 text-center">
                     <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                        Kebijakan Privasi
+                        Syarat &amp; Ketentuan
                     </h1>
                     <p class="mt-3 text-slate-600">Terakhir diperbarui: 29 September 2026</p>
                 </div>
 
                 <div class="space-y-8 text-slate-700">
                     <section>
-                        <h2 class="text-xl font-bold text-slate-900">1. Pendahuluan</h2>
+                        <h2 class="text-xl font-bold text-slate-900">1. Penerimaan Syarat</h2>
                         <p class="mt-2 leading-relaxed">
-                            Qosim Al Hadi Semarang menghargai privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi yang Anda berikan saat menggunakan situs web kami.
+                            Dengan mengakses dan menggunakan situs web Qosim Al Hadi Semarang, Anda dianggap telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku. Jika Anda tidak menyetujui, harap untuk tidak melanjutkan penggunaan situs ini.
                         </p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-bold text-slate-900">2. Informasi yang Kami Kumpulkan</h2>
+                        <h2 class="text-xl font-bold text-slate-900">2. Penggunaan Situs</h2>
                         <p class="mt-2 leading-relaxed">
-                            Kami dapat mengumpulkan informasi berupa nama, alamat email, nomor telepon, dan pesan yang Anda kirimkan melalui formulir kontak. Kami tidak mengumpulkan informasi sensitif seperti nomor kartu kredit atau data kesehatan melalui situs ini.
+                            Situs ini disediakan untuk memberikan informasi mengenai sekolah, program, kegiatan, dan layanan yang kami tawarkan. Anda dilarang menggunakan situs ini untuk tujuan yang melanggar hukum, menyesatkan, atau merusak nama baik institusi.
                         </p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-bold text-slate-900">3. Penggunaan Informasi</h2>
+                        <h2 class="text-xl font-bold text-slate-900">3. Kekayaan Intelektual</h2>
                         <p class="mt-2 leading-relaxed">
-                            Informasi yang Anda berikan digunakan untuk merespons pertanyaan, memproses pendaftaran, memberikan informasi sekolah, dan meningkatkan layanan kami. Kami tidak menjual, menyewakan, atau membagikan data pribadi Anda kepada pihak ketiga untuk tujuan komersial.
+                            Seluruh konten di situs ini, termasuk teks, gambar, logo, video, dan materi lainnya, merupakan milik Qosim Al Hadi Semarang atau pihak yang memberi lisensi kepada kami. Dilarang menyalin, mendistribusikan, atau memodifikasi konten tanpa izin tertulis.
                         </p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-bold text-slate-900">4. Perlindungan Data</h2>
+                        <h2 class="text-xl font-bold text-slate-900">4. Batasan Tanggung Jawab</h2>
                         <p class="mt-2 leading-relaxed">
-                            Kami menerapkan langkah-langkah keamanan yang wajar untuk melindungi data Anda dari akses, penggunaan, atau pengungkapan yang tidak sah. Meskipun demikian, tidak ada sistem online yang sepenuhnya aman.
+                            Kami berusaha menyajikan informasi yang akurat dan terkini, namun tidak menjamin bahwa seluruh informasi bebas dari kesalahan atau kelalaian. Qosim Al Hadi Semarang tidak bertanggung jawab atas kerugian yang timbul akibat penggunaan informasi di situs ini.
                         </p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-bold text-slate-900">5. Cookies</h2>
+                        <h2 class="text-xl font-bold text-slate-900">5. Tautan Pihak Ketiga</h2>
                         <p class="mt-2 leading-relaxed">
-                            Situs ini dapat menggunakan cookies untuk meningkatkan pengalaman pengguna, seperti menyimpan preferensi bahasa atau analitik kunjungan. Anda dapat menonaktifkan cookies melalui pengaturan browser, namun beberapa fitur mungkin tidak berfungsi optimal.
+                            Situs ini dapat menyertakan tautan ke situs pihak ketiga. Tautan tersebut disediakan untuk kemudahan Anda dan bukan merupakan endorsement. Kami tidak bertanggung jawab atas konten atau kebijakan privasi situs pihak ketiga.
                         </p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-bold text-slate-900">6. Hak Anda</h2>
+                        <h2 class="text-xl font-bold text-slate-900">6. Perubahan Syarat</h2>
                         <p class="mt-2 leading-relaxed">
-                            Anda berhak meminta akses, perbaikan, atau penghapusan data pribadi Anda yang kami miliki. Silakan hubungi kami melalui informasi kontak yang tersedia di situs ini.
+                            Kami berhak mengubah syarat dan ketentuan ini sewaktu-waktu tanpa pemberitahuan sebelumnya. Perubahan akan berlaku sejak dipublikasikan di halaman ini. Penggunaan berkelanjutan atas situs ini berarti Anda menerima syarat yang telah diperbarui.
                         </p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-bold text-slate-900">7. Perubahan Kebijakan</h2>
+                        <h2 class="text-xl font-bold text-slate-900">7. Hukum yang Berlaku</h2>
                         <p class="mt-2 leading-relaxed">
-                            Kebijakan Privasi ini dapat diperbarui sewaktu-waktu. Perubahan akan diumumkan di halaman ini dan berlaku sejak dipublikasikan.
+                            Syarat dan ketentuan ini tunduk pada hukum yang berlaku di Indonesia. Setiap perselisihan yang timbul akan diselesaikan melalui musyawarah mufakat atau lewat jalur hukum yang berwenang.
                         </p>
                     </section>
 
                     <section>
                         <h2 class="text-xl font-bold text-slate-900">8. Kontak</h2>
                         <p class="mt-2 leading-relaxed">
-                            Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, silakan hubungi kami melalui email info@qosimalhadi.sch.id atau telepon (021) 555-0123.
+                            Jika Anda memiliki pertanyaan mengenai Syarat &amp; Ketentuan ini, silakan hubungi kami melalui email info@qosimalhadi.sch.id atau telepon (021) 555-0123.
                         </p>
                     </section>
                 </div>

@@ -472,7 +472,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 <p>&copy; {{ date('Y') }} Qosim Al Hadi. Seluruh hak cipta dilindungi.</p>
                 <div class="flex gap-6">
                     <a href="{{ route('privacy') }}" class="transition hover:text-primary-400">Kebijakan Privasi</a>
-                    <a href="#" class="transition hover:text-primary-400">Syarat &amp; Ketentuan</a>
+                    <a href="{{ route('terms') }}" class="transition hover:text-primary-400">Syarat &amp; Ketentuan</a>
                 </div>
             </div>
 
