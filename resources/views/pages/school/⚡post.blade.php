@@ -187,6 +187,30 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
                                     {{ $post['title'] }}
                                 </h1>
                                 <p class="mt-3 text-slate-500">{{ $post['date'] }}</p>
+
+                                @php
+                                    $shareUrl = urlencode(url()->current());
+                                    $shareTitle = urlencode($post['title']);
+                                @endphp
+                                <div class="mt-4 flex flex-wrap items-center gap-2">
+                                    <span class="text-sm text-slate-500">Bagikan:</span>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ $shareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] text-white transition hover:opacity-90">
+                                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.354c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                    </a>
+                                    <a href="https://twitter.com/intent/tweet?url={{ $shareUrl }}&text={{ $shareTitle }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#1DA1F2] text-white transition hover:opacity-90">
+                                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-3.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.229-.616v.06a4.923 4.923 0 003.946 4.835 4.996 4.996 0 01-2.223.085 4.93 4.93 0 004.604 3.417 9.996 9.996 0 01-6.205 2.14c-.403 0-.797-.024-1.184-.07a14.118 14.118 0 007.628 2.245c9.15 0 14.15-7.584 14.15-14.15 0-.229-.005-.458-.014-.683A10.005 10.005 0 0024 4.305z"/></svg>
+                                    </a>
+                                    <a href="https://wa.me/?text={{ $shareTitle }}%20{{ $shareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:opacity-90">
+                                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.693-1.036-1.143-1.756-1.143-.163 0-.324.02-.48.058-.297.074-.583.22-.82.43l-.036.03c-.72.615-1.44 1.23-2.16 1.845l-.018.016c-.24.21-.48.42-.72.63-.24.21-.48.42-.72.63l-.018.016c-.72.615-1.44 1.23-2.16 1.845l-.036.03c-.24.21-.48.42-.72.63-.24.21-.48.42-.72.63l-.018.016c-.72.615-1.44 1.23-2.16 1.845l-.036.03c-.24.21-.48.42-.72.63-.24.21-.48.42-.72.63-.297.258-.57.54-.792.855-.222.315-.39.66-.498 1.026a2.98 2.98 0 00-.072.498c0 .324.054.642.162.948.108.306.27.588.486.84l.012.012c.27.312.612.54.984.672.222.078.456.12.696.12.45 0 .888-.12 1.278-.348l.03-.018c.72-.42 1.44-.84 2.16-1.26l.036-.024c.72-.42 1.44-.84 2.16-1.26l.018-.012c.72-.42 1.44-.84 2.16-1.26l.036-.024c.72-.42 1.44-.84 2.16-1.26l.018-.012c.72-.42 1.44-.84 2.16-1.26l.03-.018a4.45 4.45 0 001.584-1.584c.21-.36.36-.75.438-1.152.06-.318.06-.642.006-.96-.054-.324-.174-.636-.36-.924zM12 2C6.486 2 2 6.486 2 12c0 2.658.84 5.13 2.268 7.146L2 22l2.88-.882A9.963 9.963 0 0012 22c5.514 0 10-4.486 10-10S17.514 2 12 2z"/></svg>
+                                    </a>
+                                    <a href="https://t.me/share/url?url={{ $shareUrl }}&text={{ $shareTitle }}" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#0088CC] text-white transition hover:opacity-90">
+                                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9.417 15.181l-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.932L23.197 2.21c.313-1.234-.456-1.716-1.283-1.71L1.843 9.48c-1.226.05-1.22 1.12-.168 1.41l5.513 1.701 12.794-4.045c.604-.193 1.148.135.935.491l-9.478 8.624z"/></svg>
+                                    </a>
+                                    <button x-data="{ copied: false }" @click="navigator.clipboard.writeText(window.location.href).then(() => { copied = true; setTimeout(() => copied = false, 2000) })" class="flex h-9 items-center gap-1.5 rounded-full bg-slate-200 px-3 text-xs font-semibold text-slate-700 transition hover:bg-slate-300" type="button">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 6h8a2 2 0 012 2v8a2 2 0 01-2 2h-8a2 2 0 01-2-2v-8a2 2 0 012-2z"/></svg>
+                                        <span x-text="copied ? 'Tersalin' : 'Salin Link'">Salin Link</span>
+                                    </button>
+                                </div>
                             </div>
 
                             <div class="relative mb-10 h-72 w-full overflow-hidden rounded-3xl bg-slate-200 sm:h-96">
