@@ -76,13 +76,11 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
             </a>
 
             <ul class="hidden items-center gap-9 lg:flex">
-                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas'] as $id => $label)
-                    <li>
-                        <a href="{{ route('home') }}" class="text-base font-medium text-slate-700 transition hover:text-primary-500">
-                            {{ $label }}
-                        </a>
-                    </li>
-                @endforeach
+                <li>
+                    <a href="{{ route('home') }}" class="text-base font-medium text-slate-700 transition hover:text-primary-500">
+                        Beranda
+                    </a>
+                </li>
                 <li>
                     <a href="{{ route('blog') }}" class="text-base font-medium text-primary-600 transition hover:text-primary-500" aria-current="page">
                         Berita
@@ -103,13 +101,11 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
 
         <div x-show="open" x-cloak x-transition.opacity class="lg:hidden">
             <ul class="mx-4 mb-4 space-y-1 rounded-2xl bg-white p-4 shadow-2xl">
-                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas'] as $id => $label)
-                    <li>
-                        <a href="{{ route('home') }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
-                            {{ $label }}
-                        </a>
-                    </li>
-                @endforeach
+                <li>
+                    <a href="{{ route('home') }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
+                        Beranda
+                    </a>
+                </li>
                 <li>
                     <a href="{{ route('blog') }}" @click="open = false" class="block rounded-lg bg-primary-50 px-4 py-3.5 text-base font-medium text-primary-700 transition hover:bg-primary-100">
                         Berita
