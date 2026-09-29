@@ -18,7 +18,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
                 'title' => 'Pendaftaran Penerimaan Siswa Baru Dibuka',
                 'excerpt' => 'Gelombang pertama pendaftaran tahun ajaran 2027/2028 resmi dibuka secara daring. Segera daftarkan putra-putri Anda.',
                 'color' => 'bg-blue-100 text-blue-700',
-                'content' => '<p>Pendaftaran Penerimaan Siswa Baru Qosim Al Hadi Semarang untuk tahun ajaran 2027/2028 telah resmi dibuka. Kami membuka kesempatan bagi para siswa berprestasi untuk bergabung dan menempuh pendidikan berkualitas bersama kami.</p><p>Proses pendaftaran dapat dilakukan secara daring melalui portal resmi sekolah. Orang tua dapat mengisi formulir, mengunggah dokumen yang diperlukan, dan mengikuti jadwal seleksi yang telah ditentukan.</p><p>Jangan lewatkan kesempatan emas ini. Kuota terbatas, segera daftarkan putra-putri Anda dan jadilah bagian dari keluarga besar Qosim Al Hadi Semarang.</p>',
+                'content' => '<p>Pendaftaran Penerimaan Siswa Baru Qosim Al Hadi Semarang untuk tahun ajaran 2027/2028 telah resmi dibuka. Kami membuka kesempatan bagi para siswa berprestasi untuk bergabung dan menempuh pendidikan berkualitas bersama kami.</p><figure class="my-8"><img src="' . asset('images/logo-qosimalhadi-128.png') . '" alt="Ilustrasi pendaftaran" class="w-full rounded-2xl shadow-md"><figcaption class="mt-2 text-center text-sm text-slate-500">Ilustrasi proses pendaftaran siswa baru secara daring.</figcaption></figure><p>Proses pendaftaran dapat dilakukan secara daring melalui portal resmi sekolah. Orang tua dapat mengisi formulir, mengunggah dokumen yang diperlukan, dan mengikuti jadwal seleksi yang telah ditentukan.</p><p>Jangan lewatkan kesempatan emas ini. Kuota terbatas, segera daftarkan putra-putri Anda dan jadilah bagian dari keluarga besar Qosim Al Hadi Semarang.</p>',
             ],
             [
                 'category' => 'Prestasi',
@@ -220,7 +220,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
                             </div>
 
                             <article class="rounded-2xl bg-white p-6 sm:p-10 shadow-sm">
-                                <div class="prose prose-lg prose-slate max-w-none prose-p:leading-[1.9] prose-p:text-slate-700 prose-p:mb-6 prose-p:text-justify">
+                                <div class="prose prose-lg prose-slate max-w-none prose-p:leading-[1.9] prose-p:text-slate-700 prose-p:mb-6 prose-p:text-justify prose-img:rounded-2xl prose-img:shadow-md prose-figure:my-8 prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-slate-500">
                                     {!! $post['content'] !!}
                                 </div>
                             </article>
