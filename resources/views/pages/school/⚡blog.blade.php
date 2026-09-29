@@ -3,9 +3,57 @@
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('Syarat & Ketentuan - Qosim Al Hadi Semarang')] class extends Component
+new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Component
 {
-    //
+    public function with(): array
+    {
+        return [
+            'posts' => [
+                [
+                    'category' => 'Pengumuman',
+                    'date' => '28 Agu 2026',
+                    'title' => 'Pendaftaran Penerimaan Siswa Baru Dibuka',
+                    'excerpt' => 'Gelombang pertama pendaftaran tahun ajaran 2027/2028 resmi dibuka secara daring. Segera daftarkan putra-putri Anda.',
+                    'color' => 'bg-blue-100 text-blue-700',
+                ],
+                [
+                    'category' => 'Prestasi',
+                    'date' => '12 Sep 2026',
+                    'title' => 'Tim Olimpiade Sains Raih Medali Emas Nasional',
+                    'excerpt' => 'Tiga siswa berhasil membawa pulang medali emas pada ajang OSN tingkat nasional tahun ini.',
+                    'color' => 'bg-amber-100 text-amber-700',
+                ],
+                [
+                    'category' => 'Kegiatan',
+                    'date' => '05 Sep 2026',
+                    'title' => 'Festival Seni Budaya Nusantara 2026',
+                    'excerpt' => 'Ribuan penonton hadir memeriahkan panggung seni tahunan yang menampilkan pertunjukan budaya.',
+                    'color' => 'bg-rose-100 text-rose-700',
+                ],
+                [
+                    'category' => 'Informasi',
+                    'date' => '20 Jul 2026',
+                    'title' => 'Jadwal Ujian Semester Genap Tahun Ajaran 2025/2026',
+                    'excerpt' => 'Informasi lengkap mengenai jadwal ujian semester genap dapat diunduh melalui portal siswa.',
+                    'color' => 'bg-emerald-100 text-emerald-700',
+                ],
+                [
+                    'category' => 'Prestasi',
+                    'date' => '15 Jun 2026',
+                    'title' => 'Juara Umum Olimpiade Matematika Tingkat Kota',
+                    'excerpt' => 'Siswa-siswi Qosim Al Hadi kembali menorehkan prestasi gemilang di bidang matematika.',
+                    'color' => 'bg-amber-100 text-amber-700',
+                ],
+                [
+                    'category' => 'Kegiatan',
+                    'date' => '10 Mei 2026',
+                    'title' => 'Study Tour ke Kawasan Industri dan Perguruan Tinggi',
+                    'excerpt' => 'Kegiatan study tour memberikan pengalaman belajar langsung di dunia industri dan kampus.',
+                    'color' => 'bg-rose-100 text-rose-700',
+                ],
+            ],
+        ];
+    }
 };
 
 ?>
@@ -36,7 +84,7 @@ new #[Title('Syarat & Ketentuan - Qosim Al Hadi Semarang')] class extends Compon
                     </li>
                 @endforeach
                 <li>
-                    <a href="{{ route('blog') }}" class="text-base font-medium text-slate-700 transition hover:text-primary-500">
+                    <a href="{{ route('blog') }}" class="text-base font-medium text-primary-600 transition hover:text-primary-500" aria-current="page">
                         Berita
                     </a>
                 </li>
@@ -63,7 +111,7 @@ new #[Title('Syarat & Ketentuan - Qosim Al Hadi Semarang')] class extends Compon
                     </li>
                 @endforeach
                 <li>
-                    <a href="{{ route('blog') }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
+                    <a href="{{ route('blog') }}" @click="open = false" class="block rounded-lg bg-primary-50 px-4 py-3.5 text-base font-medium text-primary-700 transition hover:bg-primary-100">
                         Berita
                     </a>
                 </li>
@@ -73,80 +121,52 @@ new #[Title('Syarat & Ketentuan - Qosim Al Hadi Semarang')] class extends Compon
 
     <main class="flex min-h-screen flex-col bg-slate-50 pt-28 text-slate-800">
         <div class="flex-1 py-12 sm:py-16 lg:py-20">
-            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <nav aria-label="Breadcrumb" class="mb-6 flex justify-center text-sm text-slate-500">
                     <ol class="flex items-center gap-2">
                         <li>
                             <a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a>
                         </li>
                         <li aria-hidden="true" class="text-slate-300">/</li>
-                        <li class="font-medium text-slate-700" aria-current="page">Syarat &amp; Ketentuan</li>
+                        <li class="font-medium text-slate-700" aria-current="page">Berita &amp; Informasi</li>
                     </ol>
                 </nav>
 
-                <div class="mb-10 text-center">
+                <div class="mb-12 text-center">
                     <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                        Syarat &amp; Ketentuan
+                        Berita &amp; Informasi
                     </h1>
-                    <p class="mt-3 text-slate-600">Terakhir diperbarui: 29 September 2026</p>
+                    <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+                        Ikuti perkembangan terbaru seputar pengumuman, prestasi, dan kegiatan Qosim Al Hadi Semarang.
+                    </p>
                 </div>
 
-                <div class="space-y-8 text-slate-700">
-                    <section>
-                        <h2 class="text-xl font-bold text-slate-900">1. Penerimaan Syarat</h2>
-                        <p class="mt-2 leading-relaxed">
-                            Dengan mengakses dan menggunakan situs web Qosim Al Hadi Semarang, Anda dianggap telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku. Jika Anda tidak menyetujui, harap untuk tidak melanjutkan penggunaan situs ini.
-                        </p>
-                    </section>
-
-                    <section>
-                        <h2 class="text-xl font-bold text-slate-900">2. Penggunaan Situs</h2>
-                        <p class="mt-2 leading-relaxed">
-                            Situs ini disediakan untuk memberikan informasi mengenai sekolah, program, kegiatan, dan layanan yang kami tawarkan. Anda dilarang menggunakan situs ini untuk tujuan yang melanggar hukum, menyesatkan, atau merusak nama baik institusi.
-                        </p>
-                    </section>
-
-                    <section>
-                        <h2 class="text-xl font-bold text-slate-900">3. Kekayaan Intelektual</h2>
-                        <p class="mt-2 leading-relaxed">
-                            Seluruh konten di situs ini, termasuk teks, gambar, logo, video, dan materi lainnya, merupakan milik Qosim Al Hadi Semarang atau pihak yang memberi lisensi kepada kami. Dilarang menyalin, mendistribusikan, atau memodifikasi konten tanpa izin tertulis.
-                        </p>
-                    </section>
-
-                    <section>
-                        <h2 class="text-xl font-bold text-slate-900">4. Batasan Tanggung Jawab</h2>
-                        <p class="mt-2 leading-relaxed">
-                            Kami berusaha menyajikan informasi yang akurat dan terkini, namun tidak menjamin bahwa seluruh informasi bebas dari kesalahan atau kelalaian. Qosim Al Hadi Semarang tidak bertanggung jawab atas kerugian yang timbul akibat penggunaan informasi di situs ini.
-                        </p>
-                    </section>
-
-                    <section>
-                        <h2 class="text-xl font-bold text-slate-900">5. Tautan Pihak Ketiga</h2>
-                        <p class="mt-2 leading-relaxed">
-                            Situs ini dapat menyertakan tautan ke situs pihak ketiga. Tautan tersebut disediakan untuk kemudahan Anda dan bukan merupakan endorsement. Kami tidak bertanggung jawab atas konten atau kebijakan privasi situs pihak ketiga.
-                        </p>
-                    </section>
-
-                    <section>
-                        <h2 class="text-xl font-bold text-slate-900">6. Perubahan Syarat</h2>
-                        <p class="mt-2 leading-relaxed">
-                            Kami berhak mengubah syarat dan ketentuan ini sewaktu-waktu tanpa pemberitahuan sebelumnya. Perubahan akan berlaku sejak dipublikasikan di halaman ini. Penggunaan berkelanjutan atas situs ini berarti Anda menerima syarat yang telah diperbarui.
-                        </p>
-                    </section>
-
-                    <section>
-                        <h2 class="text-xl font-bold text-slate-900">7. Hukum yang Berlaku</h2>
-                        <p class="mt-2 leading-relaxed">
-                            Syarat dan ketentuan ini tunduk pada hukum yang berlaku di Indonesia. Setiap perselisihan yang timbul akan diselesaikan melalui musyawarah mufakat atau lewat jalur hukum yang berwenang.
-                        </p>
-                    </section>
-
-                    <section>
-                        <h2 class="text-xl font-bold text-slate-900">8. Kontak</h2>
-                        <p class="mt-2 leading-relaxed">
-                            Jika Anda memiliki pertanyaan mengenai Syarat &amp; Ketentuan ini, silakan hubungi kami melalui email info@qosimalhadi.sch.id atau telepon (021) 555-0123.
-                        </p>
-                    </section>
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    @foreach ($posts as $post)
+                        <article class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-lg">
+                            <div class="relative h-48 bg-slate-200">
+                                <div class="flex h-full w-full items-center justify-center text-slate-400">
+                                    <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flex flex-1 flex-col p-6">
+                                <div class="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-wide">
+                                    <span class="rounded-full px-2.5 py-1 {{ $post['color'] }}">{{ $post['category'] }}</span>
+                                    <span class="text-slate-400">{{ $post['date'] }}</span>
+                                </div>
+                                <h2 class="text-lg font-bold text-slate-900 transition group-hover:text-primary-600">
+                                    {{ $post['title'] }}
+                                </h2>
+                                <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+                                    {{ $post['excerpt'] }}
+                                </p>
+                                <a href="#" class="mt-5 inline-flex items-center text-sm font-semibold text-primary-600 transition hover:text-primary-700">
+                                    Baca selengkapnya
+                                    <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </article>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -178,9 +198,11 @@ new #[Title('Syarat & Ketentuan - Qosim Al Hadi Semarang')] class extends Compon
                     <div>
                         <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Tautan Cepat</h3>
                         <ul class="mt-5 space-y-3 text-sm">
-                            @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
-                                <li><a href="{{ route('home') }}#{{ $id }}" class="transition hover:text-primary-400">{{ $label }}</a></li>
-                            @endforeach
+                            <li><a href="{{ route('home') }}" class="transition hover:text-primary-400">Beranda</a></li>
+                            <li><a href="{{ route('home') }}#nurture" class="transition hover:text-primary-400">Program</a></li>
+                            <li><a href="{{ route('home') }}#qurani" class="transition hover:text-primary-400">Fasilitas</a></li>
+                            <li><a href="{{ route('home') }}#universities" class="transition hover:text-primary-400">Universitas</a></li>
+                            <li><a href="{{ route('blog') }}" class="transition hover:text-primary-400">Berita</a></li>
                         </ul>
                     </div>
 

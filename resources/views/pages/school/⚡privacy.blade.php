@@ -28,13 +28,18 @@ new #[Title('Kebijakan Privasi - Qosim Al Hadi Semarang')] class extends Compone
             </a>
 
             <ul class="hidden items-center gap-9 lg:flex">
-                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
+                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas'] as $id => $label)
                     <li>
                         <a href="{{ route('home') }}#{{ $id }}" class="text-base font-medium text-slate-700 transition hover:text-primary-500">
                             {{ $label }}
                         </a>
                     </li>
                 @endforeach
+                <li>
+                    <a href="{{ route('blog') }}" class="text-base font-medium text-slate-700 transition hover:text-primary-500">
+                        Berita
+                    </a>
+                </li>
                 <li>
                     <a href="{{ route('home') }}" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:scale-105">
                         SPMB 2027
@@ -50,13 +55,18 @@ new #[Title('Kebijakan Privasi - Qosim Al Hadi Semarang')] class extends Compone
 
         <div x-show="open" x-cloak x-transition.opacity class="lg:hidden">
             <ul class="mx-4 mb-4 space-y-1 rounded-2xl bg-white p-4 shadow-2xl">
-                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
+                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas'] as $id => $label)
                     <li>
                         <a href="{{ route('home') }}#{{ $id }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
                             {{ $label }}
                         </a>
                     </li>
                 @endforeach
+                <li>
+                    <a href="{{ route('blog') }}" @click="open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
+                        Berita
+                    </a>
+                </li>
             </ul>
         </div>
     </header>

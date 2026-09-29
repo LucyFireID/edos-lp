@@ -53,4 +53,11 @@ class LandingPageTest extends TestCase
             ->assertOk()
             ->assertSee('Syarat & Ketentuan');
     }
+
+    public function test_blog_page_renders(): void
+    {
+        $this->get('/berita')
+            ->assertOk()
+            ->assertSee('Berita & Informasi');
+    }
 }
