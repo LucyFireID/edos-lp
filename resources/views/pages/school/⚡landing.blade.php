@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Str;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
@@ -84,11 +85,36 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 ['name' => 'Rangga Pratama', 'role' => 'Alumni 2021', 'quote' => 'Bekal riset dan disiplin yang saya dapatkan membuat saya percaya diri kuliah di luar negeri.'],
                 ['name' => 'Bapak Hendra Wijaya', 'role' => 'Orang Tua Siswa', 'quote' => 'Fasilitas lengkap dan program ekstrakurikuler yang beragam membuat anak semangat bersekolah setiap hari.'],
             ],
-            'news' => [
-                ['date' => '12 Sep 2026', 'category' => 'Prestasi', 'title' => 'Tim Olimpiade Sains Raih Medali Emas Nasional', 'excerpt' => 'Tiga siswa berhasil membawa pulang medali emas pada ajang OSN tingkat nasional tahun ini.'],
-                ['date' => '05 Sep 2026', 'category' => 'Kegiatan', 'title' => 'Festival Seni Budaya Nusantara 2026', 'excerpt' => 'Ribuan penonton hadir memeriahkan panggung seni tahunan yang menampilkan pertunjukan budaya.'],
-                ['date' => '28 Agu 2026', 'category' => 'Pengumuman', 'title' => 'Pendaftaran Penerimaan Siswa Baru Dibuka', 'excerpt' => 'Gelombang pertama pendaftaran tahun ajaran 2027/2028 resmi dibuka secara daring.'],
-            ],
+            'news' => collect([
+                [
+                    'date' => '12 September 2026',
+                    'timestamp' => '2026-09-12',
+                    'category' => 'Prestasi',
+                    'title' => 'Tim Olimpiade Sains Raih Medali Emas Nasional',
+                    'excerpt' => 'Tiga siswa berhasil membawa pulang medali emas pada ajang OSN tingkat nasional tahun ini.',
+                ],
+                [
+                    'date' => '05 September 2026',
+                    'timestamp' => '2026-09-05',
+                    'category' => 'Kegiatan',
+                    'title' => 'Festival Seni Budaya Nusantara 2026',
+                    'excerpt' => 'Ribuan penonton hadir memeriahkan panggung seni tahunan yang menampilkan pertunjukan budaya.',
+                ],
+                [
+                    'date' => '28 Agustus 2026',
+                    'timestamp' => '2026-08-28',
+                    'category' => 'Pengumuman',
+                    'title' => 'Pendaftaran Penerimaan Siswa Baru Dibuka',
+                    'excerpt' => 'Gelombang pertama pendaftaran tahun ajaran 2027/2028 resmi dibuka secara daring.',
+                ],
+                [
+                    'date' => '20 Juli 2026',
+                    'timestamp' => '2026-07-20',
+                    'category' => 'Informasi',
+                    'title' => 'Jadwal Ujian Semester Genap Tahun Ajaran 2025/2026',
+                    'excerpt' => 'Informasi lengkap mengenai jadwal ujian semester genap dapat diunduh melalui portal siswa.',
+                ],
+            ])->sortByDesc('timestamp')->map(fn ($item) => [...$item, 'slug' => Str::slug($item['title'])])->values()->all(),
         ];
     }
 };
@@ -406,7 +432,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <span class="text-sm font-semibold uppercase tracking-widest text-primary-600">Berita Terbaru</span>
                     <h2 class="mt-4 text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">Kabar dari Sekolah</h2>
                 </div>
-                <a href="#" class="text-sm font-semibold text-primary-600 hover:text-primary-700">Lihat semua berita &rarr;</a>
+                <a href="{{ route('blog') }}" class="text-sm font-semibold text-primary-600 hover:text-primary-700">Lihat semua berita &rarr;</a>
             </div>
 
             <div class="mt-14 grid gap-8 lg:grid-cols-3">
@@ -418,9 +444,11 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                                 <span class="rounded-full bg-primary-100 px-3 py-1 font-semibold text-primary-700">{{ $item['category'] }}</span>
                                 <span class="text-slate-500">{{ $item['date'] }}</span>
                             </div>
-                                <h3 class="mt-4 text-lg font-semibold text-slate-900 transition">{{ $item['title'] }}</h3>
+                                <a href="{{ route('blog.post', $item['slug']) }}" class="mt-4 block">
+                                    <h3 class="text-lg font-semibold text-slate-900 transition hover:text-primary-600">{{ $item['title'] }}</h3>
+                                </a>
                             <p class="mt-3 text-sm leading-relaxed text-slate-600">{{ $item['excerpt'] }}</p>
-                            <a href="#" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary-600">
+                            <a href="{{ route('blog.post', $item['slug']) }}" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary-600">
                                 Baca selengkapnya
                                 <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                             </a>
