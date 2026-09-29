@@ -156,48 +156,70 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
 
     <main class="flex min-h-screen flex-col bg-slate-50 pt-28 text-slate-800">
         <div class="flex-1 py-12 sm:py-16 lg:py-20">
-            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-                @if ($post)
-                    <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-500">
-                        <ol class="flex flex-wrap items-center gap-2">
-                            <li><a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a></li>
-                            <li aria-hidden="true" class="text-slate-300">/</li>
-                            <li><a href="{{ route('blog') }}" class="transition hover:text-primary-600">Berita</a></li>
-                            <li aria-hidden="true" class="text-slate-300">/</li>
-                            <li class="min-w-0 font-medium text-slate-700" aria-current="page">
-                                <span class="block truncate max-w-[140px] sm:max-w-xs">{{ Str::limit($post['title'], 50) }}</span>
-                            </li>
-                        </ol>
-                    </nav>
-
-                    <div class="mb-8">
-                        <span class="rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide {{ $post['color'] }}">{{ $post['category'] }}</span>
-                        <h1 class="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                            {{ $post['title'] }}
-                        </h1>
-                        <p class="mt-3 text-slate-500">{{ $post['date'] }}</p>
-                    </div>
-
-                    <div class="relative mb-10 h-72 w-full overflow-hidden rounded-3xl bg-slate-200 sm:h-96">
-                        <div class="flex h-full w-full items-center justify-center text-slate-400">
-                            <svg class="h-20 w-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-[220px_1fr_220px]">
+                    {{-- Iklan kiri --}}
+                    <aside class="hidden lg:block">
+                        <div class="sticky top-28 flex h-[600px] w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-white p-4 text-slate-400 shadow-sm">
+                            <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            <span class="mt-2 text-sm font-medium">Space Iklan</span>
+                            <span class="text-xs">160 x 600</span>
                         </div>
+                    </aside>
+
+                    <div class="min-w-0">
+                        @if ($post)
+                            <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-500">
+                                <ol class="flex flex-wrap items-center gap-2">
+                                    <li><a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a></li>
+                                    <li aria-hidden="true" class="text-slate-300">/</li>
+                                    <li><a href="{{ route('blog') }}" class="transition hover:text-primary-600">Berita</a></li>
+                                    <li aria-hidden="true" class="text-slate-300">/</li>
+                                    <li class="min-w-0 font-medium text-slate-700" aria-current="page">
+                                        <span class="block truncate max-w-[140px] sm:max-w-xs">{{ Str::limit($post['title'], 50) }}</span>
+                                    </li>
+                                </ol>
+                            </nav>
+
+                            <div class="mb-8">
+                                <span class="rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide {{ $post['color'] }}">{{ $post['category'] }}</span>
+                                <h1 class="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                                    {{ $post['title'] }}
+                                </h1>
+                                <p class="mt-3 text-slate-500">{{ $post['date'] }}</p>
+                            </div>
+
+                            <div class="relative mb-10 h-72 w-full overflow-hidden rounded-3xl bg-slate-200 sm:h-96">
+                                <div class="flex h-full w-full items-center justify-center text-slate-400">
+                                    <svg class="h-20 w-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                </div>
+                            </div>
+
+                            <article class="rounded-2xl bg-white p-6 sm:p-10 shadow-sm">
+                                <div class="prose prose-lg prose-slate max-w-none prose-p:leading-[1.9] prose-p:text-slate-700 prose-p:mb-6 prose-p:text-justify">
+                                    {!! $post['content'] !!}
+                                </div>
+                            </article>
+                        @else
+                            <div class="rounded-2xl bg-white p-12 text-center shadow-sm">
+                                <h1 class="text-2xl font-bold text-slate-900">Berita tidak ditemukan</h1>
+                                <p class="mt-3 text-slate-600">Berita yang Anda cari tidak tersedia.</p>
+                                <a href="{{ route('blog') }}" class="mt-6 inline-flex items-center rounded-full bg-primary-600 px-6 py-3 font-semibold text-white transition hover:bg-primary-700">
+                                    Kembali ke Berita
+                                </a>
+                            </div>
+                        @endif
                     </div>
 
-                    <article class="rounded-2xl bg-white p-6 sm:p-10 shadow-sm">
-                        <div class="prose prose-lg prose-slate max-w-none prose-p:leading-[1.9] prose-p:text-slate-700 prose-p:mb-6 prose-p:text-justify">
-                            {!! $post['content'] !!}
+                    {{-- Iklan kanan --}}
+                    <aside class="hidden lg:block">
+                        <div class="sticky top-28 flex h-[600px] w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-white p-4 text-slate-400 shadow-sm">
+                            <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            <span class="mt-2 text-sm font-medium">Space Iklan</span>
+                            <span class="text-xs">160 x 600</span>
                         </div>
-                    </article>
-                @else
-                    <div class="rounded-2xl bg-white p-12 text-center shadow-sm">
-                        <h1 class="text-2xl font-bold text-slate-900">Berita tidak ditemukan</h1>
-                        <p class="mt-3 text-slate-600">Berita yang Anda cari tidak tersedia.</p>
-                        <a href="{{ route('blog') }}" class="mt-6 inline-flex items-center rounded-full bg-primary-600 px-6 py-3 font-semibold text-white transition hover:bg-primary-700">
-                            Kembali ke Berita
-                        </a>
-                    </div>
-                @endif
+                    </aside>
+                </div>
             </div>
         </div>
 
