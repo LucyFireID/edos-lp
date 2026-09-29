@@ -15,6 +15,10 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
                 ['name' => 'Sari Dewi, S.Pd.', 'subject' => 'Biologi', 'role' => 'Guru'],
                 ['name' => 'Ridwan Hakim, S.Pd.', 'subject' => 'Pendidikan Agama Islam', 'role' => 'Guru'],
                 ['name' => 'Nur Aini, S.Pd.', 'subject' => 'Bahasa Inggris', 'role' => 'Guru'],
+                ['name' => 'Bambang Setyo, S.Pd.', 'subject' => 'Sejarah', 'role' => 'Guru'],
+                ['name' => 'Lestari Indah, S.Pd.', 'subject' => 'Kimia', 'role' => 'Guru'],
+                ['name' => 'Andi Pratama, S.Pd.', 'subject' => 'Olahraga', 'role' => 'Guru'],
+                ['name' => 'Fitriani Rahma, S.Pd.', 'subject' => 'Seni Budaya', 'role' => 'Guru'],
             ],
         ];
     }
@@ -78,18 +82,18 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
                     <p class="mt-3 text-slate-600">Terakhir diperbarui: 29 September 2026</p>
                 </div>
 
-                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+                <div class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible lg:grid-cols-5 lg:gap-6 lg:px-0 lg:pb-0">
                     @foreach ($teachers as $teacher)
-                        <div class="text-center">
-                            <div class="mx-auto aspect-[3/4] w-full max-w-[220px] rounded-2xl bg-slate-200">
+                        <div class="w-36 shrink-0 snap-start text-center sm:w-auto">
+                            <div class="mx-auto aspect-[3/4] w-full max-w-[180px] rounded-2xl bg-slate-200 sm:max-w-[220px]">
                                 <div class="flex h-full w-full items-center justify-center text-slate-400">
-                                    <svg class="h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
                                 </div>
                             </div>
-                            <div class="mt-4">
-                                <h2 class="text-lg font-bold text-slate-900">{{ $teacher['name'] }}</h2>
-                                <p class="mt-1 text-sm text-slate-500">{{ $teacher['role'] }}</p>
-                                <p class="mt-0.5 text-sm text-primary-600">{{ $teacher['subject'] }}</p>
+                            <div class="mt-3 px-1">
+                                <h2 class="text-sm font-semibold leading-tight text-slate-900 sm:text-base">{{ $teacher['name'] }}</h2>
+                                <p class="mt-1 text-xs text-slate-500">{{ $teacher['role'] }}</p>
+                                <p class="mt-0.5 text-xs text-primary-600">{{ $teacher['subject'] }}</p>
                             </div>
                         </div>
                     @endforeach
