@@ -450,8 +450,6 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                             <div class="flex items-center gap-3 text-xs">
                                 <span class="rounded-full bg-primary-100 px-3 py-1 font-semibold text-primary-700">{{ $item['category'] }}</span>
                                 <span class="text-slate-500">{{ $item['date'] }}</span>
-                                <span class="text-slate-300">·</span>
-                                <span class="text-slate-500">{{ $item['author'] }}</span>
                             </div>
                                 <a href="{{ route('blog.post', $item['slug']) }}" class="mt-4 block">
                                     <h3 class="text-lg font-semibold text-slate-900 transition hover:text-primary-600">{{ $item['title'] }}</h3>
