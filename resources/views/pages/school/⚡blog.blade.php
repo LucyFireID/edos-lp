@@ -195,9 +195,9 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                         <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Tautan Cepat</h3>
                         <ul class="mt-5 space-y-3 text-sm">
                             <li><a href="{{ route('home') }}" class="transition hover:text-primary-400">Beranda</a></li>
-                            <li><a href="{{ route('home') }}#nurture" class="transition hover:text-primary-400">Program</a></li>
-                            <li><a href="{{ route('home') }}#qurani" class="transition hover:text-primary-400">Fasilitas</a></li>
-                            <li><a href="{{ route('home') }}#universities" class="transition hover:text-primary-400">Universitas</a></li>
+                            <li><a href="{{ route('home') }}#program" class="transition hover:text-primary-400">Program</a></li>
+                            <li><a href="{{ route('home') }}#fasilitas" class="transition hover:text-primary-400">Fasilitas</a></li>
+                            <li><a href="{{ route('home') }}#universitas" class="transition hover:text-primary-400">Universitas</a></li>
                             <li><a href="{{ route('blog') }}" class="transition hover:text-primary-400">Berita</a></li>
                         </ul>
                     </div>

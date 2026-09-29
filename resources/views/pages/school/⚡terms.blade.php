@@ -164,7 +164,7 @@ new #[Title('Syarat & Ketentuan - Qosim Al Hadi Semarang')] class extends Compon
                     <div>
                         <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Tautan Cepat</h3>
                         <ul class="mt-5 space-y-3 text-sm">
-                            @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
+                            @foreach (['home' => 'Beranda', 'program' => 'Program', 'fasilitas' => 'Fasilitas', 'universitas' => 'Universitas', 'berita' => 'Berita'] as $id => $label)
                                 <li><a href="{{ route('home') }}#{{ $id }}" class="transition hover:text-primary-400">{{ $label }}</a></li>
                             @endforeach
                         </ul>

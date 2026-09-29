@@ -114,7 +114,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             </a>
 
             <ul class="hidden items-center gap-9 lg:flex">
-                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas'] as $id => $label)
+                @foreach (['home' => 'Beranda', 'program' => 'Program', 'fasilitas' => 'Fasilitas', 'universitas' => 'Universitas'] as $id => $label)
                     <li>
                         <a href="#{{ $id }}" @click.prevent="scrollToSection('{{ $id }}')" class="text-base font-medium transition hover:text-primary-500" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
                             {{ $label }}
@@ -141,7 +141,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
 
         <div x-show="open" x-cloak x-transition.opacity class="lg:hidden">
             <ul class="mx-4 mb-4 space-y-1 rounded-2xl bg-white p-4 shadow-2xl">
-                @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas'] as $id => $label)
+                @foreach (['home' => 'Beranda', 'program' => 'Program', 'fasilitas' => 'Fasilitas', 'universitas' => 'Universitas'] as $id => $label)
                     <li>
                         <a href="#{{ $id }}" @click.prevent="scrollToSection('{{ $id }}'); open = false" class="block rounded-lg px-4 py-3.5 text-base font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary-600">
                             {{ $label }}
@@ -227,7 +227,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     <a href="#home" @click.prevent="scrollToSection('home')" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-primary-500/30 transition hover:scale-105">
                         SPMB 2027
                     </a>
-                    <a href="#nurture" @click.prevent="scrollToSection('nurture')" class="rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">
+                    <a href="#program" @click.prevent="scrollToSection('program')" class="rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">
                         Jelajahi Program
                     </a>
                 </div>
@@ -245,7 +245,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     </section>
 
     {{-- Built to Nurture --}}
-    <section id="nurture" class="relative bg-white py-24">
+    <section id="program" class="relative bg-white py-24">
         <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('{{ asset('images/batik.png') }}')"></div>
         <div class="relative z-10 mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-3xl text-center">
@@ -315,7 +315,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
             ['title' => 'Pengabdian Masyarakat', 'desc' => 'Melatih empati dan kontribusi nyata untuk lingkungan.'],
         ];
     @endphp
-    <section id="qurani" class="bg-slate-50 py-24 md:pb-48">
+    <section id="fasilitas" class="bg-slate-50 py-24 md:pb-48">
         <div class="mx-auto max-w-7xl px-6">
             <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-balance text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
@@ -337,7 +337,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     </section>
 
     {{-- University Spread --}}
-    <section id="universities" class="relative bg-white py-24">
+    <section id="universitas" class="relative bg-white py-24">
         <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('{{ asset('images/batik2.png') }}')"></div>
         <div class="relative z-10 mx-auto max-w-7xl px-6">
             <div class="grid items-start gap-12 lg:grid-cols-2">
@@ -399,7 +399,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
     </section>
 
     {{-- News --}}
-    <section id="news" class="bg-slate-50 py-24">
+    <section id="berita" class="bg-slate-50 py-24">
         <div class="mx-auto max-w-7xl px-6">
             <div class="flex flex-wrap items-end justify-between gap-6">
                 <div>
@@ -461,7 +461,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                 <div>
                     <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Tautan Cepat</h3>
                     <ul class="mt-5 space-y-3 text-sm">
-                        @foreach (['home' => 'Beranda', 'nurture' => 'Program', 'qurani' => 'Fasilitas', 'universities' => 'Universitas', 'news' => 'Berita'] as $id => $label)
+                        @foreach (['home' => 'Beranda', 'program' => 'Program', 'fasilitas' => 'Fasilitas', 'universitas' => 'Universitas', 'berita' => 'Berita'] as $id => $label)
                             <li><a href="#{{ $id }}" @click.prevent="scrollToSection('{{ $id }}')" class="transition hover:text-primary-400">{{ $label }}</a></li>
                         @endforeach
                     </ul>
