@@ -67,4 +67,11 @@ class LandingPageTest extends TestCase
             ->assertOk()
             ->assertSee('Pendaftaran Penerimaan Siswa Baru Dibuka');
     }
+
+    public function test_teachers_page_renders(): void
+    {
+        $this->get('/tenaga-pendidik')
+            ->assertOk()
+            ->assertSee('Tenaga Pendidik');
+    }
 }
