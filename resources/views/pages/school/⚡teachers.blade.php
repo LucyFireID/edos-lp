@@ -65,17 +65,17 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
     <main class="flex min-h-screen flex-col bg-slate-50 pt-28 text-slate-800">
         <div class="flex-1 py-12 sm:py-16 lg:py-20">
             <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-                <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-500">
-                    <ol class="flex flex-wrap items-center gap-2">
+                <nav aria-label="Breadcrumb" class="mb-6 flex justify-center text-sm text-slate-500">
+                    <ol class="flex items-center gap-2">
                         <li><a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a></li>
                         <li aria-hidden="true" class="text-slate-300">/</li>
                         <li class="font-medium text-slate-700" aria-current="page">Tenaga Pendidik</li>
                     </ol>
                 </nav>
 
-                <div class="mb-12 text-center">
+                <div class="mb-10 text-center">
                     <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Tenaga Pendidik</h1>
-                    <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600">Perkenalan para guru dan tenaga pendidik Qosim Al Hadi Semarang.</p>
+                    <p class="mt-3 text-slate-600">Perkenalan para guru dan tenaga pendidik Qosim Al Hadi Semarang.</p>
                 </div>
 
                 <div class="grid gap-8 sm:grid-cols-2">
