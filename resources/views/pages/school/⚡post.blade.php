@@ -13,7 +13,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
         $posts = collect([
             [
                 'category' => 'Pengumuman',
-                'date' => '28 Agu 2026',
+                'date' => '28 Agustus 2026',
                 'timestamp' => '2026-08-28',
                 'title' => 'Pendaftaran Penerimaan Siswa Baru Dibuka',
                 'excerpt' => 'Gelombang pertama pendaftaran tahun ajaran 2027/2028 resmi dibuka secara daring. Segera daftarkan putra-putri Anda.',
@@ -22,7 +22,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
             ],
             [
                 'category' => 'Prestasi',
-                'date' => '12 Sep 2026',
+                'date' => '12 September 2026',
                 'timestamp' => '2026-09-12',
                 'title' => 'Tim Olimpiade Sains Raih Medali Emas Nasional',
                 'excerpt' => 'Tiga siswa berhasil membawa pulang medali emas pada ajang OSN tingkat nasional tahun ini.',
@@ -31,7 +31,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
             ],
             [
                 'category' => 'Kegiatan',
-                'date' => '05 Sep 2026',
+                'date' => '05 September 2026',
                 'timestamp' => '2026-09-05',
                 'title' => 'Festival Seni Budaya Nusantara 2026',
                 'excerpt' => 'Ribuan penonton hadir memeriahkan panggung seni tahunan yang menampilkan pertunjukan budaya.',
@@ -40,7 +40,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
             ],
             [
                 'category' => 'Informasi',
-                'date' => '20 Jul 2026',
+                'date' => '20 Juli 2026',
                 'timestamp' => '2026-07-20',
                 'title' => 'Jadwal Ujian Semester Genap Tahun Ajaran 2025/2026',
                 'excerpt' => 'Informasi lengkap mengenai jadwal ujian semester genap dapat diunduh melalui portal siswa.',
@@ -49,7 +49,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
             ],
             [
                 'category' => 'Prestasi',
-                'date' => '15 Jun 2026',
+                'date' => '15 Juni 2026',
                 'timestamp' => '2026-06-15',
                 'title' => 'Juara Umum Olimpiade Matematika Tingkat Kota',
                 'excerpt' => 'Siswa-siswi Qosim Al Hadi kembali menorehkan prestasi gemilang di bidang matematika.',
@@ -67,7 +67,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
             ],
             [
                 'category' => 'Informasi',
-                'date' => '15 Apr 2026',
+                'date' => '15 April 2026',
                 'timestamp' => '2026-04-15',
                 'title' => 'Jadwal Pembagian Raport Semester Genap',
                 'excerpt' => 'Informasi pembagian raport semester genap tahun ajaran 2025/2026 dapat diakses melalui portal siswa.',
@@ -76,7 +76,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
             ],
             [
                 'category' => 'Kegiatan',
-                'date' => '08 Mar 2026',
+                'date' => '08 Maret 2026',
                 'timestamp' => '2026-03-08',
                 'title' => 'Workshop Kepramukaian dan Kepemimpinan Siswa',
                 'excerpt' => 'Kegiatan workshop membekali siswa dengan keterampilan kepramukaian dan kepemimpinan.',
