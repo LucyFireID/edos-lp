@@ -39,4 +39,11 @@ class LandingPageTest extends TestCase
             ->assertSet('sent', true)
             ->assertSet('name', '');
     }
+
+    public function test_privacy_page_renders(): void
+    {
+        $this->get('/kebijakan-privasi')
+            ->assertOk()
+            ->assertSee('Kebijakan Privasi');
+    }
 }
