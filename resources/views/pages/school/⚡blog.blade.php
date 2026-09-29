@@ -9,6 +9,12 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
     #[Url]
     public int $page = 1;
 
+    public function goToPage(int $page): void
+    {
+        $this->page = $page;
+        $this->dispatch('paginated');
+    }
+
     public function with(): array
     {
         $posts = collect([
@@ -96,7 +102,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
 
 ?>
 
-<div class="scroll-smooth">
+<div class="scroll-smooth" x-on:paginated.window="window.scrollTo({ top: 0, behavior: 'smooth' })">
     {{-- Navigation --}}
     <header
         x-data="{ open: false, scrolled: true }"
@@ -251,7 +257,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                 @if ($lastPage > 1)
                     <div class="mt-12 flex items-center justify-center gap-2">
                         <button
-                            wire:click="$set('page', {{ $currentPage - 1 }})"
+                            wire:click="goToPage({{ $currentPage - 1 }})"
                             @disabled($currentPage === 1)
                             class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
                         >
@@ -260,7 +266,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
 
                         @for ($i = 1; $i <= $lastPage; $i++)
                             <button
-                                wire:click="$set('page', {{ $i }})"
+                                wire:click="goToPage({{ $i }})"
                                 class="h-10 w-10 rounded-lg text-sm font-semibold transition {{ $i === $currentPage ? 'bg-primary-600 text-white' : 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50' }}"
                             >
                                 {{ $i }}
@@ -268,7 +274,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                         @endfor
 
                         <button
-                            wire:click="$set('page', {{ $currentPage + 1 }})"
+                            wire:click="goToPage({{ $currentPage + 1 }})"
                             @disabled($currentPage === $lastPage)
                             class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
                         >
