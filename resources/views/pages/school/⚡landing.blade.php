@@ -114,7 +114,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     'title' => 'Jadwal Ujian Semester Genap Tahun Ajaran 2025/2026',
                     'excerpt' => 'Informasi lengkap mengenai jadwal ujian semester genap dapat diunduh melalui portal siswa.',
                 ],
-            ])->sortByDesc('timestamp')->map(fn ($item) => [...$item, 'slug' => Str::slug($item['title'])])->values()->all(),
+            ])->sortByDesc('timestamp')->take(3)->map(fn ($item) => [...$item, 'slug' => Str::slug($item['title'])])->values()->all(),
         ];
     }
 };
