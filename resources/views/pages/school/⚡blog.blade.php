@@ -86,6 +86,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
 
         return [
             'posts' => $posts->slice($offset, $perPage)->all(),
+            'heroPosts' => $posts->take(3)->values()->all(),
             'currentPage' => $current,
             'lastPage' => $lastPage,
             'total' => $total,
@@ -173,6 +174,51 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                         Ikuti perkembangan terbaru seputar pengumuman, prestasi, dan kegiatan Qosim Al Hadi Semarang.
                     </p>
                 </div>
+
+                @if ($currentPage === 1 && count($heroPosts) > 0)
+                    <div class="mb-12" x-data="{ active: 0, total: {{ count($heroPosts) }} }" x-init="setInterval(() => active = (active + 1) % total, 5000)">
+                        <div class="relative overflow-hidden rounded-3xl bg-white shadow-lg">
+                            <div class="flex transition-transform duration-700 ease-out" :style="`transform: translateX(-${active * 100}%)`">
+                                @foreach ($heroPosts as $heroPost)
+                                    <div class="w-full flex-shrink-0">
+                                        <div class="flex flex-col md:flex-row">
+                                            <div class="relative h-64 bg-slate-200 md:h-auto md:w-1/2 md:min-h-[360px]">
+                                                <div class="flex h-full w-full items-center justify-center text-slate-400">
+                                                    <svg class="h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l2.586-2.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col justify-center p-8 md:w-1/2 md:p-12">
+                                                <div class="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-wide">
+                                                    <span class="rounded-full px-2.5 py-1 {{ $heroPost['color'] }}">{{ $heroPost['category'] }}</span>
+                                                    <span class="text-slate-400">{{ $heroPost['date'] }}</span>
+                                                </div>
+                                                <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">{{ $heroPost['title'] }}</h2>
+                                                <p class="mt-4 line-clamp-3 text-slate-600">{{ $heroPost['excerpt'] }}</p>
+                                                <a href="#" class="mt-6 inline-flex items-center text-sm font-semibold text-primary-600 transition hover:text-primary-700">
+                                                    Baca selengkapnya
+                                                    <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+
+                            <button @click="active = (active - 1 + total) % total" class="absolute top-1/2 left-4 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow-md transition hover:bg-white" aria-label="Sebelumnya">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            </button>
+                            <button @click="active = (active + 1) % total" class="absolute top-1/2 right-4 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow-md transition hover:bg-white" aria-label="Selanjutnya">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </button>
+
+                            <div class="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+                                <template x-for="i in total">
+                                    <button @click="active = i - 1" class="h-2.5 w-2.5 rounded-full transition" :class="i - 1 === active ? 'bg-primary-600' : 'bg-slate-300'" aria-label="Pindah slide"></button>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                @endif
 
                 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     @foreach ($posts as $post)
