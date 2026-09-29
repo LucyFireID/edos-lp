@@ -85,7 +85,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
             ],
         ])->sortByDesc('timestamp')->values();
 
-        $posts = $posts->map(fn ($post) => [...$post, 'slug' => Str::slug($post['title'])])->values();
+        $posts = $posts->map(fn ($post) => [...$post, 'slug' => Str::slug($post['title']), 'author' => 'Tim Redaksi Qosim Al Hadi'])->values();
         $post = $posts->firstWhere('slug', $this->slug);
 
         return [
@@ -186,7 +186,7 @@ new #[Title('Berita - Qosim Al Hadi Semarang')] class extends Component
                                 <h1 class="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
                                     {{ $post['title'] }}
                                 </h1>
-                                <p class="mt-3 text-slate-500">{{ $post['date'] }}</p>
+                                <p class="mt-3 text-slate-500">{{ $post['date'] }} · {{ $post['author'] }}</p>
 
                                 @php
                                     $shareUrl = urlencode(url()->current());

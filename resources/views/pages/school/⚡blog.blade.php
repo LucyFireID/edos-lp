@@ -85,7 +85,7 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
             ],
         ])->sortByDesc('timestamp')->values();
 
-        $posts = $posts->map(fn ($post) => [...$post, 'slug' => Str::slug($post['title'])])->values();
+        $posts = $posts->map(fn ($post) => [...$post, 'slug' => Str::slug($post['title']), 'author' => 'Tim Redaksi Qosim Al Hadi'])->values();
 
         $perPage = 6;
         $total = $posts->count();
@@ -200,6 +200,8 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                                                 <div class="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-wide">
                                                     <span class="rounded-full px-2.5 py-1 {{ $heroPost['color'] }}">{{ $heroPost['category'] }}</span>
                                                     <span class="text-slate-400">{{ $heroPost['date'] }}</span>
+                                                    <span class="text-slate-300">·</span>
+                                                    <span class="text-slate-500">{{ $heroPost['author'] }}</span>
                                                 </div>
                                                 <a href="{{ route('blog.post', $heroPost['slug']) }}" class="block">
                                                     <h2 class="text-2xl font-bold text-slate-900 transition hover:text-primary-600 sm:text-3xl">{{ $heroPost['title'] }}</h2>
@@ -243,6 +245,8 @@ new #[Title('Berita & Informasi - Qosim Al Hadi Semarang')] class extends Compon
                                 <div class="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-wide">
                                     <span class="rounded-full px-2.5 py-1 {{ $post['color'] }}">{{ $post['category'] }}</span>
                                     <span class="text-slate-400">{{ $post['date'] }}</span>
+                                    <span class="text-slate-300">·</span>
+                                    <span class="text-slate-500">{{ $post['author'] }}</span>
                                 </div>
                                 <a href="{{ route('blog.post', $post['slug']) }}" class="block">
                                     <h2 class="text-lg font-bold text-slate-900 transition group-hover:text-primary-600">
