@@ -12,3 +12,4 @@ Route::livewire('/alumni', 'pages::school.alumni')->name('alumni');
 Route::livewire('/sebaran-universitas', 'pages::school.universities')->name('universities');
 Route::livewire('/madrasah-ibtidaiyah', 'pages::school.mi')->name('mi');
 Route::livewire('/madrasah-tsanawiyah', 'pages::school.mts')->name('mts');
+Route::livewire('/madrasah-aliyah', 'pages::school.ma')->name('ma');
