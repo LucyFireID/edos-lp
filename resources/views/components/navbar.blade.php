@@ -17,7 +17,7 @@ $isTransparent = $isHome || request()->routeIs('mi');
             </span>
             <span class="flex flex-col leading-tight">
                 <span class="text-xl font-bold tracking-tight sm:text-2xl @if ($isTransparent) transition-colors duration-300" :class="scrolled ? 'text-slate-900' : 'text-white' @else text-slate-900 @endif">Qosim Al Hadi</span>
-                <span class="text-sm tracking-wide @if ($isTransparent) transition-colors duration-300" :class="scrolled ? 'text-slate-500' : 'text-primary-100' @else text-slate-500 @endif">Bhakti Kepada Negeri</span>
+                <span class="text-sm tracking-wide @if ($isTransparent) transition-colors duration-300" :class="scrolled ? 'text-slate-500' : 'text-white/80' @else text-slate-500 @endif">Bhakti Kepada Negeri</span>
             </span>
         </a>
 
