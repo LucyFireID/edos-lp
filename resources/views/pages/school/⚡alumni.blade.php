@@ -305,7 +305,7 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
                                 class="w-full appearance-none rounded-full border border-slate-200 bg-white py-3 pr-10 pl-5 text-sm text-slate-700 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none"
                             >
                                 <option value="">Semua Jenjang</option>
-                                <option value="MI">MI</option>
+                                <option value="MI">Madrasah Ibtidaiyah</option>
                                 <option value="MTs">MTs</option>
                                 <option value="MA">MA</option>
                                 <option value="Ponpes">Ponpes</option>

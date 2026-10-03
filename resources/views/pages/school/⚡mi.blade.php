@@ -3,7 +3,7 @@
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends Component
+new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Component
 {
     public function with(): array
     {
@@ -37,7 +37,7 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
                 <div class="max-w-3xl">
                     <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Madrasah Ibtidaiyah</h1>
                     <p class="mt-4 text-xl font-medium text-white">Membentuk Generasi Qur'ani sejak Usia Dini</p>
-                    <p class="mt-6 max-w-2xl leading-relaxed text-slate-200">MI Qosim Al Hadi menyelenggarakan pendidikan dasar Islam yang mengintegrasikan ilmu umum dan keislaman dalam suasana belajar yang menyenangkan, aman, dan penuh kasih sayang.</p>
+                    <p class="mt-6 max-w-2xl leading-relaxed text-slate-200">Madrasah Ibtidaiyah Qosim Al Hadi menyelenggarakan pendidikan dasar Islam yang mengintegrasikan ilmu umum dan keislaman dalam suasana belajar yang menyenangkan, aman, dan penuh kasih sayang.</p>
                     <a href="#spmb" class="mt-8 inline-flex items-center rounded-full bg-primary-600 px-8 py-3.5 font-semibold text-white shadow-lg shadow-primary-600/30 transition hover:bg-primary-500">Daftar Siswa Baru</a>
                 </div>
             </div>
@@ -60,7 +60,7 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
                             <h2 class="text-3xl font-bold tracking-tight text-slate-900">Sambutan Kepala Madrasah</h2>
                             <p class="mt-6 leading-relaxed text-slate-600">Assalamu'alaikum warahmatullahi wabarakatuh,</p>
                             <p class="mt-4 leading-relaxed text-slate-600">Selamat datang di Madrasah Ibtidaiyah Qosim Al Hadi. Sejak berdiri, kami berkomitmen untuk memberikan pendidikan dasar yang tidak hanya mengutamakan akademik, tetapi juga membentuk karakter Islami pada setiap siswa.</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Kami percaya bahwa masa kanak-kanak adalah fondasi penting bagi perkembangan masa depan anak. Oleh karena itu, MI Qosim Al Hadi hadir sebagai rumah belajar kedua yang penuh kasih sayang, disiplin, dan inspiratif.</p>
+                            <p class="mt-4 leading-relaxed text-slate-600">Kami percaya bahwa masa kanak-kanak adalah fondasi penting bagi perkembangan masa depan anak. Oleh karena itu, Madrasah Ibtidaiyah Qosim Al Hadi hadir sebagai rumah belajar kedua yang penuh kasih sayang, disiplin, dan inspiratif.</p>
                             <p class="mt-4 leading-relaxed text-slate-600">Terima kasih atas kepercayaan Anda. Mari bersama-sama membangun generasi yang cerdas, berakhlak, dan Qur'ani.</p>
                             <p class="mt-6 font-bold text-slate-900">Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
                         </div>
@@ -73,7 +73,7 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
                     <div>
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Sekilas MI</h2>
+                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Sekilas Madrasah Ibtidaiyah</h2>
                         <p class="mt-6 leading-relaxed text-slate-600">Madrasah Ibtidaiyah Qosim Al Hadi menyelenggarakan pendidikan dasar yang mengintegrasikan kurikulum nasional dan pendidikan Islam. Kami berfokus pada pembentukan karakter, kebiasaan ibadah, serta keterampilan dasar siswa melalui metode pembelajaran yang aktif dan menyenangkan.</p>
                         <p class="mt-4 leading-relaxed text-slate-600">Dengan dukungan guru yang berdedikasi dan lingkungan yang aman, setiap siswa dibimbing untuk menjadi pribadi yang mandiri, kreatif, dan peduli sesama.</p>
                         <div class="mt-8 grid grid-cols-3 gap-4">
@@ -92,7 +92,7 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
                         </div>
                     </div>
                     <div>
-                        <img src="{{ asset('images/mi.png') }}" alt="Sekilas MI" class="rounded-3xl shadow-lg">
+                        <img src="{{ asset('images/mi.png') }}" alt="Sekilas Madrasah Ibtidaiyah" class="rounded-3xl shadow-lg">
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
 
         <section id="spmb" class="bg-slate-900 py-20">
             <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-white sm:text-4xl">Pendaftaran Siswa Baru MI</h2>
+                <h2 class="text-3xl font-bold text-white sm:text-4xl">Pendaftaran Siswa Baru Madrasah Ibtidaiyah</h2>
                 <p class="mt-4 text-slate-300">Tahun ajaran 2026/2027 telah dibuka. Wujudkan masa depan cerah anak Anda sejak dini.</p>
                 <a href="{{ route('home') }}" class="mt-8 inline-flex items-center rounded-full bg-primary-600 px-10 py-4 font-semibold text-white shadow-lg shadow-primary-600/30 transition hover:bg-primary-500">Daftar Sekarang</a>
                 <p class="mt-4 text-sm text-slate-400">Kuota terbatas — segera lakukan pendaftaran.</p>
