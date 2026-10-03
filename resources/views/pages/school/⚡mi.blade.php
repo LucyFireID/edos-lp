@@ -24,7 +24,7 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
     <main class="flex min-h-screen flex-col bg-white pt-28 text-slate-800">
         <section class="relative bg-slate-900 py-20 lg:py-28">
             <img src="{{ asset('images/mi.png') }}" alt="Madrasah Ibtidaiyah" class="absolute inset-0 h-full w-full object-cover opacity-25">
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/90 to-primary-900/60"></div>
+            <div class="absolute inset-0 bg-slate-950/70"></div>
             <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-300">
                     <ol class="flex items-center gap-2">
@@ -34,11 +34,11 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
                     </ol>
                 </nav>
                 <div class="max-w-3xl">
-                    <span class="inline-block rounded-full bg-primary-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-300">Jenjang Dasar</span>
+                    <span class="inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">Jenjang Dasar</span>
                     <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Madrasah Ibtidaiyah</h1>
-                    <p class="mt-4 text-xl font-medium text-primary-300">Membentuk Generasi Qur'ani sejak Usia Dini</p>
+                    <p class="mt-4 text-xl font-medium text-white">Membentuk Generasi Qur'ani sejak Usia Dini</p>
                     <p class="mt-6 max-w-2xl leading-relaxed text-slate-200">MI Qosim Al Hadi menyelenggarakan pendidikan dasar Islam yang mengintegrasikan ilmu umum dan keislaman dalam suasana belajar yang menyenangkan, aman, dan penuh kasih sayang.</p>
-                    <a href="#spmb" class="mt-8 inline-flex items-center rounded-full bg-primary-600 px-8 py-3.5 font-semibold text-white shadow-lg shadow-primary-600/30 transition hover:bg-primary-500">Daftar Siswa Baru</a>
+                    <a href="#spmb" class="mt-8 inline-flex items-center rounded-full bg-white px-8 py-3.5 font-semibold text-slate-900 shadow-lg transition hover:bg-slate-100">Daftar Siswa Baru</a>
                 </div>
             </div>
         </section>
@@ -129,10 +129,8 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
             </div>
         </section>
 
-        <section id="spmb" class="relative overflow-hidden bg-slate-900 py-20">
-            <div class="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-primary-600/20 blur-3xl"></div>
-            <div class="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-primary-500/10 blur-3xl"></div>
-            <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <section id="spmb" class="bg-slate-900 py-20">
+            <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-white sm:text-4xl">Pendaftaran Siswa Baru MI</h2>
                 <p class="mt-4 text-slate-300">Tahun ajaran 2026/2027 telah dibuka. Wujudkan masa depan cerah anak Anda sejak dini.</p>
                 <a href="{{ route('home') }}" class="mt-8 inline-flex items-center rounded-full bg-primary-600 px-10 py-4 font-semibold text-white shadow-lg shadow-primary-600/30 transition hover:bg-primary-500">Daftar Sekarang</a>
