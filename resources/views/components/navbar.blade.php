@@ -1,7 +1,7 @@
 @php
 $isHome = request()->routeIs('home');
 $isBlog = request()->routeIs('blog', 'blog.post');
-$isTransparent = $isHome || request()->routeIs('mi');
+$isTransparent = $isHome || request()->routeIs('mi', 'mts');
 @endphp
 
 <header
