@@ -112,7 +112,7 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
             </div>
         </section>
 
-        <section id="spmb" class="bg-slate-900 py-20">
+        <section id="spmb" class="bg-slate-50 py-20">
             <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-white sm:text-4xl">Pendaftaran Siswa Baru Madrasah Ibtidaiyah</h2>
                 <p class="mt-4 text-slate-300">Tahun ajaran 2026/2027 telah dibuka. Wujudkan masa depan cerah anak Anda sejak dini.</p>
