@@ -8,12 +8,6 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
     public function with(): array
     {
         return [
-            'stats' => [
-                ['label' => 'Siswa', 'value' => '180'],
-                ['label' => 'Guru & Staf', 'value' => '24'],
-                ['label' => 'Rombel', 'value' => '12'],
-                ['label' => 'Tahun Berdiri', 'value' => '2003'],
-            ],
             'missions' => [
                 'Menyelenggarakan pendidikan dasar Islam berkualitas yang mengintegrasikan ilmu umum dan keislaman.',
                 'Menumbuhkan akhlak mulia, kebiasaan ibadah, dan kecintaan terhadap Al-Qur\'an sejak dini.',
@@ -45,14 +39,6 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
                     <p class="mt-4 text-xl font-medium text-white">Membentuk Generasi Qur'ani sejak Usia Dini</p>
                     <p class="mt-6 max-w-2xl leading-relaxed text-slate-200">MI Qosim Al Hadi menyelenggarakan pendidikan dasar Islam yang mengintegrasikan ilmu umum dan keislaman dalam suasana belajar yang menyenangkan, aman, dan penuh kasih sayang.</p>
                     <a href="#spmb" class="mt-8 inline-flex items-center rounded-full bg-primary-600 px-8 py-3.5 font-semibold text-white shadow-lg shadow-primary-600/30 transition hover:bg-primary-500">Daftar Siswa Baru</a>
-                    <div class="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-4">
-                        @foreach ($stats as $stat)
-                            <div>
-                                <p class="text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ $stat['value'] }}</p>
-                                <p class="mt-1 text-xs font-medium uppercase tracking-wider text-slate-400">{{ $stat['label'] }}</p>
-                            </div>
-                        @endforeach
-                    </div>
                 </div>
             </div>
         </section>
