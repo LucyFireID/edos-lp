@@ -61,7 +61,7 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
                             <h2 class="text-3xl font-bold tracking-tight text-slate-900">Sambutan Kepala Madrasah</h2>
                             <p class="mt-6 leading-relaxed text-slate-600">Assalamu'alaikum warahmatullahi wabarakatuh,</p>
                             <p class="mt-4 leading-relaxed text-slate-600">Selamat datang di Madrasah Ibtidaiyah Qosim Al Hadi. Kami berkomitmen membentuk karakter Islami sekaligus menguatkan akademik sejak usia dini. Mari bersama membangun generasi yang cerdas, berakhlak, dan Qur'ani.</p>
-                            <p class="mt-6 font-bold text-slate-900">Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
+                            <p class="mt-6 text-slate-600">Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
                         </div>
                     </div>
                 </div>
