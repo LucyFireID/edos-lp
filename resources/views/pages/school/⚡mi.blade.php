@@ -14,18 +14,19 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
                 ['label' => 'Rombel', 'value' => '12'],
                 ['label' => 'Tahun Berdiri', 'value' => '2003'],
             ],
+            'features' => [
+                ['title' => 'Pendidikan Islam Terintegrasi', 'desc' => 'Al-Qur\'an, aqidah, dan akhlak menjadi bagian tak terpisah dari aktivitas harian siswa.', 'icon' => 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'],
+                ['title' => 'Metode Pembelajaran Aktif', 'desc' => 'Belajar melalui bermain, eksplorasi, dan proyek kecil untuk membangun rasa ingin tahu.', 'icon' => 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a4 4 0 117.072 0l-.548.547A3.495 3.495 0 0112 19.5a3.495 3.495 0 01-3.622-3.168l-.548-.547z'],
+                ['title' => 'Guru yang Peduli', 'desc' => 'Guru MI berkompeten dan dekat dengan siswa, membantu mengembangkan potensi serta karakter.', 'icon' => 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2a3 3 0 00-5.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2a3 3 0 015.356-1.857M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'],
+                ['title' => 'Lingkungan Aman & Nyaman', 'desc' => 'Kelas modern, perpustakaan ceria, dan area bermain edukatif mendukung pembelajaran yang menyenangkan.', 'icon' => 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10m-2 2l2-2'],
+            ],
             'curriculum' => [
-                ['title' => 'Pendidikan Agama Islam', 'desc' => 'Aqidah, akhlak, fiqih, dan Al-Qur\'an untuk membangun fondasi keislaman yang kuat.'],
-                ['title' => 'Matematika & Sains', 'desc' => 'Pembelajaran dasar matematika dan sains dengan pendekatan eksploratif dan praktik.'],
-                ['title' => 'Bahasa Indonesia & Inggris', 'desc' => 'Literasi bahasa untuk berkomunikasi dengan baik secara lisan maupun tulisan.'],
-                ['title' => 'Seni & Olahraga', 'desc' => 'Pengembangan kreativitas dan kesehatan fisik melalui seni, musik, dan aktivitas olahraga.'],
+                ['title' => 'Pendidikan Agama Islam', 'desc' => 'Aqidah, akhlak, fiqih, dan tahsin Al-Qur\'an untuk membentuk fondasi keislaman yang kuat.'],
+                ['title' => 'Literasi & Numerasi', 'desc' => 'Matematika, bahasa Indonesia, dan sains dasar melalui pendekatan eksploratif dan bermain.'],
+                ['title' => 'Bahasa Inggris & Arab', 'desc' => 'Pembelajaran bahasa sejak dini untuk membiasakan komunikasi multibahasa.'],
+                ['title' => 'Seni, Olahraga & Keterampilan', 'desc' => 'Mengembangkan kreativitas, kesehatan fisik, dan keterampilan hidup secara seimbang.'],
             ],
-            'facilities' => [
-                ['name' => 'Ruang Kelas Modern', 'icon' => 'M4 6a2 2 0 012-2h12a2 2 0 012 2v7a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM12 15l6 4V6a2 2 0 00-2-2H8a2 2 0 00-2 2v13l6-4z'],
-                ['name' => 'Perpustakaan Ceria', 'icon' => 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'],
-                ['name' => 'Area Bermain Edukatif', 'icon' => 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'],
-                ['name' => 'Laboratorium Sains Dasar', 'icon' => 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'],
-            ],
+            'gallery' => ['card4.png', 'card5.png', 'card6.png', 'card7.png'],
         ];
     }
 };
@@ -34,104 +35,139 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
 
 <div class="scroll-smooth">
     <main class="flex min-h-screen flex-col bg-slate-50 pt-28 text-slate-800">
-        {{-- Hero --}}
         <section class="relative overflow-hidden bg-slate-900 py-24 lg:py-32">
-            <img src="{{ asset('images/mi.png') }}" alt="Madrasah Ibtidaiyah" class="absolute inset-0 h-full w-full object-cover opacity-40">
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 to-slate-950/60"></div>
+            <img src="{{ asset('images/mi.png') }}" alt="Madrasah Ibtidaiyah" class="absolute inset-0 h-full w-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/80 to-primary-900/60"></div>
             <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <nav aria-label="Breadcrumb" class="mb-4 text-sm text-slate-300">
                     <ol class="flex items-center gap-2">
                         <li><a href="{{ route('home') }}" class="transition hover:text-white">Beranda</a></li>
                         <li aria-hidden="true" class="text-slate-500">/</li>
-                        <li class="font-medium text-white" aria-current="page">Madrasah Ibtidaiyah</li>
+                        <li class="font-medium text-white">Madrasah Ibtidaiyah</li>
                     </ol>
                 </nav>
-                <h1 class="max-w-3xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Madrasah Ibtidaiyah (MI)</h1>
-                <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-200">Membangun fondasi ilmu, iman, dan karakter mulia bagi generasi muda sejak usia dini.</p>
-            </div>
-        </section>
-
-        {{-- Stats --}}
-        <section class="py-12 lg:py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
-                    @foreach ($stats as $stat)
-                        <div class="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-slate-100">
-                            <p class="text-3xl font-extrabold text-primary-600">{{ $stat['value'] }}</p>
-                            <p class="mt-1 text-sm text-slate-600">{{ $stat['label'] }}</p>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-        {{-- About & Vision --}}
-        <section class="py-12 lg:py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-12 lg:grid-cols-2">
-                    <div class="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-100 lg:p-10">
-                        <h2 class="text-2xl font-bold text-slate-900">Tentang MI</h2>
-                        <p class="mt-4 leading-relaxed text-slate-600">Madrasah Ibtidaiyah Qosim Al Hadi menyelenggarakan pendidikan dasar yang mengintegrasikan kurikulum umum dan keislaman. Kami percaya bahwa masa kecil adalah golden age untuk menanamkan kecintaan terhadap ilmu, Al-Qur'an, dan akhlak mulia.</p>
-                        <p class="mt-4 leading-relaxed text-slate-600">Melalui metode pembelajaran yang aktif, menyenangkan, dan sesuai tahap perkembangan anak, siswa dibimbing untuk menjadi pribadi yang percaya diri, mandiri, dan peduli sesama.</p>
-                    </div>
-                    <div class="rounded-3xl bg-primary-600 p-8 text-white shadow-lg lg:p-10">
-                        <h2 class="text-2xl font-bold">Visi & Misi</h2>
-                        <p class="mt-4 leading-relaxed">Menjadikan generasi muslim yang berilmu, berakhlak, berdaya saing, dan siap melanjutkan pendidikan ke jenjang yang lebih tinggi.</p>
-                        <ul class="mt-6 list-disc space-y-2 pl-5 leading-relaxed">
-                            <li>Menanamkan aqidah dan akhlak islamiyyah.</li>
-                            <li>Mengembangkan literasi dan numerasi dasar yang kuat.</li>
-                            <li>Membiasakan hidup sehat, disiplin, dan mandiri.</li>
-                            <li>Membantu anak mengenali dan mengembangkan potensi dirinya.</li>
-                        </ul>
+                <div class="max-w-2xl">
+                    <span class="inline-block rounded-full bg-primary-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-300 backdrop-blur">Jenjang Pendidikan</span>
+                    <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Madrasah Ibtidaiyah</h1>
+                    <p class="mt-6 text-lg leading-relaxed text-slate-200">Membangun fondasi ilmu, iman, dan karakter sejak usia dini melalui pembelajaran yang menyenangkan dan bermakna.</p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#kurikulum" class="rounded-full bg-primary-600 px-8 py-3.5 font-semibold text-white shadow-lg shadow-primary-600/30 transition hover:bg-primary-500">Lihat Kurikulum</a>
+                        <a href="{{ route('home') }}" class="rounded-full border border-white/30 bg-white/5 px-8 py-3.5 font-semibold text-white backdrop-blur transition hover:bg-white/10">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        {{-- Curriculum --}}
-        <section class="bg-white py-12 lg:py-16">
+        <div class="relative -mt-16 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-slate-100 shadow-xl sm:grid-cols-4">
+                @foreach ($stats as $stat)
+                    <div class="bg-white p-6 text-center">
+                        <p class="text-3xl font-extrabold text-primary-600">{{ $stat['value'] }}</p>
+                        <p class="mt-1 text-sm text-slate-600">{{ $stat['label'] }}</p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+        <section class="py-20 lg:py-28">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-3xl text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900">Kurikulum</h2>
-                    <p class="mt-4 text-slate-600">Kurikulum MI kami dirancang untuk memenuhi standar nasional sekaligus memperkuat nilai keislaman.</p>
-                </div>
-                <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    @foreach ($curriculum as $item)
-                        <div class="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-100 transition hover:shadow-md">
-                            <h3 class="text-lg font-bold text-slate-900">{{ $item['title'] }}</h3>
-                            <p class="mt-2 text-sm leading-relaxed text-slate-600">{{ $item['desc'] }}</p>
-                        </div>
-                    @endforeach
+                <div class="grid items-center gap-12 lg:grid-cols-2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 h-24 w-24 rounded-full bg-primary-100"></div>
+                        <img src="{{ asset('images/mi.png') }}" alt="Kegiatan MI" class="relative z-10 rounded-3xl shadow-lg">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Membentuk Generasi Qur'ani sejak Dini</h2>
+                        <p class="mt-4 leading-relaxed text-slate-600">Madrasah Ibtidaiyah Qosim Al Hadi menggabungkan kurikulum nasional dan pendidikan Islam dalam suasana belajar yang penuh kasih sayang. Setiap anak dibimbing untuk mengenali potensinya, membiasakan ibadah, dan membangun karakter positif.</p>
+                        <p class="mt-4 leading-relaxed text-slate-600">Kami percaya bahwa masa kanak-kanak adalah momen penting untuk menanamkan kecintaan terhadap ilmu, Al-Qur'an, dan nilai-nilai luhur yang akan menemani perjalanan hidup mereka.</p>
+                        <a href="#fasilitas" class="mt-6 inline-flex items-center gap-2 font-semibold text-primary-600 hover:text-primary-700">
+                            Jelajahi Fasilitas
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        {{-- Facilities --}}
-        <section class="py-12 lg:py-16">
+        <section class="bg-white py-20 lg:py-28">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="mx-auto max-w-3xl text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900">Fasilitas & Kegiatan</h2>
-                    <p class="mt-4 text-slate-600">Lingkungan belajar yang nyaman dan aman untuk mendukung perkembangan optimal siswa.</p>
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Kenapa Memilih MI Qosim Al Hadi?</h2>
+                    <p class="mt-4 text-slate-600">Kami hadir untuk memberikan pengalaman belajar terbaik bagi anak Anda.</p>
                 </div>
-                <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    @foreach ($facilities as $facility)
-                        <div class="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
-                            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600">
-                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ $facility['icon'] }}"/></svg>
+                <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    @foreach ($features as $feature)
+                        <div class="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-lg">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-600">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ $feature['icon'] }}"/></svg>
                             </div>
-                            <h3 class="mt-4 text-sm font-bold text-slate-900">{{ $facility['name'] }}</h3>
+                            <h3 class="mt-4 text-lg font-bold text-slate-900">{{ $feature['title'] }}</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-slate-600">{{ $feature['desc'] }}</p>
                         </div>
                     @endforeach
                 </div>
             </div>
         </section>
 
-        {{-- CTA --}}
-        <section class="bg-slate-900 py-16">
-            <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-white">Daftarkan Putra-Putri Anda di MI Qosim Al Hadi</h2>
-                <p class="mt-4 text-slate-300">Pendaftaran tahun ajaran 2027/2028 telah dibuka. Kuota terbatas.</p>
-                <a href="{{ route('home') }}" class="mt-8 inline-flex items-center rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-4 font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:scale-105">
+        <section id="kurikulum" class="py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-3xl text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Kurikulum</h2>
+                    <p class="mt-4 text-slate-600">Integrasi ilmu umum dan keislaman untuk masa depan yang cerah.</p>
+                </div>
+                <div class="mt-12 grid gap-6 md:grid-cols-2">
+                    @foreach ($curriculum as $item)
+                        <div class="flex gap-5 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-600 text-white">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">{{ $item['title'] }}</h3>
+                                <p class="mt-1 text-sm leading-relaxed text-slate-600">{{ $item['desc'] }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+
+        <section id="fasilitas" class="bg-white py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-3xl text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Aktivitas & Fasilitas</h2>
+                    <p class="mt-4 text-slate-600">Lingkungan yang nyaman dan aman untuk menunjang proses belajar anak.</p>
+                </div>
+                <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    @foreach ($gallery as $image)
+                        <div class="aspect-[4/3] overflow-hidden rounded-2xl">
+                            <img src="{{ asset('images/' . $image) }}" alt="Aktivitas MI" class="h-full w-full object-cover transition hover:scale-105">
+                        </div>
+                    @endforeach
+                </div>
+                <div class="mt-8 grid grid-cols-2 gap-4 text-center sm:grid-cols-4">
+                    <div class="rounded-2xl bg-slate-50 py-6 ring-1 ring-slate-100">
+                        <p class="text-sm font-semibold text-slate-700">Ruang Kelas Modern</p>
+                    </div>
+                    <div class="rounded-2xl bg-slate-50 py-6 ring-1 ring-slate-100">
+                        <p class="text-sm font-semibold text-slate-700">Perpustakaan Ceria</p>
+                    </div>
+                    <div class="rounded-2xl bg-slate-50 py-6 ring-1 ring-slate-100">
+                        <p class="text-sm font-semibold text-slate-700">Area Bermain</p>
+                    </div>
+                    <div class="rounded-2xl bg-slate-50 py-6 ring-1 ring-slate-100">
+                        <p class="text-sm font-semibold text-slate-700">Laboratorium Dasar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative overflow-hidden bg-primary-600 py-20">
+            <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary-500 opacity-50"></div>
+            <div class="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-primary-700 opacity-50"></div>
+            <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-white sm:text-4xl">Daftarkan Putra-Putri Anda di MI Qosim Al Hadi</h2>
+                <p class="mt-4 text-primary-100">Pendaftaran tahun ajaran 2027/2028 telah dibuka. Wujudkan masa depan cerah bersama kami.</p>
+                <a href="{{ route('home') }}" class="mt-8 inline-flex items-center rounded-full bg-white px-8 py-4 font-semibold text-primary-600 shadow-lg transition hover:bg-slate-100">
                     SPMB 2027
                 </a>
             </div>
