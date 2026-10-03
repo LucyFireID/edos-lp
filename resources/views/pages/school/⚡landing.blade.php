@@ -148,7 +148,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                     Yayasan Qosim Al Hadi menghadirkan pendidikan berkualitas dengan kurikulum modern, tenaga pengajar berpengalaman, dan lingkungan belajar yang inspiratif.
                 </p>
                 <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="#home" @click.prevent="scrollToSection('home')" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:opacity-90">
+                    <a href="#home" @click.prevent="scrollToSection('home')" class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white transition hover:opacity-90">
                         SPMB 2027
                     </a>
                     <a href="#program" @click.prevent="scrollToSection('program')" class="rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">

@@ -44,7 +44,7 @@ $isTransparent = $isHome || request()->routeIs('mi');
                 @endif
             @endif
             <li>
-                <a href="{{ $isHome ? '#home' : route('home') }}" @if ($isHome) @click.prevent="scrollToSection('home')" @endif class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:opacity-90">
+                <a href="{{ $isHome ? '#home' : route('home') }}" @if ($isHome) @click.prevent="scrollToSection('home')" @endif class="rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white transition hover:opacity-90">
                     SPMB 2027
                 </a>
             </li>
