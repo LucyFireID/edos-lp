@@ -1,13 +1,14 @@
 @php
 $isHome = request()->routeIs('home');
 $isBlog = request()->routeIs('blog', 'blog.post');
+$isTransparent = $isHome || request()->routeIs('mi');
 @endphp
 
 <header
-    x-data="{ open: false @if ($isHome) , scrolled: false @endif }"
-    @if ($isHome) @scroll.window="scrolled = window.scrollY > 20" @endif
-    @if ($isHome) :class="scrolled ? 'bg-white/90 shadow-lg backdrop-blur-md' : 'bg-transparent'" @endif
-    class="fixed inset-x-0 top-0 z-50 transition-all duration-300 @unless ($isHome) bg-white/90 shadow-lg backdrop-blur-md @endunless"
+    x-data="{ open: false @if ($isTransparent) , scrolled: false @endif }"
+    @if ($isTransparent) @scroll.window="scrolled = window.scrollY > 20" @endif
+    @if ($isTransparent) :class="scrolled ? 'bg-white/90 shadow-lg backdrop-blur-md' : 'bg-transparent'" @endif
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-300 @unless ($isTransparent) bg-white/90 shadow-lg backdrop-blur-md @endunless"
 >
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <a href="{{ $isHome ? '#home' : route('home') }}" @if ($isHome) @click.prevent="scrollToSection('home')" @endif class="flex items-center gap-4">
@@ -15,8 +16,8 @@ $isBlog = request()->routeIs('blog', 'blog.post');
                 <img src="{{ asset('images/logo-qosimalhadi-128.png') }}" alt="Logo Qosim Al Hadi" class="h-full w-full object-contain drop-shadow-lg">
             </span>
             <span class="flex flex-col leading-tight">
-                <span class="text-xl font-bold tracking-tight sm:text-2xl @if ($isHome) transition-colors duration-300" :class="scrolled ? 'text-slate-900' : 'text-white' @else text-slate-900 @endif">Qosim Al Hadi</span>
-                <span class="text-sm tracking-wide @if ($isHome) transition-colors duration-300" :class="scrolled ? 'text-slate-500' : 'text-primary-100' @else text-slate-500 @endif">Bhakti Kepada Negeri</span>
+                <span class="text-xl font-bold tracking-tight sm:text-2xl @if ($isTransparent) transition-colors duration-300" :class="scrolled ? 'text-slate-900' : 'text-white' @else text-slate-900 @endif">Qosim Al Hadi</span>
+                <span class="text-sm tracking-wide @if ($isTransparent) transition-colors duration-300" :class="scrolled ? 'text-slate-500' : 'text-primary-100' @else text-slate-500 @endif">Bhakti Kepada Negeri</span>
             </span>
         </a>
 
@@ -49,7 +50,7 @@ $isBlog = request()->routeIs('blog', 'blog.post');
             </li>
         </ul>
 
-        @if ($isHome)
+        @if ($isTransparent)
             <button @click="open = !open" class="transition-colors duration-300 lg:hidden" :class="scrolled ? 'text-slate-900' : 'text-white'" aria-label="Menu">
         @else
             <button @click="open = !open" class="text-slate-900 lg:hidden" aria-label="Menu">
