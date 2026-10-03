@@ -19,6 +19,8 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
                 ['name' => 'Lestari Indah, S.Pd.', 'subject' => 'Kimia', 'role' => 'Guru'],
                 ['name' => 'Andi Pratama, S.Pd.', 'subject' => 'Olahraga', 'role' => 'Guru'],
                 ['name' => 'Fitriani Rahma, S.Pd.', 'subject' => 'Seni Budaya', 'role' => 'Guru'],
+                ['name' => 'Eko Nugroho, M.Pd.', 'subject' => 'Bahasa Arab', 'role' => 'Guru'],
+                ['name' => 'Rina Amelia, S.Pd.', 'subject' => 'IPS', 'role' => 'Guru'],
             ],
         ];
     }
@@ -68,7 +70,7 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
 
     <main class="flex min-h-screen flex-col bg-slate-50 pt-28 text-slate-800">
         <div class="flex-1 py-12 sm:py-16 lg:py-20">
-            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                 <nav aria-label="Breadcrumb" class="mb-6 flex justify-center text-sm text-slate-500">
                     <ol class="flex items-center gap-2">
                         <li><a href="{{ route('home') }}" class="transition hover:text-primary-600">Beranda</a></li>
@@ -82,7 +84,7 @@ new #[Title('Tenaga Pendidik - Qosim Al Hadi Semarang')] class extends Component
                     <p class="mt-3 text-slate-600">Terakhir diperbarui: 29 September 2026</p>
                 </div>
 
-                <div class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible lg:grid-cols-5 lg:gap-6 lg:px-0 lg:pb-0">
+                <div class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-4 lg:gap-6 lg:px-0 lg:pb-0">
                     @foreach ($teachers as $teacher)
                         <div class="w-36 shrink-0 snap-start text-center sm:w-auto">
                             <div class="mx-auto aspect-[3/4] w-full max-w-[180px] rounded-2xl bg-slate-200 sm:max-w-[220px]">
