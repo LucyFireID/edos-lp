@@ -15,6 +15,30 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
     #[Url]
     public string $program = '';
 
+    #[Url]
+    public int $page = 1;
+
+    public function goToPage(int $page): void
+    {
+        $this->page = $page;
+        $this->dispatch('paginated');
+    }
+
+    public function updatedSearch(): void
+    {
+        $this->page = 1;
+    }
+
+    public function updatedYear(): void
+    {
+        $this->page = 1;
+    }
+
+    public function updatedProgram(): void
+    {
+        $this->page = 1;
+    }
+
     public function with(): array
     {
         $alumni = collect([
@@ -153,8 +177,17 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
             ->when($this->year, fn ($query) => $query->where('year', (int) $this->year))
             ->when($this->program, fn ($query) => $query->where('program', $this->program));
 
+        $perPage = 15;
+        $total = $filtered->count();
+        $lastPage = max(1, (int) ceil($total / $perPage));
+        $current = max(1, min($this->page, $lastPage));
+        $offset = ($current - 1) * $perPage;
+
         return [
-            'alumni' => $filtered->values()->all(),
+            'alumni' => $filtered->slice($offset, $perPage)->values()->all(),
+            'currentPage' => $current,
+            'lastPage' => $lastPage,
+            'total' => $total,
             'years' => $alumni->pluck('year')->unique()->sortDesc()->values()->all(),
         ];
     }
@@ -164,12 +197,13 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
         $this->search = '';
         $this->year = '';
         $this->program = '';
+        $this->page = 1;
     }
 };
 
 ?>
 
-<div class="scroll-smooth">
+<div class="scroll-smooth" x-on:paginated.window="window.scrollTo({ top: 0, behavior: 'smooth' })">
     <main class="flex min-h-screen flex-col bg-slate-50 pt-28 text-slate-800">
         <div class="flex-1 py-12 sm:py-16 lg:py-20">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -258,10 +292,39 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
 
                                     <p class="mt-4 flex-1 text-sm italic text-slate-600">"{{ $item['quote'] }}"</p>
                                 </div>
-                            </article>
-                        @endforeach
+                        </article>
+                    @endforeach
+                </div>
+
+                @if ($lastPage > 1)
+                    <div class="mt-12 flex items-center justify-center gap-2">
+                        <button
+                            wire:click="goToPage({{ $currentPage - 1 }})"
+                            @disabled($currentPage === 1)
+                            class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                            Sebelumnya
+                        </button>
+
+                        @for ($i = 1; $i <= $lastPage; $i++)
+                            <button
+                                wire:click="goToPage({{ $i }})"
+                                class="h-10 w-10 rounded-lg text-sm font-semibold transition {{ $i === $currentPage ? 'bg-primary-600 text-white' : 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50' }}"
+                            >
+                                {{ $i }}
+                            </button>
+                        @endfor
+
+                        <button
+                            wire:click="goToPage({{ $currentPage + 1 }})"
+                            @disabled($currentPage === $lastPage)
+                            class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                            Selanjutnya
+                        </button>
                     </div>
-                @else
+                @endif
+            @else
                     <div class="rounded-2xl bg-white p-12 text-center shadow-sm">
                         <p class="text-slate-600">Tidak ada alumni yang cocok dengan pencarian Anda.</p>
                         <button wire:click="resetFilters" class="mt-4 rounded-full bg-primary-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-primary-700">
