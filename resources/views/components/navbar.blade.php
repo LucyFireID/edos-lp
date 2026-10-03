@@ -35,11 +35,11 @@ $isTransparent = $isHome || request()->routeIs('mi');
                 </li>
             @else
                 <li>
-                    <a href="{{ route('home') }}" class="text-base font-medium text-slate-700 transition hover:text-primary-500">Beranda</a>
+                    <a href="{{ route('home') }}" class="text-base font-medium transition hover:text-primary-500 @if ($isTransparent)" :class="scrolled ? 'text-slate-700' : 'text-white/90' @else text-slate-700 @endif">Beranda</a>
                 </li>
                 @if ($isBlog)
                     <li>
-                        <a href="{{ route('blog') }}" class="text-base font-medium text-primary-600 transition hover:text-primary-500" aria-current="page">Berita</a>
+                        <a href="{{ route('blog') }}" class="text-base font-medium transition hover:text-primary-500 @if ($isTransparent)" :class="scrolled ? 'text-primary-600' : 'text-white/90' @else text-primary-600 @endif" aria-current="page">Berita</a>
                     </li>
                 @endif
             @endif
