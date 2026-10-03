@@ -13,3 +13,4 @@ Route::livewire('/sebaran-universitas', 'pages::school.universities')->name('uni
 Route::livewire('/madrasah-ibtidaiyah', 'pages::school.mi')->name('mi');
 Route::livewire('/madrasah-tsanawiyah', 'pages::school.mts')->name('mts');
 Route::livewire('/madrasah-aliyah', 'pages::school.ma')->name('ma');
+Route::livewire('/pondok-pesantren', 'pages::school.ponpes')->name('ponpes');

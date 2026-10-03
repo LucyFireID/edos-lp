@@ -223,7 +223,7 @@ new #[Title('Qosim Al Hadi Semarang | Bhakti Kepada Negeri')] class extends Comp
                         <span class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur transition-colors duration-500 group-hover:bg-primary-100 group-hover:text-primary-700">Pondok Pesantren</span>
                         <h3 class="mt-3 text-2xl font-bold text-white transition-colors duration-500 group-hover:text-white">Membentuk Generasi Berilmu dan Berakhlak</h3>
                         <p class="max-w-md overflow-hidden text-sm leading-relaxed text-slate-100 transition-all duration-500 ease-out" :class="open ? 'mt-2 max-h-40 opacity-100' : 'mt-0 max-h-0 opacity-0'">Membangun pribadi yang berpegang teguh pada nilai-nilai keislaman, berakhlak mulia, mandiri, disiplin, dan siap menghadapi tantangan kehidupan.</p>
-                        <span class="mt-0 overflow-hidden text-sm font-semibold text-white transition-all duration-500 ease-out" :class="open ? 'mt-2 max-h-10 opacity-100' : 'mt-0 max-h-0 opacity-0'">Selengkapnya &rarr;</span>
+                        <a href="{{ route('ponpes') }}" @click.stop class="mt-0 overflow-hidden text-sm font-semibold text-white transition-all duration-500 ease-out" :class="open ? 'mt-2 max-h-10 opacity-100' : 'mt-0 max-h-0 opacity-0'">Selengkapnya &rarr;</a>
                     </div>
                 </div>
             </div>
