@@ -12,6 +12,9 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
     #[Url]
     public string $year = '';
 
+    #[Url]
+    public string $program = '';
+
     public function with(): array
     {
         $alumni = collect([
@@ -111,6 +114,30 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
                 'major' => 'Farmasi',
                 'quote' => 'Saya berterima kasih atas bimbingan guru dan dukungan teman-teman sekolah.',
             ],
+            [
+                'name' => 'Fauzan Akmal',
+                'program' => 'Ponpes',
+                'year' => 2023,
+                'status' => 'UIN Walisongo Semarang',
+                'major' => 'Pendidikan Islam',
+                'quote' => 'Pondok pesantren menguatkan spiritual dan akademik saya secara seimbang.',
+            ],
+            [
+                'name' => 'Khadijah Ramadhani',
+                'program' => 'Ponpes',
+                'year' => 2022,
+                'status' => 'UIN Sunan Kalijaga Yogyakarta',
+                'major' => 'Tafsir Hadis',
+                'quote' => 'Belajar di asrama pondok membuat saya mandiri dan disiplin.',
+            ],
+            [
+                'name' => 'Miftahul Huda',
+                'program' => 'Ponpes',
+                'year' => 2021,
+                'status' => 'STAINU Kudus',
+                'major' => 'Studi Islam',
+                'quote' => 'Bimbingan ustadz dan kiai membentuk karakter keislaman saya.',
+            ],
         ]);
 
         $filtered = $alumni
@@ -123,7 +150,8 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
                     || str_contains(strtolower($a['major']), $search)
                 );
             })
-            ->when($this->year, fn ($query) => $query->where('year', (int) $this->year));
+            ->when($this->year, fn ($query) => $query->where('year', (int) $this->year))
+            ->when($this->program, fn ($query) => $query->where('program', $this->program));
 
         return [
             'alumni' => $filtered->values()->all(),
@@ -135,6 +163,7 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
     {
         $this->search = '';
         $this->year = '';
+        $this->program = '';
     }
 };
 
@@ -157,7 +186,7 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
                     <p class="mt-3 text-slate-600">Terakhir diperbarui: 29 September 2026</p>
                 </div>
 
-                <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                     <div class="relative max-w-md flex-1">
                         <input
                             wire:model.live.debounce.300ms="search"
@@ -181,6 +210,22 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
                             @foreach ($years as $y)
                                 <option value="{{ $y }}">{{ $y }}</option>
                             @endforeach
+                        </select>
+                        <svg class="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+
+                    <div class="relative w-full sm:w-48">
+                        <select
+                            wire:model.live="program"
+                            id="program"
+                            name="program"
+                            class="w-full appearance-none rounded-full border border-slate-200 bg-white py-3 pr-10 pl-5 text-sm text-slate-700 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none"
+                        >
+                            <option value="">Semua Jenjang</option>
+                            <option value="MI">MI</option>
+                            <option value="MTs">MTs</option>
+                            <option value="MA">MA</option>
+                            <option value="Ponpes">Ponpes</option>
                         </select>
                         <svg class="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </div>
