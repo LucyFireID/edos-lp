@@ -9,3 +9,4 @@ Route::livewire('/berita', 'pages::school.blog')->name('blog');
 Route::livewire('/berita/{slug}', 'pages::school.post')->name('blog.post');
 Route::livewire('/tenaga-pendidik', 'pages::school.teachers')->name('teachers');
 Route::livewire('/alumni', 'pages::school.alumni')->name('alumni');
+Route::livewire('/sebaran-universitas', 'pages::school.universities')->name('universities');
