@@ -43,7 +43,7 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
             </div>
         </section>
 
-        <section class="bg-slate-50 py-16 lg:py-24">
+        <section class="bg-primary-50 py-16 lg:py-24">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
                     <div>
@@ -72,7 +72,7 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
             </div>
         </section>
 
-        <section class="py-16 lg:py-24">
+        <section class="bg-primary-50 py-16 lg:py-24">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid gap-8 lg:grid-cols-2">
                     <div class="rounded-3xl bg-primary-600 p-10 text-white lg:p-12">
@@ -91,9 +91,9 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
             </div>
         </section>
 
-        <section class="py-16 lg:py-24">
+        <section class="bg-primary-50 py-16 lg:py-24">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="overflow-hidden rounded-3xl bg-slate-50 ring-1 ring-slate-100">
+                <div class="overflow-hidden rounded-3xl bg-white ring-1 ring-slate-100">
                     <div class="grid lg:grid-cols-5">
                         <div class="flex items-center justify-center bg-primary-600 p-10 lg:col-span-2 lg:p-12">
                             <div class="text-center">
