@@ -60,9 +60,7 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
                         <div class="p-10 lg:col-span-3 lg:p-12">
                             <h2 class="text-3xl font-bold tracking-tight text-slate-900">Sambutan Kepala Madrasah</h2>
                             <p class="mt-6 leading-relaxed text-slate-600">Assalamu'alaikum warahmatullahi wabarakatuh,</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Selamat datang di Madrasah Ibtidaiyah Qosim Al Hadi. Sejak berdiri, kami berkomitmen untuk memberikan pendidikan dasar yang tidak hanya mengutamakan akademik, tetapi juga membentuk karakter Islami pada setiap siswa.</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Kami percaya bahwa masa kanak-kanak adalah fondasi penting bagi perkembangan masa depan anak. Oleh karena itu, Madrasah Ibtidaiyah Qosim Al Hadi hadir sebagai rumah belajar kedua yang penuh kasih sayang, disiplin, dan inspiratif.</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Terima kasih atas kepercayaan Anda. Mari bersama-sama membangun generasi yang cerdas, berakhlak, dan Qur'ani.</p>
+                            <p class="mt-4 leading-relaxed text-slate-600">Selamat datang di Madrasah Ibtidaiyah Qosim Al Hadi. Kami berkomitmen membentuk karakter Islami sekaligus menguatkan akademik sejak usia dini. Mari bersama membangun generasi yang cerdas, berakhlak, dan Qur'ani.</p>
                             <p class="mt-6 font-bold text-slate-900">Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
                         </div>
                     </div>
