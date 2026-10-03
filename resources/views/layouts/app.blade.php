@@ -19,9 +19,14 @@
         @livewireStyles
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @fonts
+        <style>[x-cloak] { display: none !important; }</style>
     </head>
     <body class="font-sans antialiased">
+        <x-navbar />
+
         {{ $slot }}
+
+        <x-footer />
 
         @livewireScriptConfig
     </body>
