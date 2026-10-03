@@ -49,7 +49,11 @@ $isBlog = request()->routeIs('blog', 'blog.post');
             </li>
         </ul>
 
-        <button @click="open = !open" class="@if ($isHome) transition-colors duration-300" :class="scrolled ? 'text-slate-900' : 'text-white' @else text-slate-900 @endif lg:hidden" aria-label="Menu">
+        @if ($isHome)
+            <button @click="open = !open" class="transition-colors duration-300 lg:hidden" :class="scrolled ? 'text-slate-900' : 'text-white'" aria-label="Menu">
+        @else
+            <button @click="open = !open" class="text-slate-900 lg:hidden" aria-label="Menu">
+        @endif
             <svg x-show="!open" class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             <svg x-show="open" x-cloak class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
