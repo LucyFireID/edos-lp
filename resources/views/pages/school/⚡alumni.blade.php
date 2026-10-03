@@ -186,7 +186,7 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
                     <p class="mt-3 text-slate-600">Terakhir diperbarui: 29 September 2026</p>
                 </div>
 
-                <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div class="relative max-w-md flex-1">
                         <input
                             wire:model.live.debounce.300ms="search"
