@@ -43,8 +43,9 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
             </div>
         </section>
 
-        <section class="py-16 lg:py-24">
-            <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <section class="relative bg-white py-16 lg:py-24">
+            <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('{{ asset('images/batik.png') }}')"></div>
+            <div class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                 <div class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-100">
                     <div class="grid lg:grid-cols-5">
                         <div class="flex items-center justify-center bg-slate-100 p-10 lg:col-span-2 lg:p-12">
