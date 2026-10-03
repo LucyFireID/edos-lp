@@ -130,6 +130,12 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
             'years' => $alumni->pluck('year')->unique()->sortDesc()->values()->all(),
         ];
     }
+
+    public function resetFilters(): void
+    {
+        $this->search = '';
+        $this->year = '';
+    }
 };
 
 ?>
@@ -204,7 +210,7 @@ new #[Title('Lacak Para Alumni - Qosim Al Hadi Semarang')] class extends Compone
                 @else
                     <div class="rounded-2xl bg-white p-12 text-center shadow-sm">
                         <p class="text-slate-600">Tidak ada alumni yang cocok dengan pencarian Anda.</p>
-                        <button wire:click="$set('search', ''); $set('year', '')" class="mt-4 rounded-full bg-primary-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-primary-700">
+                        <button wire:click="resetFilters" class="mt-4 rounded-full bg-primary-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-primary-700">
                             Reset filter
                         </button>
                     </div>
