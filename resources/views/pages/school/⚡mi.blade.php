@@ -23,7 +23,7 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
 ?>
 
 <div class="scroll-smooth">
-    <main class="flex min-h-screen flex-col bg-white pt-28 text-slate-800">
+    <main class="flex min-h-screen flex-col bg-white text-slate-800">
         <section class="relative flex min-h-svh items-center bg-slate-900">
             <img src="{{ asset('images/mi.png') }}" alt="Madrasah Ibtidaiyah" class="absolute inset-0 h-full w-full object-cover opacity-25">
             <div class="absolute inset-0 bg-slate-950/70 lg:hidden"></div>
