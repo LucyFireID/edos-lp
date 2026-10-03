@@ -8,3 +8,4 @@ Route::livewire('/syarat-ketentuan', 'pages::school.terms')->name('terms');
 Route::livewire('/berita', 'pages::school.blog')->name('blog');
 Route::livewire('/berita/{slug}', 'pages::school.post')->name('blog.post');
 Route::livewire('/tenaga-pendidik', 'pages::school.teachers')->name('teachers');
+Route::livewire('/alumni', 'pages::school.alumni')->name('alumni');
