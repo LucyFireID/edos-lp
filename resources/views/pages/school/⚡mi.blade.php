@@ -43,32 +43,6 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
             </div>
         </section>
 
-        <section class="py-16 lg:py-24">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="overflow-hidden rounded-3xl bg-slate-50 ring-1 ring-slate-100">
-                    <div class="grid lg:grid-cols-5">
-                        <div class="flex items-center justify-center bg-primary-600 p-10 lg:col-span-2 lg:p-12">
-                            <div class="text-center">
-                                <div class="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-white/10 text-white">
-                                    <svg class="h-14 w-14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-                                </div>
-                                <p class="mt-6 text-xl font-bold text-white">Ahmad Fauzi, S.Pd.</p>
-                                <p class="text-sm text-primary-100">Kepala Madrasah Ibtidaiyah</p>
-                            </div>
-                        </div>
-                        <div class="p-10 lg:col-span-3 lg:p-12">
-                            <h2 class="text-3xl font-bold tracking-tight text-slate-900">Sambutan Kepala Madrasah</h2>
-                            <p class="mt-6 leading-relaxed text-slate-600">Assalamu'alaikum warahmatullahi wabarakatuh,</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Selamat datang di Madrasah Ibtidaiyah Qosim Al Hadi. Sejak berdiri, kami berkomitmen untuk memberikan pendidikan dasar yang tidak hanya mengutamakan akademik, tetapi juga membentuk karakter Islami pada setiap siswa.</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Kami percaya bahwa masa kanak-kanak adalah fondasi penting bagi perkembangan masa depan anak. Oleh karena itu, MI Qosim Al Hadi hadir sebagai rumah belajar kedua yang penuh kasih sayang, disiplin, dan inspiratif.</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Terima kasih atas kepercayaan Anda. Mari bersama-sama membangun generasi yang cerdas, berakhlak, dan Qur'ani.</p>
-                            <p class="mt-6 font-bold text-slate-900">Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="bg-slate-50 py-16 lg:py-24">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -112,6 +86,32 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
                                 <li>{{ $mission }}</li>
                             @endforeach
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 lg:py-24">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="overflow-hidden rounded-3xl bg-slate-50 ring-1 ring-slate-100">
+                    <div class="grid lg:grid-cols-5">
+                        <div class="flex items-center justify-center bg-primary-600 p-10 lg:col-span-2 lg:p-12">
+                            <div class="text-center">
+                                <div class="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-white/10 text-white">
+                                    <svg class="h-14 w-14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                </div>
+                                <p class="mt-6 text-xl font-bold text-white">Ahmad Fauzi, S.Pd.</p>
+                                <p class="text-sm text-primary-100">Kepala Madrasah Ibtidaiyah</p>
+                            </div>
+                        </div>
+                        <div class="p-10 lg:col-span-3 lg:p-12">
+                            <h2 class="text-3xl font-bold tracking-tight text-slate-900">Sambutan Kepala Madrasah</h2>
+                            <p class="mt-6 leading-relaxed text-slate-600">Assalamu'alaikum warahmatullahi wabarakatuh,</p>
+                            <p class="mt-4 leading-relaxed text-slate-600">Selamat datang di Madrasah Ibtidaiyah Qosim Al Hadi. Sejak berdiri, kami berkomitmen untuk memberikan pendidikan dasar yang tidak hanya mengutamakan akademik, tetapi juga membentuk karakter Islami pada setiap siswa.</p>
+                            <p class="mt-4 leading-relaxed text-slate-600">Kami percaya bahwa masa kanak-kanak adalah fondasi penting bagi perkembangan masa depan anak. Oleh karena itu, MI Qosim Al Hadi hadir sebagai rumah belajar kedua yang penuh kasih sayang, disiplin, dan inspiratif.</p>
+                            <p class="mt-4 leading-relaxed text-slate-600">Terima kasih atas kepercayaan Anda. Mari bersama-sama membangun generasi yang cerdas, berakhlak, dan Qur'ani.</p>
+                            <p class="mt-6 font-bold text-slate-900">Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
+                        </div>
                     </div>
                 </div>
             </div>
