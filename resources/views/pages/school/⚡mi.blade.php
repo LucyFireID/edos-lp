@@ -115,7 +115,7 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
         <section id="spmb" class="bg-slate-50 py-20">
             <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Sistem Penerimaan Murid Baru Madrasah Ibtidaiyah</h2>
-                <a href="{{ route('home') }}" class="mt-8 inline-flex items-center rounded-full bg-primary-600 px-10 py-4 font-semibold text-white shadow-lg shadow-primary-600/30 transition hover:bg-primary-500">SPMB 2027</a>
+                <a href="{{ route('home') }}" class="mt-8 inline-flex items-center rounded-full bg-primary-600 px-10 py-4 font-semibold text-white transition hover:bg-primary-500">SPMB 2027</a>
             </div>
         </section>
     </main>
