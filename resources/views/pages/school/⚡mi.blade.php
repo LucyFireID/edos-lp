@@ -77,20 +77,7 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
                         <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Sekilas Madrasah Ibtidaiyah</h2>
                         <p class="mt-6 leading-relaxed text-slate-600">Madrasah Ibtidaiyah Qosim Al Hadi menyelenggarakan pendidikan dasar yang mengintegrasikan kurikulum nasional dan pendidikan Islam. Kami berfokus pada pembentukan karakter, kebiasaan ibadah, serta keterampilan dasar siswa melalui metode pembelajaran yang aktif dan menyenangkan.</p>
                         <p class="mt-4 leading-relaxed text-slate-600">Dengan dukungan guru yang berdedikasi dan lingkungan yang aman, setiap siswa dibimbing untuk menjadi pribadi yang mandiri, kreatif, dan peduli sesama.</p>
-                        <div class="mt-8 grid grid-cols-3 gap-4">
-                            <div class="rounded-2xl border border-slate-100 bg-white p-4 text-center shadow-sm">
-                                <p class="text-2xl font-extrabold text-primary-600">2003</p>
-                                <p class="text-xs text-slate-500">Berdiri</p>
-                            </div>
-                            <div class="rounded-2xl border border-slate-100 bg-white p-4 text-center shadow-sm">
-                                <p class="text-2xl font-extrabold text-primary-600">A</p>
-                                <p class="text-xs text-slate-500">Akreditasi</p>
-                            </div>
-                            <div class="rounded-2xl border border-slate-100 bg-white p-4 text-center shadow-sm">
-                                <p class="text-2xl font-extrabold text-primary-600">180+</p>
-                                <p class="text-xs text-slate-500">Siswa</p>
-                            </div>
-                        </div>
+
                     </div>
                     <div>
                         <img src="{{ asset('images/mi.png') }}" alt="Sekilas Madrasah Ibtidaiyah" class="rounded-3xl shadow-lg">
