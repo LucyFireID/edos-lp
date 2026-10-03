@@ -9,12 +9,10 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
     {
         return [
             'missions' => [
-                'Menyelenggarakan pendidikan dasar Islam berkualitas dengan mengintegrasikan ilmu umum dan keislaman secara seimbang.',
-                'Membiasakan siswa membaca, memahami, dan mengamalkan Al-Qur\'an melalui program tahsin, tahfidz, dan doa harian.',
-                'Menumbuhkan akhlak mulia, kebiasaan ibadah, dan karakter positif sejak usia dini.',
-                'Mengembangkan kemampuan literasi, numerasi, serta keterampilan hidup siswa melalui pembelajaran aktif dan bermakna.',
-                'Membekali siswa dengan karakter mandiri, kreatif, percaya diri, dan peduli terhadap sesama.',
-                'Membangun kolaborasi aktif antara sekolah, keluarga, dan masyarakat dalam mendukung tumbuh kembang anak.',
+                'Menyelenggarakan pendidikan dasar Islam berkualitas yang mengintegrasikan ilmu umum dan keislaman.',
+                'Menumbuhkan akhlak mulia, kebiasaan ibadah, dan kecintaan terhadap Al-Qur\'an sejak dini.',
+                'Mengembangkan kemampuan literasi, numerasi, dan keterampilan hidup siswa secara menyenangkan.',
+                'Membekali siswa dengan karakter mandiri, kreatif, dan peduli sesama.',
             ],
         ];
     }
@@ -39,7 +37,7 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
                 <div class="max-w-3xl">
                     <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Madrasah Ibtidaiyah</h1>
                     <p class="mt-4 text-xl font-medium text-white">Membentuk Generasi Qur'ani sejak Usia Dini</p>
-                    <p class="mt-6 max-w-2xl leading-relaxed text-slate-200">MI Qosim Al Hadi menyelenggarakan pendidikan dasar Islam berkualitas yang mengintegrasikan kurikulum nasional dan pendidikan keislaman. Kami membimbing setiap siswa untuk tumbuh menjadi pribadi yang cerdas, berakhlak mulia, dan dekat dengan Al-Qur'an dalam suasana belajar yang menyenangkan serta aman.</p>
+                    <p class="mt-6 max-w-2xl leading-relaxed text-slate-200">Madrasah Ibtidaiyah Qosim Al Hadi menyelenggarakan pendidikan dasar Islam yang mengintegrasikan ilmu umum dan keislaman dalam suasana belajar yang menyenangkan, aman, dan penuh kasih sayang.</p>
                     <a href="{{ route('home') }}" class="mt-8 inline-flex items-center rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-3.5 text-base font-semibold text-white transition hover:opacity-90">SPMB 2027</a>
                 </div>
             </div>
@@ -61,9 +59,9 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
                         <div class="p-10 lg:col-span-3 lg:p-12">
                             <h2 class="text-3xl font-bold tracking-tight text-slate-900">Sambutan Kepala Madrasah</h2>
                             <p class="mt-6 leading-relaxed text-slate-600">Assalamu'alaikum warahmatullahi wabarakatuh,</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Puji syukur kami panjatkan kepada Allah Subhanahu wa Ta'ala atas segala karunia-Nya. Selamat datang di Madrasah Ibtidaiyah Qosim Al Hadi, tempat di mana setiap anak dibimbing untuk mengenal Al-Qur'an, memahami ilmu pengetahuan, dan menumbuhkan akhlak mulia sejak usia dini.</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Kami percaya bahwa pendidikan dasar adalah fondasi terpenting dalam membentuk karakter dan potensi seorang anak. Oleh karena itu, kami berkomitmen untuk menyelenggarakan pembelajaran yang tidak hanya berkualitas secara akademik, tetapi juga menguatkan spiritual, sosial, dan emosional setiap siswa.</p>
-                            <p class="mt-4 leading-relaxed text-slate-600">Dengan dukungan guru yang berdedikasi, kurikulum yang terintegrasi, serta kolaborasi aktif dengan orang tua, kami yakin dapat melahirkan generasi Qur'ani yang siap menghadapi tantangan masa depan.</p>
+                            <p class="mt-4 leading-relaxed text-slate-600">Selamat datang di Madrasah Ibtidaiyah Qosim Al Hadi. Sejak berdiri, kami berkomitmen untuk memberikan pendidikan dasar yang tidak hanya mengutamakan akademik, tetapi juga membentuk karakter Islami pada setiap siswa.</p>
+                            <p class="mt-4 leading-relaxed text-slate-600">Kami percaya bahwa masa kanak-kanak adalah fondasi penting bagi perkembangan masa depan anak. Oleh karena itu, Madrasah Ibtidaiyah Qosim Al Hadi hadir sebagai rumah belajar kedua yang penuh kasih sayang, disiplin, dan inspiratif.</p>
+                            <p class="mt-4 leading-relaxed text-slate-600">Terima kasih atas kepercayaan Anda. Mari bersama-sama membangun generasi yang cerdas, berakhlak, dan Qur'ani.</p>
                             <p class="mt-6 font-bold text-slate-900">Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
                         </div>
                     </div>
@@ -76,8 +74,8 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
                 <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
                     <div>
                         <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Sekilas Madrasah Ibtidaiyah</h2>
-                        <p class="mt-6 leading-relaxed text-slate-600">Madrasah Ibtidaiyah Qosim Al Hadi merupakan jenjang pendidikan dasar yang menyelenggarakan program belajar mengajar berbasis Islam. Kami menggabungkan kurikulum nasional dengan pendidikan Al-Qur'an, aqidah, dan akhlak sehingga siswa tidak hanya unggul dalam akademik, tetapi juga kuat dalam spiritual.</p>
-                        <p class="mt-4 leading-relaxed text-slate-600">Setiap harinya, siswa diajak untuk aktif belajar melalui metode yang menyenangkan, bermakna, dan sesuai dengan tahap perkembangan anak. Didukung oleh lingkungan yang aman, guru yang berdedikasi, serta fasilitas pembelajaran yang memadai, kami berupaya membentuk karakter mandiri, kreatif, dan peduli sesama sejak dini.</p>
+                        <p class="mt-6 leading-relaxed text-slate-600">Madrasah Ibtidaiyah Qosim Al Hadi menyelenggarakan pendidikan dasar yang mengintegrasikan kurikulum nasional dan pendidikan Islam. Kami berfokus pada pembentukan karakter, kebiasaan ibadah, serta keterampilan dasar siswa melalui metode pembelajaran yang aktif dan menyenangkan.</p>
+                        <p class="mt-4 leading-relaxed text-slate-600">Dengan dukungan guru yang berdedikasi dan lingkungan yang aman, setiap siswa dibimbing untuk menjadi pribadi yang mandiri, kreatif, dan peduli sesama.</p>
                         <div class="mt-8 grid grid-cols-3 gap-4">
                             <div class="rounded-2xl border border-slate-100 bg-white p-4 text-center shadow-sm">
                                 <p class="text-2xl font-extrabold text-primary-600">2003</p>
@@ -108,7 +106,7 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
                         <h2 class="mt-6 text-3xl font-bold tracking-tight text-slate-900">Visi</h2>
-                        <p class="mt-4 leading-relaxed text-slate-600">Menjadikan Madrasah Ibtidaiyah Qosim Al Hadi sebagai lembaga pendidikan dasar Islam unggul yang melahirkan generasi Qur'ani yang cerdas, berakhlak mulia, mandiri, dan berdaya saing tinggi.</p>
+                        <p class="mt-4 leading-relaxed text-slate-600">Menjadikan Madrasah Ibtidaiyah Qosim Al Hadi sebagai lembaga pendidikan dasar Islam yang menghasilkan generasi cerdas, berakhlak mulia, dan berdaya saing tinggi.</p>
                     </div>
                     <div class="rounded-3xl border-t-4 border-primary-500 bg-white p-10 shadow-sm lg:p-12">
                         <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600">
@@ -128,7 +126,7 @@ new #[Title('Madrasah Ibtidaiyah - Qosim Al Hadi Semarang')] class extends Compo
         <section id="spmb" class="bg-slate-900 py-20">
             <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-white sm:text-4xl">Pendaftaran Siswa Baru Madrasah Ibtidaiyah</h2>
-                <p class="mt-4 text-slate-300">Tahun ajaran 2026/2027 telah dibuka. Daftarkan putra-putri Anda untuk memulai perjalanan membentuk karakter Qur'ani sejak dini.</p>
+                <p class="mt-4 text-slate-300">Tahun ajaran 2026/2027 telah dibuka. Wujudkan masa depan cerah anak Anda sejak dini.</p>
                 <a href="{{ route('home') }}" class="mt-8 inline-flex items-center rounded-full bg-primary-600 px-10 py-4 font-semibold text-white shadow-lg shadow-primary-600/30 transition hover:bg-primary-500">Daftar Sekarang</a>
                 <p class="mt-4 text-sm text-slate-400">Kuota terbatas — segera lakukan pendaftaran.</p>
             </div>
