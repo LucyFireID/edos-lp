@@ -30,7 +30,8 @@ new #[Title('Madrasah Ibtidaiyah (MI) - Qosim Al Hadi Semarang')] class extends 
     <main class="flex min-h-screen flex-col bg-white text-slate-800">
         <section class="relative flex min-h-svh items-center bg-slate-900 pt-28">
             <img src="{{ asset('images/mi.png') }}" alt="Madrasah Ibtidaiyah" class="absolute inset-0 h-full w-full object-cover opacity-25">
-            <div class="absolute inset-0 bg-slate-950/70"></div>
+            <div class="absolute inset-0 bg-slate-950/70 lg:hidden"></div>
+            <div class="absolute inset-0 hidden bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-slate-950/10 lg:block"></div>
             <div class="relative mx-auto w-full max-w-7xl px-6 py-20 lg:py-28">
                 <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-300">
                     <ol class="flex items-center gap-2">
